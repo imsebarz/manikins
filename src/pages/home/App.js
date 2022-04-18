@@ -1,38 +1,29 @@
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
 import "./App.scss";
+import Arena from "./components/Arena";
+import Cta from "./components/Cta.js";
+import Copy from "./components/Copy";
+import Hero from "./components/Hero";
+import Register from "./components/Register";
+import Relics from "./components/Relics";
+import Evolutions from "./components/Evolutions";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <nav>
-          <h1>NAVBAR</h1>
-        </nav>
+        <Navbar></Navbar>
       </header>
       <main>
-        <section className="section-hero">
-          <h1>section-hero</h1>
-        </section>
-        <section className="section-register">
-          <h1>section-register</h1>
-        </section>
-        <section className="section-arena">
-          <h1>section-arena</h1>
-        </section>
-        <section className="section-copy">
-          <h1>section-copy</h1>
-        </section>
-        <section className="section-relics">
-          <h1>section-relics</h1>
-        </section>
-        <section className="section-evolutions">
-          <h1>section-evolutions</h1>
-        </section>
-        <section className="section-cta">
-          <h1>section-cta</h1>
-        </section>
-        <footer>
-          <h1>footer</h1>
-        </footer>
+        <Hero></Hero>
+        <Register></Register>
+        <Arena></Arena>
+        <Copy></Copy>
+        <Relics></Relics>
+        <Evolutions></Evolutions>
+        <Cta></Cta>
+        <Footer></Footer>
       </main>
     </div>
   );

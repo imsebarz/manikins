@@ -1,0 +1,32 @@
+nav {
+  display: flex;
+  width: 90%;
+  position: relative;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: white;
+        padding-right: 3rem;
+      }
+    }
+  }
+
+  button {
+    padding: 1.2rem;
+    background-color: rgb(223, 131, 11);
+    border: none;
+    outline: none;
+    color: rgb(131, 74, 0);
+    font-weight: 900;
+    font-size: large;
+    border-radius: 15px;
+  }
+}

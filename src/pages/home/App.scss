@@ -12,13 +12,14 @@ main {
   flex-direction: column;
   place-content: center;
   place-items: center;
+  color: white;
 }
 
 section {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  background-color: #61dafb;
-  border-top: 1px solid #00465c;
+  background-color: #202020;
   width: 100%;
   place-content: center;
   place-items: center;
