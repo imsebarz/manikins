@@ -13,15 +13,15 @@ const Evolutions = () => {
             <div className='characteristics'>
                 <div>
                     <p>🟢</p>
-                    <p>Tradeable</p>
+                    <p>TRADEABLE ON MARKETPLACE</p>
                 </div>
                 <div>
                     <p>🟢</p>
-                    <p>Earn</p>
+                    <p>EARN WHILE PLAYING</p>
                 </div>
                 <div>
                     <p>🟢</p>
-                    <p>Limited</p>
+                    <p>LIMITED EDITIONS</p>
                 </div>
             </div>
         </section>
