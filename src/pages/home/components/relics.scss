@@ -1,10 +1,29 @@
 .section-relics {
-  display: flex;
   flex-direction: column;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(0, 0, 0) 65%
+  );
+  display: grid;
+  .background {
+    width: 100vw;
+    height: auto;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    filter: brightness(0.2);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    z-index: -1;
+  }
   .main {
     display: flex;
     justify-content: space-around;
     width: 80%;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
     align-items: center;
     img {
       width: 50%;
@@ -25,6 +44,12 @@
         h1,
         p {
           margin: 0;
+        }
+        h1 {
+          font-size: 3rem;
+        }
+        p {
+          color: gray;
         }
       }
     }

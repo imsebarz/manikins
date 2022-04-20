@@ -1,10 +1,16 @@
 import React from "react";
 import "./relics.scss";
 import manikinSmoke from "../../../assets/maneki_smoke.png";
+import manikinsArena from "../../../assets/manikinsArena.png";
 
 const Relics = () => {
   return (
     <section className="section-relics">
+      <img
+        src={manikinsArena}
+        className="background"
+        alt="manikins on the arena"
+      />
       <div className="main">
         <div className="copy">
           <div>

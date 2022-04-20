@@ -1,0 +1,35 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  .links {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    .logo {
+      width: 200px;
+      height: auto;
+    }
+    .navigation {
+      ul {
+        columns: 2;
+        li {
+          padding: 10px;
+          list-style: none;
+          font-weight: 700;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .companies {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      img {
+        width: 100px;
+        height: auto;
+      }
+    }
+  }
+}
