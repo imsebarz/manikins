@@ -8,13 +8,9 @@ export const UserDispatchContext = createContext();
 
 
 const initialState = {
-    token: '',
-    isAuthenticated: !!localStorage.getItem('iduser'),
-    iduser: localStorage.getItem("iduser") || '',
+    isAuthenticated: !!localStorage.getItem('username'),
     username: localStorage.getItem("username") || '',
-    firstname: localStorage.getItem("firstname") || '',
-    middlename: localStorage.getItem("middlename") || '',
-    lastname: localStorage.getItem("lastname") || '',
+    name: localStorage.getItem("name") || '',
     email: localStorage.getItem("email") || '',
 }
 

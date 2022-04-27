@@ -4,13 +4,10 @@ export default function userReducer(state, action) {
         case "LOGIN_SUCCESS":
             return {
                 ...state,
-                isAuthenticated: !!localStorage.getItem('iduser'),
-                iduser: localStorage.getItem('iduser'),
+                isAuthenticated: true,
                 username: localStorage.getItem("username"),
-                firstname: localStorage.getItem("firstname"),
-                middlename: localStorage.getItem("middlename"),
-                lastname: localStorage.getItem("lastname"),
-                email: localStorage.getItem("email"),
+                // name: localStorage.getItem("name"),
+                // email: localStorage.getItem("email"),
                 loginError: false,
             };
         case "SIGN_OUT_SUCCESS":
