@@ -1,31 +1,20 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import './navbar.scss'
-import { Link, ETHTokenType } from '@imtbl/imx-sdk';
-const link = new Link('https://link.ropsten.x.immutable.com');
-
-
-const testIMX = async () => {
-    const { address } = await link.setup({});
-    localStorage.setItem('address', address);
-}
-
-const deposit = async () => {
-    link.deposit({
-    });
-}
-
-
-const disconnect = async () => {
-    localStorage.removeItem('address');
-}
-
+import { useUserState, useUserDispatch } from '../context/user/State'
+import { signOut } from '../context/user/Actions'
 
 const Navbar = () => {
+
+    const { isAuthenticated } = useUserState()
+    const userDispatch = useUserDispatch()
+    const navigate = useNavigate()
+
     return (
         <nav className='navbar'>
             <ul>
                 <li id='logo-head'>
-                    <a href="/">{localStorage.getItem('address')}</a>
+                    <a href="/">{ }</a>
                 </li>
                 <li>
                     <a href="/team">Team</a>
@@ -43,10 +32,22 @@ const Navbar = () => {
                     <a href="/about">About</a>
                 </li>
             </ul>
-            <button onClick={testIMX}>Join now</button>
-            <button onClick={deposit}>Deposit</button>
-            <button onClick={disconnect}>disconnect</button>
-        </nav>
+            {isAuthenticated
+                ?
+                <button onClick={() => signOut(userDispatch, navigate)}>Log out </button>
+                :
+                <>
+                    <Link to='/register'>
+                        <button >Register </button>
+                    </Link>
+                    <Link to='/login'>
+                        <button >Login</button>
+                    </Link>
+                </>
+
+            }
+
+        </nav >
     )
 }
 

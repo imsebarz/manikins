@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { Link, ETHTokenType } from '@imtbl/imx-sdk';
 import './login.scss';
+import { Link as BrowserLink, useNavigate } from 'react-router-dom';
+import { useUserDispatch, useUserState } from '../../context/user/State';
+import { loginUser } from '../../context/user/Actions';
 
 
 const Login = () => {
@@ -8,6 +11,12 @@ const Login = () => {
     const link = new Link('https://link.ropsten.x.immutable.com');
 
     const [myAddress, setAddress] = useState('')
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    const { isAuthenticated } = useUserState()
+    const userDispatch = useUserDispatch()
+    const navigate = useNavigate()
+
 
     const testIMX = async () => {
         const { address } = await link.setup({});
@@ -26,14 +35,46 @@ const Login = () => {
         setAddress('')
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const user = {
+            username: username,
+            password: password,
+        }
+        loginUser(userDispatch, user, navigate)
+
+    }
+
+
 
     return (
         <section>
-            <h1>{myAddress}</h1>
-            <button onClick={testIMX}>Join now</button>
-            <button onClick={deposit}>Deposit</button>
-            <button onClick={disconnect}>disconnect</button>
-        </section>
+            {isAuthenticated === false
+                ?
+                (
+                    <>
+                        <h1>{myAddress || "Login"}</h1>
+                        <form onSubmit={(e) => handleSubmit(e)}>
+                            <input type='text' placeholder='username' onChange={(e) => setUsername(e.target.value)} />
+                            <input type='password' placeholder='password' onChange={(e) => setPassword(e.target.value)} />
+                            <button type='submit'>Login</button>
+                        </form>
+                        <BrowserLink to='/' >
+                            <button>Go back</button>
+                        </BrowserLink>
+                    </>
+                )
+                :
+                (
+                    <>
+                        <h1>You are already logged</h1>
+                        <BrowserLink to='/' >
+                            <button>Go back</button>
+                        </BrowserLink>
+                    </>
+                )
+            }
+        </section >
     )
 }
 

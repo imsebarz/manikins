@@ -1,10 +1,15 @@
 import React, { useState } from "react";
-import { Link, ETHTokenType } from "@imtbl/imx-sdk";
 import "./register.scss";
+import { registerUser } from "../../context/user/Actions";
+import { useUserDispatch } from "../../context/user/State";
+import { useNavigate, Link } from "react-router-dom";
 
 const Register = () => {
   // States for registration
+  const navigate = useNavigate()
+  const userDispatch = useUserDispatch()
   const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
@@ -17,6 +22,11 @@ const Register = () => {
   // Handling the name change
   const handleName = (e) => {
     setName(e.target.value);
+    setSubmitted(false);
+  };
+
+  const handleUsername = (e) => {
+    setUsername(e.target.value);
     setSubmitted(false);
   };
 
@@ -56,6 +66,13 @@ const Register = () => {
     } else {
       setSubmitted(true);
       setError(false);
+      const user = {
+        name: name,
+        username: username,
+        email: email,
+        password: password,
+      }
+      registerUser(userDispatch, user, navigate)
     }
   };
 
@@ -73,6 +90,16 @@ const Register = () => {
           type="text"
           required
           placeholder="Enter your name"
+        />
+
+        <label className="label">Username</label>
+        <input
+          onChange={handleUsername}
+          className="input"
+          value={username}
+          type="text"
+          required
+          placeholder="Create a username"
         />
 
         <label className="label">Email</label>
@@ -104,10 +131,14 @@ const Register = () => {
           type="password"
         />
 
-        <button className="btn" type="submit">
+        <button type="submit">
           Submit
         </button>
       </form>
+      <Link to='/' >
+        <button>Go back</button>
+      </Link>
+
 
       {!error ? <h1>Not errors</h1> : <h1>{error}</h1>}
     </section>
