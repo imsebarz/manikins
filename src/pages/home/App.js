@@ -8,6 +8,7 @@ import Hero from "./components/Hero";
 import Register from "./components/Register";
 import Relics from "./components/Relics";
 import Evolutions from "./components/Evolutions";
+import ComingSoon from "./components/ComingSoon";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       </header>
       <main>
         <Hero></Hero>
-        <Register></Register>
+        <ComingSoon></ComingSoon>
         <Arena></Arena>
         <Copy></Copy>
         <Relics></Relics>

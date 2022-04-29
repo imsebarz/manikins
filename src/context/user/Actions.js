@@ -26,13 +26,6 @@ export const loginUser = async (dispatch, data, navigate) => {
 };
 
 
-const setUserState = (dispatch, result) => {
-    localStorage.setItem("username", result.username);
-    // localStorage.setItem("name", result.name);
-    // localStorage.setItem("email", result.email);
-    dispatch({ type: "LOGIN_SUCCESS" });
-}
-
 export function signOut(dispatch, navigate) {
     localStorage.removeItem("username");
     localStorage.removeItem("email");
@@ -40,3 +33,11 @@ export function signOut(dispatch, navigate) {
     dispatch({ type: "SIGN_OUT_SUCCESS" });
     navigate("/login");
 }
+
+const setUserState = (dispatch, result) => {
+    localStorage.setItem("username", result.username);
+    // localStorage.setItem("name", result.name);
+    // localStorage.setItem("email", result.email);
+    dispatch({ type: "LOGIN_SUCCESS" });
+}
+

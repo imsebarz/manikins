@@ -19,15 +19,27 @@
     z-index: -1;
   }
   .main {
-    display: flex;
-    justify-content: space-around;
+    // display: flex;
     width: 80%;
     grid-column: 1 / -1;
+    height: auto;
     grid-row: 1 / -1;
     align-items: center;
+    justify-content: space-around;
     img {
       width: 50%;
       height: auto;
+    }
+    h1 {
+      text-align: center;
+    }
+
+    .videos {
+      display: flex;
+      gap: 100px;
+      video {
+        width: 20%;
+      }
     }
     .copy {
       width: 50%;

@@ -17,35 +17,38 @@ const Navbar = () => {
                     <a href="/">{ }</a>
                 </li>
                 <li>
-                    <a href="/team">Team</a>
-                </li>
-                <li>
-                    <a href="/teasers">Teasers</a>
-                </li>
-                <li>
-                    <a href="/market">Market</a>
-                </li>
-                <li>
-                    <a href="/faq">FAQ</a>
-                </li>
-                <li>
                     <a href="/about">About</a>
                 </li>
-            </ul>
-            {isAuthenticated
-                ?
-                <button onClick={() => signOut(userDispatch, navigate)}>Log out </button>
-                :
-                <>
-                    <Link to='/register'>
-                        <button >Register </button>
-                    </Link>
-                    <Link to='/login'>
-                        <button >Login</button>
-                    </Link>
-                </>
+                <li>
+                    <a href="/market">NTF's</a>
+                </li>
+                <li>
+                    <a href="/team">Our Team</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact US</a>
+                </li>
+                {isAuthenticated
+                    ?
+                    <li>
+                        <button onClick={() => signOut(userDispatch, navigate)}>Log out </button>
+                    </li>
+                    :
+                    <>
+                        <li>
+                            <Link to='/register'>
+                                <button >Register </button>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to='/login'>
+                                <button >Login</button>
+                            </Link>
+                        </li>
+                    </>
 
-            }
+                }
+            </ul>
 
         </nav >
     )

@@ -48,7 +48,7 @@ const Login = () => {
 
 
     return (
-        <section>
+        <section className='login'>
             {isAuthenticated === false
                 ?
                 (

@@ -1,0 +1,29 @@
+.section-comingsoon {
+  display: flex;
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+  h1 {
+    font-size: 5rem;
+    color: gold;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  p {
+    margin: 1em;
+  }
+  button {
+    background: rgb(187, 135, 15);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+  span {
+    font-size: 1rem;
+  }
+}

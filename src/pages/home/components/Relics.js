@@ -1,6 +1,6 @@
 import React from "react";
 import "./relics.scss";
-import manikinSmoke from "../../../assets/maneki_smoke.png";
+import item from "../../../assets/item.mp4";
 import manikinsArena from "../../../assets/manikinsArena.png";
 
 const Relics = () => {
@@ -14,18 +14,23 @@ const Relics = () => {
       <div className="main">
         <div className="copy">
           <div>
-            <h1>Characters don't matter</h1>
-            <p>Every person uses the same character: A maniki</p>
-          </div>
-          <div>
-            <h1>Relics Matter the most</h1>
-            <p>
-              Every item is an NFT and it's called a Relic. you can use in the
-              game to power up your character
-            </p>
+            <h1>Our Coffers</h1>
           </div>
         </div>
-        <img src={manikinSmoke} alt="manikin with smoke" />
+        <div className="videos">
+          <video autoPlay loop muted>
+            <source src={item} type="video/ogg" />
+          </video>
+          <video autoPlay loop muted>
+            <source src={item} type="video/ogg" />
+          </video>
+          <video autoPlay loop muted>
+            <source src={item} type="video/ogg" />
+          </video>
+          <video autoPlay loop muted>
+            <source src={item} type="video/ogg" />
+          </video>
+        </div>
       </div>
       <button>See more Relics</button>
     </section>

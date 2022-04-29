@@ -1,17 +1,19 @@
-button {
-  margin: 20px;
-  padding: 15px 20px;
-  color: white;
-  min-width: 200px;
-  border-radius: 5px;
-  border: 2px solid rgb(6, 149, 216);
-  background-color: #ffffff07;
-}
+.login {
+  button {
+    margin: 20px;
+    padding: 15px 20px;
+    color: white;
+    min-width: 200px;
+    border-radius: 5px;
+    border: 2px solid rgb(6, 149, 216);
+    background-color: #ffffff07;
+  }
 
-button:hover {
-  background-color: #ffffff17;
-}
+  button:hover {
+    background-color: #ffffff17;
+  }
 
-h1 {
-  color: white;
+  h1 {
+    color: white;
+  }
 }

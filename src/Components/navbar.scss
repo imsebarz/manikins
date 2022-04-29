@@ -7,12 +7,13 @@ nav {
   width: 90%;
   position: relative;
   z-index: 1000;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: row;
   ul {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     li {
       list-style: none;
       a {
@@ -24,13 +25,14 @@ nav {
   }
 
   button {
-    // padding: 10px 0px;
+    padding: 10px;
     background-color: rgb(223, 131, 11);
     border: none;
     outline: none;
     color: rgb(131, 74, 0);
     font-weight: 900;
     font-size: medium;
+    margin: 0;
     border-radius: 15px;
   }
 }
