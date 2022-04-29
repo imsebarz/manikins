@@ -5,7 +5,6 @@ import Arena from "./components/Arena";
 import Cta from "./components/Cta.js";
 import Copy from "./components/Copy";
 import Hero from "./components/Hero";
-import Register from "./components/Register";
 import Relics from "./components/Relics";
 import Evolutions from "./components/Evolutions";
 import ComingSoon from "./components/ComingSoon";
