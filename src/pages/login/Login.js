@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, ETHTokenType } from '@imtbl/imx-sdk';
+// import { Link, ETHTokenType } from '@imtbl/imx-sdk';
 import './login.scss';
 import { Link as BrowserLink, useNavigate } from 'react-router-dom';
 import { useUserDispatch, useUserState } from '../../context/user/State';
@@ -8,9 +8,9 @@ import { loginUser } from '../../context/user/Actions';
 
 const Login = () => {
 
-    const link = new Link('https://link.ropsten.x.immutable.com');
+    // const link = new Link('https://link.ropsten.x.immutable.com');
 
-    const [myAddress, setAddress] = useState('')
+    // const [myAddress, setAddress] = useState('')
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const { isAuthenticated } = useUserState()
@@ -18,22 +18,22 @@ const Login = () => {
     const navigate = useNavigate()
 
 
-    const testIMX = async () => {
-        const { address } = await link.setup({});
-        localStorage.setItem('address', address);
-        setAddress(address)
-    }
+    // const testIMX = async () => {
+    //     const { address } = await link.setup({});
+    //     localStorage.setItem('address', address);
+    //     setAddress(address)
+    // }
 
-    const deposit = async () => {
-        link.deposit({
-        });
-    }
+    // const deposit = async () => {
+    //     link.deposit({
+    //     });
+    // }
 
 
-    const disconnect = async () => {
-        localStorage.removeItem('address');
-        setAddress('')
-    }
+    // const disconnect = async () => {
+    //     localStorage.removeItem('address');
+    //     setAddress('')
+    // }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -53,7 +53,7 @@ const Login = () => {
                 ?
                 (
                     <>
-                        <h1>{myAddress || "Login"}</h1>
+                        <h1>Login</h1>
                         <form onSubmit={(e) => handleSubmit(e)}>
                             <input type='text' placeholder='username' onChange={(e) => setUsername(e.target.value)} />
                             <input type='password' placeholder='password' onChange={(e) => setPassword(e.target.value)} />

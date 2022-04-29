@@ -16,30 +16,25 @@ const Register = () => {
   const [passwordConfirmed, setPasswordConfirmed] = useState();
 
   // Stat for checking the errors
-  const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
 
   // Handling the name change
   const handleName = (e) => {
     setName(e.target.value);
-    setSubmitted(false);
   };
 
   const handleUsername = (e) => {
     setUsername(e.target.value);
-    setSubmitted(false);
   };
 
   // Handling the email change
   const handleEmail = (e) => {
     setEmail(e.target.value);
-    setSubmitted(false);
   };
 
   // Handling the password change
   const handlePassword = (e) => {
     setPassword(e.target.value);
-    setSubmitted(false);
   };
 
   // Handling the password confirmation
@@ -52,7 +47,6 @@ const Register = () => {
       setError(true);
       setPasswordConfirmed(false);
     }
-    setSubmitted(false);
   };
 
   // Handling the form submission
@@ -60,11 +54,10 @@ const Register = () => {
     e.preventDefault();
     if (
       (name === "" || email === "" || password === "") &&
-      passwordConfirmed == false
+      passwordConfirmed === false
     ) {
       setError(true);
     } else {
-      setSubmitted(true);
       setError(false);
       const user = {
         name: name,
