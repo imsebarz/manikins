@@ -1,8 +1,8 @@
 import React from "react";
 import "./footer.scss";
 import logo from "../assets/logo.png";
-import litgLogo from "../assets/litgLogo.png";
-import fryosLogo from "../assets/fryosLogo.png";
+// import litgLogo from "../assets/litgLogo.png";
+// import fryosLogo from "../assets/fryosLogo.png";
 import instagram from "../assets/instagram.png";
 import facebook from "../assets/facebook.png";
 import youtube from "../assets/youtube.png";

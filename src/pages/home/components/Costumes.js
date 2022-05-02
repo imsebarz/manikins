@@ -8,7 +8,6 @@ const Costumes = () => {
       <h1>
         You start like everyone else <br /> You end up like no one else
       </h1>
-      <h1></h1>
       <div className="content">
         <div className="slider">
           <div className="lvl"></div>
