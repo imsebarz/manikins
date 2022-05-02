@@ -8,6 +8,9 @@ import Hero from "./components/Hero";
 import Relics from "./components/Relics";
 import Evolutions from "./components/Evolutions";
 import ComingSoon from "./components/ComingSoon";
+import Carousel from "../../Components/Carousel";
+import Costumes from "./components/Costumes";
+import Features from "./components/Features";
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
         <Copy></Copy>
         <Relics></Relics>
         <Evolutions></Evolutions>
+        <Carousel></Carousel>
+        <Costumes></Costumes>
+        <Features></Features>
         <Cta></Cta>
         <Footer></Footer>
       </main>

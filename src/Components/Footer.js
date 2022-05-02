@@ -3,31 +3,23 @@ import "./footer.scss";
 import logo from "../assets/logo.png";
 import litgLogo from "../assets/litgLogo.png";
 import fryosLogo from "../assets/fryosLogo.png";
+import instagram from "../assets/instagram.png";
+import facebook from "../assets/facebook.png";
+import youtube from "../assets/youtube.png";
+import discord from "../assets/discord.png";
 
 const Footer = () => {
   return (
     <footer>
       <div className="links">
         <img src={logo} alt="" className="logo" />
-        <div className="navigation">
-          <ul>
-            <li>Team</li>
-            <li>Teasers</li>
-            <li>Market</li>
-            <li>FAQ</li>
-            <li>About</li>
-            <li>Home</li>
-          </ul>
-        </div>
         <div className="social">
-          <p>🟢</p>
-          <p>🟢</p>
-          <p>🟢</p>
+          <img src={facebook} alt="" />
+          <img src={youtube} alt="" />
+          <img src={instagram} alt="" />
+          <img src={discord} alt="" />
         </div>
-        <div className="companies">
-          <img src={litgLogo} alt="" />
-          <img src={fryosLogo} alt="" />
-        </div>
+        <h4>FAQ</h4>
       </div>
       <div className="copy">
         <p>Game development made with ❤️ from Colombia</p>
