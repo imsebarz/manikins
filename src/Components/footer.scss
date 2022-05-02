@@ -1,37 +1,25 @@
 footer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 50px;
+  padding-top: 30px;
   width: 100%;
   background: rgb(0, 0, 0, 1);
   .links {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 200px;
     align-items: center;
-    .logo {
-      width: 200px;
-      height: auto;
-    }
-    .navigation {
-      ul {
-        columns: 2;
-        li {
-          padding: 10px;
-          list-style: none;
-          font-weight: 700;
-          font-size: 1.2rem;
-        }
-      }
-    }
-    .companies {
+    .social {
       display: flex;
-      flex-direction: column;
-      gap: 30px;
-      img {
-        width: 100px;
-        height: auto;
-      }
+      gap: 50px;
+    }
+    .logo {
+      width: 150px;
+      height: auto;
     }
   }
 }

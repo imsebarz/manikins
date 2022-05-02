@@ -1,0 +1,43 @@
+.costumes-section {
+  background: url("../../../assets/Intersection.png");
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  height: auto;
+  padding: 150px 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    line-height: 0.9;
+    font-size: 3rem;
+    color: goldenrod;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    img {
+      width: 40%;
+    }
+    .slider {
+      display: flex;
+      width: 50%;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 100px;
+      justify-content: center;
+      .lvl {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        background: #00000077;
+        border: 2px solid goldenrod;
+      }
+    }
+  }
+}
