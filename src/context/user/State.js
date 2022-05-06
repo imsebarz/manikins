@@ -12,6 +12,7 @@ const initialState = {
     username: localStorage.getItem("username") || '',
     name: localStorage.getItem("name") || '',
     email: localStorage.getItem("email") || '',
+    whitelistMail: ''
 }
 
 

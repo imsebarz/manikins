@@ -34,10 +34,18 @@ export function signOut(dispatch, navigate) {
     navigate("/login");
 }
 
+export async function joinWhiteList(dispatch, data) {
+    await axios
+        .post(`http://localhost:3000/api/user/whitelist`, data)
+        .then(() => { console.log('user has joined the whitelist') })
+        .catch(error => {
+            console.error('There is an error: ', error)
+        });
+}
+
 const setUserState = (dispatch, result) => {
     localStorage.setItem("username", result.username);
     // localStorage.setItem("name", result.name);
     // localStorage.setItem("email", result.email);
     dispatch({ type: "LOGIN_SUCCESS" });
 }
-
