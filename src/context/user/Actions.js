@@ -34,10 +34,18 @@ export function signOut(dispatch, navigate) {
     navigate("/login");
 }
 
-export async function joinWhiteList(dispatch, data) {
+
+
+export async function joinWaitList(dispatch, data) {
     await axios
-        .post(`http://localhost:3000/api/user/whitelist`, data)
-        .then(() => { console.log('user has joined the whitelist') })
+        .post(
+            `https://inmutable.azurewebsites.net/whitelist/`,
+            { email: data },
+            { headers: { "Content-Type": "application/json" } }
+        )
+        .then((result) => {
+            console.log('user has joined the whitelist', result.data)
+        })
         .catch(error => {
             console.error('There is an error: ', error)
         });
