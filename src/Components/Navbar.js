@@ -1,14 +1,14 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+// import { Link, useNavigate } from 'react-router-dom'
 import './navbar.scss'
-import { useUserState, useUserDispatch } from '../context/user/State'
-import { signOut } from '../context/user/Actions'
+// import { useUserState, useUserDispatch } from '../context/user/State'
+// import { signOut } from '../context/user/Actions'
 
 const Navbar = () => {
 
-    const { isAuthenticated } = useUserState()
-    const userDispatch = useUserDispatch()
-    const navigate = useNavigate()
+    // const { isAuthenticated } = useUserState()
+    // const userDispatch = useUserDispatch()
+    // const navigate = useNavigate()
 
     return (
         <nav className='navbar'>
