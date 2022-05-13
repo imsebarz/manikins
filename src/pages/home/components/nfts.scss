@@ -1,5 +1,28 @@
 .section-nfts {
   background: #00090b;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  .interaction {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    .cards {
+      width: 50%;
+      gap: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      img {
+        width: 200px;
+      }
+    }
+    .character {
+      img {
+        width: 400px;
+      }
+    }
+  }
   h1 {
     font-size: 6rem;
     color: white;
