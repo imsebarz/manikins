@@ -1,11 +1,11 @@
 import React from "react";
-import "./relics.scss";
+import "./coffers.scss";
 import item from "../../../assets/item.mp4";
 import manikinsArena from "../../../assets/manikinsArena.png";
 
-const Relics = () => {
+const Coffers = () => {
   return (
-    <section className="section-relics">
+    <section className="section-coffers">
       <img
         src={manikinsArena}
         className="background"
@@ -14,7 +14,7 @@ const Relics = () => {
       <div className="main">
         <div className="copy">
           <div>
-            <h1>Our Coffers</h1>
+            <h1 className="golden">Our Coffers</h1>
           </div>
         </div>
         <div className="videos">
@@ -32,9 +32,9 @@ const Relics = () => {
           </video>
         </div>
       </div>
-      <button>See more Relics</button>
+      <button>See more Coffers</button>
     </section>
   );
 };
 
-export default Relics;
+export default Coffers;

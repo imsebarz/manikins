@@ -1,16 +1,16 @@
 import Footer from "../../Components/Footer";
 import Navbar from "../../Components/Navbar";
 import "./App.scss";
-import Arena from "./components/Arena";
+import About from "./components/About";
 import Cta from "./components/Cta.js";
-import Copy from "./components/Copy";
 import Hero from "./components/Hero";
-import Relics from "./components/Relics";
+import Coffers from "./components/Coffers";
 import Evolutions from "./components/Evolutions";
 import ComingSoon from "./components/ComingSoon";
 import Carousel from "../../Components/Carousel";
 import Costumes from "./components/Costumes";
 import Features from "./components/Features";
+import Nfts from "./components/Nfts";
 
 function App() {
   return (
@@ -21,9 +21,9 @@ function App() {
       <main>
         <Hero></Hero>
         <ComingSoon></ComingSoon>
-        <Arena></Arena>
-        <Copy></Copy>
-        <Relics></Relics>
+        <About></About>
+        <Nfts></Nfts>
+        <Coffers></Coffers>
         <Evolutions></Evolutions>
         <Carousel></Carousel>
         <Costumes></Costumes>

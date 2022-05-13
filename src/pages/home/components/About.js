@@ -1,12 +1,12 @@
 import React from 'react'
-import './arena.scss'
+import './about.scss'
 import manikinsArena from '../../../assets/manikinsArena.png'
 
-const Arena = () => {
+const About = () => {
     return (
-        <section className="section-arena">
+        <section className="section-about">
             <div className='content'>
-                <h1>About the game</h1>
+                <h1 className='golden'>ABOUT THE GAME</h1>
                 <p>Manikins  is a Tactic game and NFT Relics collector built on the Immutable Blockchain, releasing on PC  in 2022.</p>
                 <p>Play-to-earn in the arena and defeat other players around the world while you power up your skills using Relics.</p>
             </div>
@@ -15,4 +15,4 @@ const Arena = () => {
     )
 }
 
-export default Arena
+export default About

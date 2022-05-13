@@ -1,0 +1,27 @@
+.section-about {
+  display: flex;
+  flex-direction: row;
+  background: url("../../../assets/aboutbg.png") no-repeat center center fixed;
+  border: none;
+  gap: 100px;
+  .content {
+    width: 40%;
+    text-align: left;
+    color: white;
+    h1 {
+      width: max-content;
+      font-size: 3.5rem;
+      padding-bottom: 15px;
+      border-bottom: 2px solid rgb(255, 216, 118);
+      text-align: left;
+    }
+    p {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+  img {
+    width: 30%;
+    border: 2px solid rgb(255, 216, 118);
+  }
+}

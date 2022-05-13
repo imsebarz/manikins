@@ -19,7 +19,6 @@ const Footer = () => {
           <img src={instagram} alt="" />
           <img src={discord} alt="" />
         </div>
-        <h4>FAQ</h4>
       </div>
       <div className="copy">
         <p>Game development made with ❤️ from Colombia</p>

@@ -17,14 +17,14 @@ const Cta = () => {
 
     return (
         <section className="section-cta">
-            <h1>REGISTER NOW!</h1>
+            <h1 className='golden'>REGISTER NOW!</h1>
             <div className='cta-input'>
                 <p>
                     Register now and be the first to know about manikins beta, relics sales, events and more!
                 </p>
                 <form className='cta-input-container' onSubmit={(e) => handleSubmit(e)}>
                     <input type='email' required placeholder='Enter your email' value={mail} onChange={(e) => setMail(e.target.value)}></input>
-                    <button>Join</button>
+                    <button className='golden'>Join</button>
                 </form>
             </div>
         </section>

@@ -28,7 +28,7 @@ const Navbar = () => {
                 <li>
                     <a href="/contact">Contact US</a>
                 </li>
-                {isAuthenticated
+                {/* {isAuthenticated
                     ?
                     <li>
                         <button onClick={() => signOut(userDispatch, navigate)}>Log out </button>
@@ -47,7 +47,7 @@ const Navbar = () => {
                         </li>
                     </>
 
-                }
+                } */}
             </ul>
 
         </nav >
