@@ -1,9 +1,9 @@
-import React from "react";
-import particles from "../../../assets/particles.mp4";
-import hero from "../../../assets/hero.png";
-import tipografia from "../../../assets/tipografia.png";
-import arrow from "../../../assets/arrow.png";
-import "./hero.scss";
+import React from 'react'
+import particles from '../../../assets/particles.mp4'
+import hero from '../../../assets/hero.png'
+import tipografia from '../../../assets/tipografia.png'
+import arrow from '../../../assets/arrow.png'
+import './hero.scss'
 
 const Hero = () => {
   return (
@@ -21,11 +21,11 @@ const Hero = () => {
       <div className="content">
         <img src={tipografia} alt="hero" />
         <h3>Buy, improve and sell NFTs while you play with our new game.</h3>
-        <button className="goldenButton">View NFT's</button>
+        <button className="goldenButton">{"View NFT's"}</button>
         <img src={arrow} className="arrow" alt="hero" />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

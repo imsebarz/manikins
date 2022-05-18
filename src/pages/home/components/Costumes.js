@@ -1,6 +1,6 @@
-import React from "react";
-import "./costumes.scss";
-import costume from "../../../assets/costume.png";
+import React from 'react'
+import './costumes.scss'
+import costume from '../../../assets/costume.png'
 
 const Costumes = () => {
   return (
@@ -18,7 +18,7 @@ const Costumes = () => {
         <img src={costume} alt="hola" />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Costumes;
+export default Costumes

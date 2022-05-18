@@ -1,7 +1,7 @@
-import React from "react";
-import "./nfts.scss";
-import card from "../../../assets/card.png";
-import character from "../../../assets/character.png";
+import React from 'react'
+import './nfts.scss'
+import card from '../../../assets/card.png'
+import character from '../../../assets/character.png'
 
 const Nfts = () => {
   return (
@@ -22,7 +22,7 @@ const Nfts = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Nfts;
+export default Nfts

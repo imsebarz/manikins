@@ -1,15 +1,15 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import './index.scss';
-import App from './pages/home/App';
-import Login from './pages/login/Login';
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.scss'
+import App from './pages/home/App'
+import Login from './pages/login/Login'
 // import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Register from './pages/register/Register';
-import { UserProvider } from './context/user/State';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Register from './pages/register/Register'
+import { UserProvider } from './context/user/State'
 
-const container = document.getElementById('root');
-const root = createRoot(container);
+const container = document.getElementById('root')
+const root = createRoot(container)
 
 root.render(
   <React.StrictMode>
@@ -23,9 +23,7 @@ root.render(
       </BrowserRouter>
     </UserProvider>
   </React.StrictMode>
-);
-
-
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

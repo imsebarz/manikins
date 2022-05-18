@@ -3,7 +3,7 @@ import './about.scss'
 import manikinsArena from '../../../assets/manikinsArena.png'
 
 const About = () => {
-    return (
+  return (
         <section className="section-about">
             <div className='content'>
                 <h1 className='golden'>ABOUT THE GAME</h1>
@@ -12,7 +12,7 @@ const About = () => {
             </div>
             <img src={manikinsArena} alt='Manikin' />
         </section>
-    )
+  )
 }
 
 export default About

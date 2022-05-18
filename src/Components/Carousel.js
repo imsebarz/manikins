@@ -1,8 +1,8 @@
-import React from "react";
-import "./carousel.scss";
-import manikin1 from "../assets/manikin1.png";
-import manikin2 from "../assets/manikin2.png";
-import manikin3 from "../assets/manikin3.png";
+import React from 'react'
+import './carousel.scss'
+import manikin1 from '../assets/manikin1.png'
+import manikin2 from '../assets/manikin2.png'
+import manikin3 from '../assets/manikin3.png'
 
 const Carousel = () => {
   return (
@@ -20,7 +20,7 @@ const Carousel = () => {
         <img src={manikin1} alt="manikin moving" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Carousel;
+export default Carousel

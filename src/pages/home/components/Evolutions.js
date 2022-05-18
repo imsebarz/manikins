@@ -3,7 +3,7 @@ import helmet from '../../../assets/helmet.png'
 import './evolutions.scss'
 
 const Evolutions = () => {
-    return (
+  return (
         <section className="section-evolutions">
             <h1 className='golden'>EVERY RELIC HAS<br /> <span>EVOLUTIONS</span></h1>
             <div className='content'>
@@ -16,7 +16,7 @@ const Evolutions = () => {
                 <img src={helmet} alt='magic helmet with evolutions' />
             </div>
         </section >
-    )
+  )
 }
 
 export default Evolutions
