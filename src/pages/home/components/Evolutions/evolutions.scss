@@ -1,5 +1,7 @@
 .section-evolutions {
-  background: #000;
+  background-color: #000;
+  background: url('../../../../assets/smokebg2.png') no-repeat center center;
+  padding-top: 100px;
 
   h1 {
     font-size: 3rem;
@@ -20,10 +22,55 @@
 
     .copy {
       width: 40%;
+      font-size: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      h3 {
+        font-style: italic;
+      }
+
+      p {
+        text-align: left;
+        margin: 0;
+      }
+
+      .stages {
+        border: 1px solid goldenrod;
+        margin: 30px 0;
+        padding: 5px 30px 15px 30px;
+        border-radius: 10px;
+
+        button {
+          width: 60px;
+          height: 40px;
+          border: 1px solid goldenrod;
+          border-radius: 5px;
+          margin: 10px;
+          background-color: rgba(148, 106, 0, 0.2);
+          color: goldenrod
+        }
+
+        button:hover {
+          background-color: rgba(148, 106, 0, 0.5);
+        }
+
+        button:active {
+          background-color: rgba(148, 106, 0, 0.8);
+        }
+
+        h3 {
+          margin: 10px;
+        }
+      }
     }
 
     img {
-      width: 30%;
+      width: 40%;
+      background: rgb(255, 199, 88);
+      background: radial-gradient(circle, rgba(255, 199, 88, 0.456) 0%, rgba(255, 247, 227, 0) 70%);
     }
   }
 }
