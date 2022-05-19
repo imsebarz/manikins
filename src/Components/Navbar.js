@@ -5,11 +5,11 @@ import './navbar.scss'
 // import { signOut } from '../context/user/Actions'
 
 const Navbar = () => {
-  // const { isAuthenticated } = useUserState()
-  // const userDispatch = useUserDispatch()
-  // const navigate = useNavigate()
+    // const { isAuthenticated } = useUserState()
+    // const userDispatch = useUserDispatch()
+    // const navigate = useNavigate()
 
-  return (
+    return (
         <nav className='navbar'>
             <ul>
                 <li id='logo-head'>
@@ -50,16 +50,7 @@ const Navbar = () => {
             </ul>
 
         </nav >
-  )
+    )
 }
 
 export default Navbar
-
-// create a function to convert decimal to binary
-function decimalToBinary (decimal) {
-  return (decimal >>> 0).toString(2)
-}
-
-function binaryToDecimal (binary) {
-  return parseInt(binary, 2)
-}

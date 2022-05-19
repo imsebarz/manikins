@@ -25,7 +25,7 @@ export const loginUser = async (dispatch, data, navigate) => {
     })
 }
 
-export function signOut (dispatch, navigate) {
+export function signOut(dispatch, navigate) {
   localStorage.removeItem('username')
   localStorage.removeItem('email')
   localStorage.removeItem('name')
@@ -33,7 +33,7 @@ export function signOut (dispatch, navigate) {
   navigate('/login')
 }
 
-export async function joinWaitList (dispatch, data) {
+export async function joinWaitList(dispatch, data) {
   await axios
     .post(
       'https://inmutable.azurewebsites.net/whitelist/',

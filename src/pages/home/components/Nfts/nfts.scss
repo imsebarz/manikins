@@ -3,26 +3,35 @@
   display: flex;
   width: 100%;
   flex-direction: column;
+
+  .title {
+    margin-bottom: 50px;
+  }
+
   .interaction {
     display: flex;
     width: 100%;
     justify-content: space-around;
     align-items: center;
+
     .cards {
-      width: 50%;
+      width: 60%;
       gap: 50px;
       display: flex;
       flex-wrap: wrap;
+
       img {
-        width: 200px;
+        width: 180px;
       }
     }
+
     .character {
       img {
         width: 400px;
       }
     }
   }
+
   h1 {
     font-size: 6rem;
     color: white;

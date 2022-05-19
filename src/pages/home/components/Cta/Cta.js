@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './cta.scss'
-import { joinWaitList } from '../../../context/user/Actions'
-import { useUserDispatch } from '../../../context/user/State'
+import { joinWaitList } from '../../../../context/user/Actions'
+import { useUserDispatch } from '../../../../context/user/State'
 
 const Cta = () => {
   const [mail, setMail] = useState('')

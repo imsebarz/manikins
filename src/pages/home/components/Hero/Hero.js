@@ -1,8 +1,8 @@
 import React from 'react'
-import particles from '../../../assets/particles.mp4'
-import hero from '../../../assets/hero.png'
-import tipografia from '../../../assets/tipografia.png'
-import arrow from '../../../assets/arrow.png'
+import particles from '../../../../assets/particles.mp4'
+import hero from '../../../../assets/hero.png'
+import tipografia from '../../../../assets/tipografia.png'
+import arrow from '../../../../assets/arrow.png'
 import './hero.scss'
 
 const Hero = () => {

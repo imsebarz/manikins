@@ -1,8 +1,8 @@
 import React from 'react'
 import './features.scss'
-import starIcon from '../../../assets/starIcon.png'
-import moneyIcon from '../../../assets/moneyIcon.png'
-import tradeIcon from '../../../assets/tradeIcon.png'
+import starIcon from '../../../../assets/starIcon.png'
+import moneyIcon from '../../../../assets/moneyIcon.png'
+import tradeIcon from '../../../../assets/tradeIcon.png'
 
 const Features = () => {
   return (

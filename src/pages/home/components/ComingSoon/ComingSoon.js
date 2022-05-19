@@ -1,6 +1,6 @@
 import React from 'react'
 import './comingSoon.scss'
-import floatingItems from '../../../assets/floatingItems.png'
+import floatingItems from '../../../../assets/floatingItems.png'
 
 const ComingSoon = () => {
   return (

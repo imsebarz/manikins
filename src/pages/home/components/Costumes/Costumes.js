@@ -1,6 +1,6 @@
 import React from 'react'
 import './costumes.scss'
-import costume from '../../../assets/costume.png'
+import costume from '../../../../assets/costume.png'
 
 const Costumes = () => {
   return (

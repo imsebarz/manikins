@@ -1,0 +1,45 @@
+.contact-section {
+    background: #0f0f0f;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+        width: 200px;
+    }
+
+    textarea {
+        width: 100%;
+        background: gray;
+        color: white;
+    }
+
+    button {
+        background: goldenrod;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        margin: 10px;
+    }
+
+    ::placeholder {
+        color: white;
+        opacity: 1;
+
+    }
+
+    .personal {
+        display: flex;
+        width: 100%;
+
+        input {
+            width: 50%;
+            background: gray;
+            color: white;
+        }
+
+
+    }
+}

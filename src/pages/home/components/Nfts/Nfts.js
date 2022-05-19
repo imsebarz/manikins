@@ -1,7 +1,8 @@
 import React from 'react'
 import './nfts.scss'
-import card from '../../../assets/card.png'
-import character from '../../../assets/character.png'
+import cardImage from '../../../../assets/card.png'
+import character from '../../../../assets/character.png'
+import Card from './Card'
 
 const Nfts = () => {
   return (
@@ -12,10 +13,12 @@ const Nfts = () => {
       </div>
       <div className="interaction">
         <div className="cards">
-          <img src={card} alt="" />
-          <img src={card} alt="" />
-          <img src={card} alt="" />
-          <img src={card} alt="" />
+          <Card cardImage={cardImage}></Card>
+          <Card cardImage={cardImage}></Card>
+          <Card cardImage={cardImage}></Card>
+          <Card cardImage={cardImage}></Card>
+          <Card cardImage={cardImage}></Card>
+          <Card cardImage={cardImage}></Card>
         </div>
         <div className="character">
           <img src={character} alt="" />

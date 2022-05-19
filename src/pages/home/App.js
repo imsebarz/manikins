@@ -1,20 +1,20 @@
 import Footer from '../../Components/Footer'
 import Navbar from '../../Components/Navbar'
 import './App.scss'
-import About from './components/About'
-import Cta from './components/Cta.js'
-import Hero from './components/Hero'
-import Coffers from './components/Coffers'
-import Evolutions from './components/Evolutions'
-import ComingSoon from './components/ComingSoon'
+import About from './components/About/About'
+import Cta from './components/Cta/Cta'
+import Hero from './components/Hero/Hero'
+import Coffers from './components/Coffers/Coffers'
+import Evolutions from './components/Evolutions/Evolutions'
+import ComingSoon from './components/ComingSoon/ComingSoon'
 import Carousel from '../../Components/Carousel'
-import Costumes from './components/Costumes'
-import Features from './components/Features'
-import Nfts from './components/Nfts'
-import Team from './components/Team'
-import Contact from './components/Contact'
+import Costumes from './components/Costumes/Costumes'
+import Features from './components/Features/Features'
+import Nfts from './components/Nfts/Nfts'
+import Team from './components/Team/Team'
+import Contact from './components/Contact/Contact'
 
-function App () {
+function App() {
   return (
     <div className="App">
       <header className="App-header">

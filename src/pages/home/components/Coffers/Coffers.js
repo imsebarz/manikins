@@ -1,7 +1,7 @@
 import React from 'react'
 import './coffers.scss'
-import item from '../../../assets/item.mp4'
-import manikinsArena from '../../../assets/manikinsArena.png'
+import item from '../../../../assets/item.mp4'
+import manikinsArena from '../../../../assets/manikinsArena.png'
 
 const Coffers = () => {
   return (

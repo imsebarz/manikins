@@ -12,19 +12,20 @@ const initialState = {
   whitelistMail: ''
 }
 
-export function UserProvider ({ children }) {
+// eslint-disable-next-line react/prop-types
+export function UserProvider({ children }) {
   const [state, dispatch] = useReducer(userReducer, initialState)
 
   return (
-        <UserStateContext.Provider value={state}>
-            <UserDispatchContext.Provider value={dispatch}>
-                {children}
-            </UserDispatchContext.Provider>
-        </UserStateContext.Provider>
+    <UserStateContext.Provider value={state}>
+      <UserDispatchContext.Provider value={dispatch}>
+        {children}
+      </UserDispatchContext.Provider>
+    </UserStateContext.Provider>
   )
 }
 
-export function useUserState () {
+export function useUserState() {
   const context = useContext(UserStateContext)
   if (context === undefined) {
     throw new Error('useUserState must be used within a UserProvider')
@@ -33,7 +34,7 @@ export function useUserState () {
 }
 
 // This makes avaliable the dispatch function all across the application
-export function useUserDispatch () {
+export function useUserDispatch() {
   const context = useContext(UserDispatchContext)
   if (context === undefined) {
     throw new Error('useUserDispatch must be used within a UserProvider')
