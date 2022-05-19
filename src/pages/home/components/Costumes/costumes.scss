@@ -13,8 +13,13 @@
 
   h1 {
     line-height: 0.9;
-    font-size: 3rem;
+    font-size: 3.2rem;
+    margin-bottom: 100px;
     color: goldenrod;
+
+    span {
+      font-size: 3.5rem;
+    }
   }
 
   .content {
@@ -43,6 +48,24 @@
         background: #00000077;
         border: 2px solid goldenrod;
       }
+
+      .lvl::after {
+        content: " ";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border: 1px solid #ffea00;
+        border-radius: 50%;
+      }
+
+
+      .lvl:hover {
+        transform: scale(1.2);
+        transition: all 0.2s ease;
+      }
+
     }
   }
 }

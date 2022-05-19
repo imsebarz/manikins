@@ -6,7 +6,10 @@ const Costumes = () => {
   return (
     <section className="costumes-section">
       <h1 className="golden">
-        You start like everyone else <br /> You end up like no one else
+        YOU START LIKE EVERYONE ELSE <br />
+        <span className='golden'>
+        YOU END UP LIKE NO ONE ELSE
+        </span>
       </h1>
       <div className="content">
         <div className="slider">

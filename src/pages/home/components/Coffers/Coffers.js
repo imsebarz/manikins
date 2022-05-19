@@ -1,16 +1,10 @@
 import React from 'react'
 import './coffers.scss'
 import item from '../../../../assets/item.mp4'
-import manikinsArena from '../../../../assets/manikinsArena.png'
 
 const Coffers = () => {
   return (
     <section className="section-coffers">
-      <img
-        src={manikinsArena}
-        className="background"
-        alt="manikins on the arena"
-      />
       <div className="main">
         <div className="copy">
           <div>
@@ -32,7 +26,6 @@ const Coffers = () => {
           </video>
         </div>
       </div>
-      <button>See more Coffers</button>
     </section>
   )
 }
