@@ -22,7 +22,7 @@ const Cta = () => {
         </p>
         <form className='cta-input-container' onSubmit={(e) => handleSubmit(e)}>
           <input type='email' required placeholder='Enter your email' value={mail} onChange={(e) => setMail(e.target.value)}></input>
-          <button className='golden'>Join</button>
+          <button className='goldenButton'>Join now!</button>
         </form>
       </div>
     </section>

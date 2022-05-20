@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import helmet from '../../../../assets/helmet.png'
 import './evolutions.scss'
 
 const Evolutions = () => {
+
+    const [level, setLevel] = useState(1);
+
+    const incrementLevel = () => {
+        level <= 3 ? setLevel(level + 1) : setLevel(level);
+    }
+    
+    const decrementLevel = () => {
+        level > 1 ? setLevel(level - 1) : setLevel(level);
+    }
+
     return (
         <section className="section-evolutions">
             <h1 className='golden'>EVERY RELIC HAS<br /> <span className='golden'>EVOLUTIONS</span></h1>
@@ -14,11 +25,15 @@ const Evolutions = () => {
                         up your character.</p>
                     <div className="stages">
                         <h3 className='golden'>STAGE</h3>
-                        <button>{"<"}</button>
-                        <button>{">"}</button>
+                        <button onClick={decrementLevel}>{"<"}</button>
+                        <button onClick={incrementLevel}>{">"}</button>
+                        <h5>Level {level}</h5>
                     </div>
                 </div>
-                <img src={helmet} alt='magic helmet with evolutions' />
+                <img src={helmet} style={{
+                    background: ` radial-gradient(circle,
+          rgba(255, 199, 88, ${ 0.2 + level*0.2}) 0%,
+          rgba(255, 247, 227, 0) 70%)`}} alt='magic helmet with evolutions' />
             </div>
         </section >
     )

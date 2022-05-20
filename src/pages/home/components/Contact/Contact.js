@@ -7,8 +7,8 @@ const Contact = () => {
     <img src={arc} alt="" />
     <form action="">
       <div className="title">
-        <h1>Contact us</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, ex!</p>
+        <h1 className='golden'>CONTACT US</h1>
+        <p>Do not hesitate to contact us! We will get in touch with you as soon as posible</p>
       </div>
       <div className="info">
         <div className="personal">
@@ -18,8 +18,8 @@ const Contact = () => {
         <div className="message">
           <textarea name="" id="" cols="30" rows="10" placeholder='message'></textarea>
         </div>
-        <button>Send</button>
       </div>
+      <button type='submit'>Send</button>
 
     </form>
   </section>

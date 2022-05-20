@@ -17,24 +17,20 @@ main {
 }
 
 .golden {
-  background: linear-gradient(
-    0deg,
-    rgb(255, 151, 15) 0%,
-    rgba(255, 251, 241, 0.858) 41%,
-    rgb(255, 166, 0) 100%
-  );
+  background: linear-gradient(0deg,
+      rgb(255, 151, 15) 0%,
+      rgba(255, 251, 241, 0.858) 41%,
+      rgb(255, 166, 0) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .goldenButton {
-  background: linear-gradient(
-    0deg,
-    rgb(255, 176, 73) 0%,
-    rgba(255, 251, 241, 0.9) 41%,
-    rgb(255, 199, 94) 100%
-  ) !important;
+  background: linear-gradient(0deg,
+      rgb(255, 176, 73) 0%,
+      rgba(255, 251, 241, 0.9) 41%,
+      rgb(255, 199, 94) 100%) !important;
   color: rgb(180, 112, 3) !important;
   font-weight: 900 !important;
 }
@@ -44,10 +40,11 @@ section {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #202020;
+  background-color: #0c0c0c;
   width: 100%;
   place-content: center;
   place-items: center;
+
   h1 {
     text-align: center;
   }

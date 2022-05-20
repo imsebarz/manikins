@@ -15,42 +15,49 @@
     align-items: center;
     font-size: 1.5rem;
 
+    p {
+      width: 60%;
+    }
+
     .cta-input-container {
       width: 80%;
-      display: block;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
 
       input {
         width: 33%;
-        margin-top: 50px;
-        padding: 10px 30px;
         background: rgba($color: #ffffff, $alpha: 1);
-        border: 3px solid goldenrod;
-        height: 12px;
+        height: 40px;
+        padding: 0;
         text-align: center;
-        backdrop-filter: blur(10px);
         border-radius: 15px 0 0 15px;
+        border: 3px solid white;
         outline: none;
-        margin-right: 0;
+        box-sizing: border-box;
+        margin: 0;
       }
 
       button {
         width: 30%;
+        height: 40px;
         color: white;
         outline: none;
-        border: none;
-        height: 38px;
-        margin-top: 50px;
-        padding: 10px 30px;
-        background: rgba($color: goldenrod, $alpha: 0.9);
+        box-sizing: border-box;
         border-radius: 0 15px 15px 0;
+        border: none;
       }
 
       button:hover {
         background: rgba($color: goldenrod, $alpha: 1);
+        color: white;
       }
 
       button:active {
         background: rgba($color: goldenrod, $alpha: 0.8);
+        color: white;
       }
     }
   }

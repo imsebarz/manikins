@@ -7,28 +7,42 @@
 
   .title {
     margin-bottom: 50px;
+
+    p {
+      font-size: 2rem;
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
   }
 
   .interaction {
+    flex-wrap: wrap;
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    max-width: 1200px;
+    justify-content: center;
+    gap: 80px;
     align-items: center;
 
     .cards {
-      width: 60%;
+      width: 50%;
+      min-width: 500px;
       gap: 50px;
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
 
       img {
-        width: 180px;
+        width: 160px;
       }
     }
 
     .character {
       img {
-        width: 400px;
+        min-width: 350px;
+        width: 40%;
       }
     }
   }

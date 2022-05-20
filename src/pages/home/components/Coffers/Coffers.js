@@ -1,6 +1,6 @@
 import React from 'react'
 import './coffers.scss'
-import item from '../../../../assets/item.mp4'
+import item from '../../../../assets/item.gif'
 
 const Coffers = () => {
   return (
@@ -12,18 +12,10 @@ const Coffers = () => {
           </div>
         </div>
         <div className="videos">
-          <video autoPlay loop muted>
-            <source src={item} type="video/ogg" />
-          </video>
-          <video autoPlay loop muted>
-            <source src={item} type="video/ogg" />
-          </video>
-          <video autoPlay loop muted>
-            <source src={item} type="video/ogg" />
-          </video>
-          <video autoPlay loop muted>
-            <source src={item} type="video/ogg" />
-          </video>
+           <img src={item} alt="" />
+           <img src={item} alt="" />
+           <img src={item} alt="" />
+           <img src={item} alt="" />
         </div>
       </div>
     </section>

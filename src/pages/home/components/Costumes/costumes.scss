@@ -45,11 +45,12 @@
         height: 80px;
         width: 80px;
         border-radius: 50%;
+        position: relative;
         background: #00000077;
         border: 2px solid goldenrod;
       }
 
-      .lvl::after {
+      .lvl::before {
         content: " ";
         position: absolute;
         top: 5px;

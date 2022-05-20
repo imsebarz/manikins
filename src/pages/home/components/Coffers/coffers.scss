@@ -41,14 +41,20 @@
 
     .videos {
       display: flex;
-      gap: 100px;
+      gap: 50px;
       flex-wrap: wrap;
       justify-content: center;
 
-      video {
-        width: 220px;
+      img {
+        width: 250px;
         height: 250px;
         border-radius: 15px;
+        border: 2px solid goldenrod;
+        filter: brightness(0.9);
+      }
+
+      img:hover {
+        filter: brightness(1.3);
       }
     }
   }
