@@ -1,23 +1,20 @@
 import React from 'react'
 import './carousel.scss'
-import manikin1 from '../assets/manikin1.png'
-import manikin2 from '../assets/manikin2.png'
-import manikin3 from '../assets/manikin3.png'
 
-const Carousel = () => {
+const Carousel = ({ item1, item2, item3, item4 }) => {
   return (
     <div className="carousel">
       <div className="carousel-item">
-        <img src={manikin1} alt="manikin moving" />
+        <img src={item1} alt="manikin moving" />
       </div>
       <div className="carousel-item">
-        <img src={manikin2} alt="manikin moving" />
+        <img src={item2} alt="manikin moving" />
       </div>
       <div className="carousel-item">
-        <img src={manikin3} alt="manikin moving" />
+        <img src={item3} alt="manikin moving" />
       </div>
       <div className="carousel-item">
-        <img src={manikin1} alt="manikin moving" />
+        <img src={item1} alt="manikin moving" />
       </div>
     </div>
   )

@@ -1,5 +1,4 @@
 .carousel {
-  background: black;
   display: flex;
   flex-wrap: wrap;
   width: 90%;
@@ -9,9 +8,9 @@
   gap: 50px;
 
   .carousel-item {
-    width: 250px;
+    width: 220px;
     display: flex;
-    height: 280px;
+    height: 250px;
 
     img {
       width: 100%;

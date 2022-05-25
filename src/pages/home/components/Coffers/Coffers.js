@@ -1,6 +1,7 @@
 import React from 'react'
 import './coffers.scss'
-import item from '../../../../assets/item.gif'
+import coffer from '../../../../assets/coffer.png'
+
 
 const Coffers = () => {
   return (
@@ -12,10 +13,21 @@ const Coffers = () => {
           </div>
         </div>
         <div className="videos">
-           <img src={item} alt="" />
-           <img src={item} alt="" />
-           <img src={item} alt="" />
-           <img src={item} alt="" />
+          <div className="coffer">
+            < img src={coffer} alt="" />
+            <h2>Basic</h2>
+          </div>
+          <div className="coffer">
+            < img src={coffer} alt="" />
+            <h2>Intermediate</h2>
+            
+          </div>
+          <div className="coffer">
+            < img src={coffer} alt="" />
+            <h2>Advanced</h2>
+            
+          </div>
+
         </div>
       </div>
     </section>

@@ -4,6 +4,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
+  padding: 50px 0;
 
   .title {
     margin-bottom: 50px;
@@ -13,36 +14,86 @@
     }
 
     h1 {
-      margin-bottom: 0;
+      line-height: 0.9;
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+      color: goldenrod;
+
+      span {
+        font-size: 3.5rem;
+      }
     }
   }
 
-  .interaction {
-    flex-wrap: wrap;
-    display: flex;
+
+  .character {
+    display: grid;
     width: 100%;
-    max-width: 1200px;
     justify-content: center;
-    gap: 80px;
-    align-items: center;
 
-    .cards {
-      width: 50%;
-      min-width: 500px;
-      gap: 50px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-
-      img {
-        width: 160px;
-      }
+    img {
+      min-width: 350px;
+      width: 40%;
+      grid-row: 1/-1;
+      grid-column: 1/-1;
+      z-index: 1;
+      justify-self: center;
     }
 
-    .character {
-      img {
-        min-width: 350px;
-        width: 40%;
+    .bubbles {
+      display: grid;
+      grid-row: 1/-1;
+      width: 100%;
+      grid-column: 1/-1;
+      grid-template-columns: repeat(4, 1fr);
+
+      .item {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background: black;
+        border: 2px solid goldenrod;
+        z-index: 2;
+        position: relative;
+      }
+
+      .item:hover {
+        transform: scale(1.1);
+        background-color: #000405f8;
+      }
+
+      .item::before {
+        content: '';
+        width: 75%;
+        height: 75%;
+        border-radius: 50%;
+        border: 2px solid goldenrod;
+        z-index: 2;
+      }
+
+      #item1 {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #item2 {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        display: flex;
+        justify-self: flex-end;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #item3 {
+        grid-row: 2/3;
+        display: flex;
+        grid-column: 4/5;
+        justify-content: center;
+        align-items: center;
       }
     }
   }

@@ -15,7 +15,7 @@ const Cta = () => {
 
   return (
     <section className="section-cta">
-      <h1 className='golden'>REGISTER NOW!</h1>
+      <h1 className='golden'>JOIN THE WAITLIST</h1>
       <div className='cta-input'>
         <p>
           Register now and be the first to know about manikins beta, relics sales, events and more!
