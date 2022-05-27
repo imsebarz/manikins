@@ -20,7 +20,7 @@ const useBubble = ({ id, bubbleImg }) => {
                         <h5>Epic Item</h5>
                         <p>Description about it</p>
                         <img src={bubbleImg} alt="" />
-                        <a href="#">view at market</a>
+                        <a href="https://manikins.io">view at market</a>
                 </div>
             }
             </div >
