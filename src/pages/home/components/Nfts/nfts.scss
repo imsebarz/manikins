@@ -30,6 +30,7 @@
     display: grid;
     width: 100%;
     justify-content: center;
+    background: radial-gradient(circle, rgba(217, 91, 255, 0.192) 10%, rgba(0, 0, 0, 0.058) 35%);
 
     img {
       min-width: 350px;
@@ -47,53 +48,140 @@
       grid-column: 1/-1;
       grid-template-columns: repeat(4, 1fr);
 
-      .item {
-        width: 65px;
-        height: 65px;
+
+      @keyframes float {
+        0% {
+          box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+          transform: translatey(0px);
+        }
+
+        50% {
+          box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+          transform: translatey(-20px);
+        }
+
+        100% {
+          box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+          transform: translatey(0px);
+        }
+      }
+
+      .bubble {
+        width: 85px;
+        height: 85px;
         border-radius: 50%;
-        background: black;
+        background: radial-gradient(circle, rgba(255, 211, 91, 0.388) 0%, rgba(0, 0, 0, 0.2) 80%);
         border: 2px solid goldenrod;
         z-index: 2;
         position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+
+        .bubble-img {
+          width: 60px;
+          height: 60px;
+          filter: brightness(0.9);
+        }
       }
 
-      .item:hover {
-        transform: scale(1.1);
+      .bubble:hover {
         background-color: #000405f8;
+        background: radial-gradient(circle, rgba(255, 210, 88, 0.507) 0%, rgba(0, 0, 0, 0.2) 80%);
+        transform: scale(1.1) !important;
       }
 
-      .item::before {
+      .bubble::after {
         content: '';
         width: 75%;
+        position: absolute;
         height: 75%;
         border-radius: 50%;
         border: 2px solid goldenrod;
         z-index: 2;
       }
 
-      #item1 {
+      .bubble-info {
+        position: absolute;
+        margin: 30px;
+        padding: 10px;
+        border-radius: 10px;
+        height: max-content;
+        min-height: 100px;
+        width: 130px;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid goldenrod;
+        background: rgba(0, 0, 0, 0.526);
+
+        h5 {
+          font-size: 1.2rem;
+          font-weight: 300;
+          margin: 0;
+        }
+
+        p {
+          margin: 0;
+          color: #fff;
+          font-style: italic;
+          font-weight: 300;
+          font-size: 0.9rem;
+        }
+
+        img {
+          position: relative;
+          display: inline;
+          width: 130px;
+          height: 130px;
+          min-width: 50px;
+          margin-right: 10px;
+        }
+
+        a {
+          color: goldenrod;
+        }
+      }
+
+      #bubble1 {
         grid-row: 2/3;
         grid-column: 1/2;
         display: flex;
         justify-content: center;
         align-items: center;
+        animation: float 3s ease-in-out infinite;
+
+        .bubble-info {
+          right: 60px;
+        }
       }
 
-      #item2 {
+      #bubble2 {
         grid-row: 3/4;
         grid-column: 1/2;
         display: flex;
-        justify-self: flex-end;
+        justify-self: center;
         justify-content: center;
         align-items: center;
+        animation: float 6s ease-in-out infinite;
+
+        .bubble-info {
+          right: 60px;
+        }
       }
 
-      #item3 {
+      #bubble3 {
         grid-row: 2/3;
         display: flex;
         grid-column: 4/5;
         justify-content: center;
+        justify-self: flex-end;
         align-items: center;
+        animation: float 7s ease infinite;
+
+        .bubble-info {
+          left: 60px;
+        }
       }
     }
   }

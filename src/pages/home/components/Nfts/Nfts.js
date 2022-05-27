@@ -1,21 +1,16 @@
-import { useState } from 'react'
 import './nfts.scss'
 import character from '../../../../assets/character.png'
 import Carousel from '../../../../Components/Carousel'
 import manikin1 from '../../../../assets/manikin1.png'
 import manikin2 from '../../../../assets/manikin2.png'
 import manikin3 from '../../../../assets/manikin3.png'
+import bubble1 from '../../../../assets/bubble.svg'
+import bubble2 from '../../../../assets/bubble2.svg'
+import bubble3 from '../../../../assets/bubble3.svg'
+import Bubble from './Bubble'
+
 
 const Nfts = () => {
-
-  const [hover, setHover] = useState(false)
-
-
-  const handleHover = (hoverState) => {
-    setHover(hoverState)
-    console.log(hover)
-  }
-
 
 
   return (
@@ -32,9 +27,9 @@ const Nfts = () => {
       <div className="character">
         <img src={character} alt="" />
         <div className="bubbles">
-          <div className="item" id='item1' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}></div>
-          <div className="item" id='item2' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}></div>
-          <div className="item" id='item3' onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)}></div>
+          <Bubble id='1' bubbleImg={bubble1}></Bubble>
+          <Bubble id='2' bubbleImg={bubble2}></Bubble>
+          <Bubble id='3' bubbleImg={bubble3}></Bubble>
         </div>
       </div>
       <Carousel item1={manikin1} item2={manikin2} item3={manikin3} item4={manikin1}></Carousel>
