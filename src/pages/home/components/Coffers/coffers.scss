@@ -1,10 +1,11 @@
 .section-coffers {
   background: rgb(0, 0, 0, 1);
-  background: url('../../../../assets/rasgado2.png');
+  background: url('../../../../assets/rasgado2.png') no-repeat center center;
   background-size: cover;
   place-content: center;
   margin: -50px 0px;
   z-index: 2;
+  padding: 100px 0;
 
   .background {
     width: 100vw;

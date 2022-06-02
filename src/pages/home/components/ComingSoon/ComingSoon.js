@@ -14,7 +14,7 @@ const ComingSoon = () => {
         </h3>
         <p>Be part of our new community!</p>
         <button>Join Discord!</button>
-        <img src={floatingItems} alt="Floating items" />
+        <img src={floatingItems} className='floating-items' alt="Floating items" />
       </div>
     </section>
   )

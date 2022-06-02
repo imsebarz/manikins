@@ -16,7 +16,10 @@ const Evolutions = () => {
 
     return (
         <section className="section-evolutions">
-            <h1 className='golden'>EVERY RELIC HAS<br /> <span className='golden'>EVOLUTIONS</span></h1>
+            <div className="title">
+                <h2 className="golden">EVERY RELIC HAS</h2>
+                <h1 className="golden">EVOLUTIONS</h1>
+            </div>
             <div className='content'>
                 <div className='copy'>
                     <h3>Increase your power</h3>

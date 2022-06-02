@@ -3,13 +3,18 @@
   background: url('../../../../assets/smokebg2.png') no-repeat center center;
   padding-top: 100px;
 
-  h1 {
-    font-size: 3rem;
-    margin-bottom: -10px;
+  .title {
     line-height: 0.9;
+    max-width: 90vh;
 
-    span {
-      font-size: 5.5rem;
+    h1 {
+      margin: 0px;
+      font-size: clamp(3.2rem, 7vw, 5rem);
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 4vw, 3rem);
+      margin: 0;
     }
   }
 
@@ -19,11 +24,14 @@
     justify-content: space-around;
     align-items: center;
     margin: 50px 0px;
+    flex-wrap: wrap;
 
     .copy {
       width: 40%;
       font-size: 1.5rem;
+      min-width: 400px;
       display: flex;
+      box-sizing: border-box;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
@@ -70,10 +78,25 @@
 
     img {
       width: 40%;
+      min-width: 400px;
       background: rgb(255, 199, 88);
       background: radial-gradient(circle,
           rgba(255, 199, 88, 0.456) 0%,
           rgba(255, 247, 227, 0) 70%);
+    }
+  }
+}
+
+//add media queries for mobile
+@media (max-width: 880px) {
+  .section-evolutions {
+    .content {
+
+      .copy {
+        width: 80%;
+        align-items: center;
+        padding: 50px;
+      }
     }
   }
 }

@@ -4,9 +4,13 @@
   background: url("../../../../assets/aboutbg.png") no-repeat center center fixed;
   border: none;
   gap: 100px;
+  flex-wrap: wrap;
+  padding: 80px 0 40px 0;
 
   .content {
     width: 40%;
+    gap: 50px;
+    min-width: 400px;
     text-align: left;
     color: white;
 
@@ -26,6 +30,26 @@
 
   img {
     width: 30%;
+    min-width: 400px;
     border: 2px solid rgb(255, 216, 118);
+  }
+}
+
+//media query for mobile
+@media screen and (max-width: 750px) {
+  .section-about {
+    .content {
+      h1 {
+        width: 100%;
+        font-size: 2.5rem;
+        text-align: center;
+      }
+
+      p {
+        width: 80%;
+        margin: 50px auto;
+      }
+    }
+
   }
 }

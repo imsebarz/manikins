@@ -1,6 +1,7 @@
 .section-nfts {
   background-color: #000405f8;
   background: url('../../../../assets/smokebg.png') no-repeat center center;
+  background-size: cover;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -8,8 +9,14 @@
 
   .title {
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 
     p {
+      max-width: 90%;
       font-size: 2rem;
     }
 
@@ -72,7 +79,7 @@
         border-radius: 50%;
         background: radial-gradient(circle, rgba(255, 211, 91, 0.388) 0%, rgba(0, 0, 0, 0.2) 80%);
         border: 2px solid goldenrod;
-        z-index: 2;
+        z-index: 1;
         position: relative;
         display: flex;
         justify-content: flex-start;
@@ -83,6 +90,7 @@
           width: 60px;
           height: 60px;
           filter: brightness(0.9);
+          z-index: -1;
         }
       }
 
@@ -90,6 +98,7 @@
         background-color: #000405f8;
         background: radial-gradient(circle, rgba(255, 210, 88, 0.507) 0%, rgba(0, 0, 0, 0.2) 80%);
         transform: scale(1.1) !important;
+        z-index: 5;
       }
 
       .bubble::after {
@@ -99,7 +108,7 @@
         height: 75%;
         border-radius: 50%;
         border: 2px solid goldenrod;
-        z-index: 2;
+        z-index: -1;
       }
 
       .bubble-info {
@@ -113,7 +122,7 @@
         display: flex;
         flex-direction: column;
         border: 2px solid goldenrod;
-        background: rgba(0, 0, 0, 0.526);
+        background: rgba(0, 0, 0, 1);
 
         h5 {
           font-size: 1.2rem;
@@ -189,5 +198,35 @@
   h1 {
     font-size: 6rem;
     color: white;
+  }
+}
+
+//create media query for mobile
+@media screen and (max-width: 768px) {
+  .bubble {
+    z-index: 1;
+    margin: 15px;
+
+    .bubble-info {
+      background: rgba(0, 0, 0, 1) !important;
+      z-index: 5;
+      top: 0px !important;
+      left: 0px !important;
+      right: 0px !important;
+      bottom: 0px !important;
+    }
+  }
+
+  #bubble1 {
+    .bubble-info {
+      right: 60px;
+    }
+  }
+
+  #bubble3 {
+    .bubble-info {
+      bottom: 60px !important;
+      left: -150% !important;
+    }
   }
 }

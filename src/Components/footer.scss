@@ -7,20 +7,46 @@ footer {
   padding-top: 30px;
   width: 100%;
   background: rgb(0, 0, 0, 1);
+
   .links {
     flex-wrap: wrap;
     display: flex;
     width: 90%;
     justify-content: space-between;
     align-items: center;
+
     .social {
       display: flex;
+      flex-wrap: wrap;
       gap: 50px;
       place-content: center;
     }
+
     .logo {
       width: 150px;
       height: auto;
+    }
+  }
+
+  .copy {
+    width: 80%;
+    margin: 0px 50px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 668px) {
+  footer {
+    .links {
+      justify-content: center;
+      gap: 50px;
+
+      .social {
+        display: flex;
+        flex-wrap: wrap;
+        place-content: center;
+      }
+
     }
   }
 }

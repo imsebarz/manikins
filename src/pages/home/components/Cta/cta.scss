@@ -70,3 +70,28 @@
     text-align: center;
   }
 }
+
+//media query for mobile
+@media screen and (max-width: 600px) {
+  .section-cta {
+    .golden {
+      font-size: clamp(3.6rem, 4vw, 3rem)
+    }
+
+    .cta-input {
+      width: 100%;
+
+      .cta-input-container {
+        width: 80%;
+
+        input {
+          width: 60%;
+        }
+
+        button {
+          width: 40%;
+        }
+      }
+    }
+  }
+}
