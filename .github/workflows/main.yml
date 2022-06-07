@@ -18,10 +18,10 @@ jobs:
       - name: deploy file to server
         uses: wlixcc/SFTP-Deploy-Action@v1.0
         with:
-          username: 'maniutzq'
+          username: 'frontend@manikins.io'
           server: 'ftp.manikins.io'
           port: 21098
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
           local_path: './build/*'
           remote_path: '/var/www/react-app'
-          args: '-o ConnectTimeout=50'
+          args: '-o ConnectTimeout=60'
