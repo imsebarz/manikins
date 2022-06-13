@@ -12,6 +12,7 @@ const container = document.getElementById('root')
 const root = createRoot(container)
 
 console.log(`We are running this application in ${process.env.NODE_ENV} mode.`)
+console.log(`Hello ${process.env.REACT_APP_HELLO} !!.`)
 
 root.render(
   <React.StrictMode>
