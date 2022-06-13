@@ -2,18 +2,16 @@ name: Continous deployment
 on: [push, pull_request]
 
 jobs:
-
-  avoid_reduncy: 
+  avoid_reduncy:
     runs-on: ubuntu-18.04
-    steps: 
+    steps:
       - uses: styfle/cancel-workflow-action@0.9.1
-        with: 
+        with:
           access_token: ${{ github.token }}
 
-
-  build: 
+  build:
     runs-on: ubuntu-18.04
-    steps: 
+    steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install Dependencies
@@ -22,26 +20,24 @@ jobs:
         run: npm run build
       - uses: upload-artifact@v2
         with:
-            name: build
-            path: build
+          name: build
+          path: build
 
-  test: 
-    needs: [build] 
+  test:
+    needs: [build]
     runs-on: ubuntu-18.04
-    steps: 
+    steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install Dependencies
-          run: npm ci
+        run: npm ci
       - name: Create artifact
         uses: download-artifact@v2
         with:
-            name: build
-            path: build
+          name: build
+          path: build
       - name: Test
-          run: npm run test
-        
-
+        run: npm run test
 
   deploy_job:
     needs: [test]
@@ -54,10 +50,10 @@ jobs:
         if: ${{ github.event_name == 'push' }}
       - uses: wlixcc/SFTP-Deploy-Action@v1.0
         with:
-          username: 'maniutzq'
-          server: 'ftp.manikins.io'
+          username: "maniutzq"
+          server: "ftp.manikins.io"
           port: 21098
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          local_path: './build/*'
-          remote_path: '/home/maniutzq/public_html/'
-          args: '-o ConnectTimeout=60'
+          local_path: "./build/*"
+          remote_path: "/home/maniutzq/public_html/"
+          args: "-o ConnectTimeout=60"
