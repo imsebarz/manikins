@@ -6,7 +6,6 @@ const useBubble = ({ id, bubbleImg }) => {
     const [hover, setHover] = useState(false)
     const handleHover = (hoverState) => {
         setHover(hoverState)
-        console.log(hover)
     }
 
     return (
