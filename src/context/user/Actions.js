@@ -1,9 +1,9 @@
 import axios from 'axios'
-// axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 export const registerUser = async (dispatch, data, navigate) => {
   await axios
-    .get('http://localhost:3000')
+    .get('/register')
     .then(() => {
       navigate('/login')
     })
@@ -14,7 +14,7 @@ export const registerUser = async (dispatch, data, navigate) => {
 
 export const loginUser = async (dispatch, data, navigate) => {
   await axios
-    .get('http://localhost:3000')
+    .get('/login')
     .then(() => {
       console.log(data)
       setUserState(dispatch, data)
@@ -36,7 +36,7 @@ export function signOut(dispatch, navigate) {
 export async function joinWaitList(dispatch, data) {
   await axios
     .post(
-      'https://inmutable.azurewebsites.net/whitelist/',
+      '/whitelist',
       { email: data },
       { headers: { 'Content-Type': 'application/json' } }
     )

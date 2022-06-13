@@ -11,8 +11,7 @@ jobs:
 
   build:
     env:
-      # REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
-      REACT_APP_HELLO: "MyName"
+      REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
