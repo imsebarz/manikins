@@ -6,40 +6,40 @@ jobs:
   avoid_reduncy: 
     runs-on: ubuntu-18.04
     steps: 
-      name: cancel previous redundant builds
-      uses: styfle/cancel-workflow-action@0.9.1
-      with: 
-        access_token: ${{ github.token }}
+      - uses: styfle/cancel-workflow-action@0.9.1
+        with: 
+          access_token: ${{ github.token }}
 
 
   build: 
     runs-on: ubuntu-18.04
     steps: 
-      uses: actions/checkout@v2
-      name: Install Dependencies
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Dependencies
         run: npm ci
-      name: Build
+      - name: Build
         run: npm run build
-      uses: upload-artifact@v2
-        with:
-          name: build
-          path: build
+      - uses: upload-artifact@v2
+          with:
+            name: build
+            path: build
 
   test: 
     needs: [build] 
     runs-on: ubuntu-18.04
     steps: 
-      name: Checkout
-      uses: actions/checkout@v2
-      name: Install Dependencies
-        run: npm ci
-      name: Create artifact
-      uses: download-artifact@v2
-        with:
-          name: build
-          path: build
-      name: Test
-        run: npm run test
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+          run: npm ci
+      - name: Create artifact
+        uses: download-artifact@v2
+          with:
+            name: build
+            path: build
+      - name: Test
+          run: npm run test
         
 
 
@@ -52,7 +52,7 @@ jobs:
         uses: actions/checkout@v2
       - name: deploy file to server
         if: ${{ github.event_name == 'push' }}
-        uses: wlixcc/SFTP-Deploy-Action@v1.0
+      - uses: wlixcc/SFTP-Deploy-Action@v1.0
         with:
           username: 'maniutzq'
           server: 'ftp.manikins.io'
