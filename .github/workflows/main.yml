@@ -15,14 +15,12 @@ jobs:
   build: 
     runs-on: ubuntu-18.04
     steps: 
-      name: Checkout
-        uses: actions/checkout@v2
+      uses: actions/checkout@v2
       name: Install Dependencies
         run: npm ci
       name: Build
         run: npm run build
-      name: Create artifact
-        uses: upload-artifact@v2
+      uses: upload-artifact@v2
         with:
           name: build
           path: build
@@ -32,11 +30,11 @@ jobs:
     runs-on: ubuntu-18.04
     steps: 
       name: Checkout
-        uses: actions/checkout@v2
+      uses: actions/checkout@v2
       name: Install Dependencies
         run: npm ci
       name: Create artifact
-        uses: download-artifact@v2
+      uses: download-artifact@v2
         with:
           name: build
           path: build
