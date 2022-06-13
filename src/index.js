@@ -11,6 +11,8 @@ import { UserProvider } from './context/user/State'
 const container = document.getElementById('root')
 const root = createRoot(container)
 
+console.log(`We are running this application in ${process.env.NODE_ENV} mode.`)
+
 root.render(
   <React.StrictMode>
     <UserProvider>
