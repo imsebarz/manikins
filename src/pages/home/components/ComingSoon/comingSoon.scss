@@ -1,11 +1,7 @@
 .section-comingsoon {
-  background: url("../../../../assets/rasgado.png");
-  background-color: transparent;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: #120d14;
   display: flex;
-  margin: -100px 0;
+  margin: -120px 0;
   height: auto;
   flex-direction: column;
   z-index: 10;
@@ -59,7 +55,6 @@
       font-size: 1rem;
       margin: auto;
     }
-
   }
 
   .floating-items {
