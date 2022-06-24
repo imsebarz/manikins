@@ -18,11 +18,10 @@ import item3 from '../../assets/item3.png'
 import item4 from '../../assets/item4.png'
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <Navbar></Navbar>
-      </header>
+      <Navbar></Navbar>
       <main>
         <Hero></Hero>
         <ComingSoon></ComingSoon>

@@ -1,55 +1,76 @@
-import React from 'react'
-// import { Link, useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
 import './navbar.scss'
-// import { useUserState, useUserDispatch } from '../context/user/State'
-// import { signOut } from '../context/user/Actions'
+import { useUserDispatch } from '../context/user/State'
+import { getAllItems, loginUser } from '../context/user/Actions'
+import {ReactComponent as DiscordIcon} from '../assets/discordIcon.svg'
+import {ReactComponent as TwitterIcon} from '../assets/twitterIcon.svg'
+import manikinIcon from '../assets/manikinIcon.svg'
 
 const Navbar = () => {
-    // const { isAuthenticated } = useUserState()
-    // const userDispatch = useUserDispatch()
-    // const navigate = useNavigate()
+    const userDispatch = useUserDispatch()
+    const [show, setShow] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+    const controlNavbar = () => {
+        if (typeof window !== 'undefined') {
+            if (window.scrollY < lastScrollY || window.scrollY < 550) { // if scroll down hide the navbar
+                setShow(true);
+            } else { // if scroll up show the navbar
+                setShow(false);
+            }
+
+            // remember current page location to use in the next move
+            setLastScrollY(window.scrollY);
+        }
+    };
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            window.addEventListener('scroll', controlNavbar);
+
+            // cleanup function
+            return () => {
+                window.removeEventListener('scroll', controlNavbar);
+            };
+        }
+    }, [lastScrollY]);
+
+    const login = async () => {
+        loginUser(userDispatch, { username: 'manikin@litgame.com', password: '_DevPassWord' })
+            .then(() => {
+                getAllItems(userDispatch)
+            })
+    }
+
 
     return (
-        <nav className='navbar'>
-            <ul>
-                <li id='logo-head'>
-                    <a href="/">{ }</a>
-                </li>
-                <li>
-                    <a href="/about">About</a>
-                </li>
-                <li>
-                    <a href="/market">NTF's</a>
-                </li>
-                <li>
-                    <a href="/team">Our Team</a>
-                </li>
-                <li>
-                    <a href="/contact">Contact US</a>
-                </li>
-                {/* {isAuthenticated
-                    ?
+        <header className={`navbar ${show === true ? "active" : "hidden"}`}>
+            <nav >
+                <img src={manikinIcon} className='logo' alt="" />
+                <ul>
                     <li>
-                        <button onClick={() => signOut(userDispatch, navigate)}>Log out </button>
+                        <a href="/about">About</a>
                     </li>
-                    :
-                    <>
-                        <li>
-                            <Link to='/register'>
-                                <button >Register </button>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to='/login'>
-                                <button >Login</button>
-                            </Link>
-                        </li>
-                    </>
+                    <li>
+                        <a href="/market">NTF's</a>
+                    </li>
+                    <li>
+                        <a href="/roadmap">Road map</a>
+                    </li>
+                    <li>
+                        <a href="/team">Our Team</a>
+                    </li>
+                    <li>
+                        <button onClick={login} className='register'>Register</button>
+                    </li>
 
-                } */}
-            </ul>
-
-        </nav >
+                    <li className='socials'>
+                        <DiscordIcon/>
+                        <TwitterIcon/>
+                    </li>
+                </ ul>
+            </nav >
+        </header>
     )
 }
 
