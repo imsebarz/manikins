@@ -11,6 +11,10 @@ const Navbar = () => {
     const [show, setShow] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
 
+
+
+    useEffect(() => {
+
     const controlNavbar = () => {
         if (typeof window !== 'undefined') {
             if (window.scrollY < lastScrollY || window.scrollY < 550) { // if scroll down hide the navbar
@@ -24,7 +28,7 @@ const Navbar = () => {
         }
     };
 
-    useEffect(() => {
+
         if (typeof window !== 'undefined') {
             window.addEventListener('scroll', controlNavbar);
 
