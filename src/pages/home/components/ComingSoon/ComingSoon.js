@@ -1,7 +1,12 @@
 import React from 'react'
 import './comingSoon.scss'
-import floatingItems from '../../../../assets/floatingItems.png'
 import separatorTop from '../../../../assets/separatorTop.svg'
+import comingSoon from '../../../../assets/comingsoon.png'
+import textseparator from '../../../../assets/textseparator.svg'
+import {ReactComponent as DiscordIcon} from '../../../../assets/discordIcon.svg'
+import {ReactComponent as Colon} from '../../../../assets/colon.svg'
+
+
 
 const ComingSoon = () => {
   return (
@@ -9,16 +14,22 @@ const ComingSoon = () => {
       <img src={separatorTop} className='separator' alt="" />
       <section className="section-comingsoon">
         <div className="content">
-          <h3>NFT's presale</h3>
-          <h1 className="golden">COMING SOON</h1>
-          <h3>
-            140<span>days </span> 50<span>hrs </span> 30<span>mins </span>
-            00<span>secs</span>
+          <h2>COMING SOON</h2>
+          <h4>Preventa</h4>
+          <img src={textseparator} className="text-separator" alt="hero" />
+          <h3 className='top'>
+            140<span>Days </span>
           </h3>
-          <p>Be part of our new community!</p>
-          <button>Join Discord!</button>
-          <img src={floatingItems} className='floating-items' alt="Floating items" />
+          <h3 className='clock'>
+            50<span>Hours  </span> <Colon></Colon>10<span>Mins </span><Colon></Colon>
+            15<span>Secs</span>
+          </h3>
+          <img src={textseparator} className="text-separator" alt="hero" />
+          <p>Be part of our new community</p>
+          <button><DiscordIcon></DiscordIcon>JOIN DISCORD</button>
         </div>
+        <img src={comingSoon} alt="" className='comingsoon-img' />
+
       </section>
     </>
   )
