@@ -2,7 +2,7 @@ import React from 'react'
 import './comingSoon.scss'
 import separatorTop from '../../../../assets/separatorTop.svg'
 import comingSoon from '../../../../assets/comingsoon.png'
-import textseparator from '../../../../assets/textseparator.svg'
+  import textseparator from '../../../../assets/textseparator.svg'
 import {ReactComponent as DiscordIcon} from '../../../../assets/discordIcon.svg'
 import {ReactComponent as Colon} from '../../../../assets/colon.svg'
 

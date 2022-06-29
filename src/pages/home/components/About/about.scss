@@ -1,7 +1,8 @@
 .section-about {
   display: flex;
   flex-direction: row;
-  background: url("../../../../assets/aboutbg.png") no-repeat center center fixed;
+  background: url("../../../../assets/aboutbg.png") no-repeat center center
+    fixed;
   border: none;
   gap: 100px;
   flex-wrap: wrap;
@@ -9,21 +10,28 @@
 
   .content {
     width: 40%;
-    gap: 50px;
     min-width: 400px;
-    text-align: left;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
 
     h1 {
       width: max-content;
       font-size: 3.5rem;
       padding-bottom: 15px;
-      border-bottom: 2px solid rgb(255, 216, 118);
-      text-align: left;
+      font-weight: 400;
+      text-align: center;
+      span {
+        color: rgb(255, 216, 118);
+      }
     }
 
     p {
       font-size: 1.5rem;
+      text-align: left;
       font-weight: 500;
     }
   }
@@ -32,6 +40,15 @@
     width: 30%;
     min-width: 400px;
     border: 2px solid rgb(255, 216, 118);
+    border-radius: 10px;
+  }
+
+  .text-separator {
+    border: none;
+    height: 20px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    width: auto;
   }
 }
 
@@ -50,6 +67,5 @@
         margin: 50px auto;
       }
     }
-
   }
 }
