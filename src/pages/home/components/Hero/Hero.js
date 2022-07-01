@@ -1,5 +1,5 @@
 import React from 'react'
-import hero from '../../../../assets/hero.png'
+import hero from '../../../../assets/hero.webp'
 import tipografia from '../../../../assets/tipografia.png'
 import arrow from '../../../../assets/arrow.svg'
 import './hero.scss'

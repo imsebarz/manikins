@@ -1,6 +1,6 @@
 .section-nfts {
   background-color: #000405f8;
-  background: url('../../../../assets/smokebg.png') no-repeat center center;
+  background: url("../../../../assets/smokebg.webp") no-repeat center center;
   background-size: cover;
   display: flex;
   width: 100%;
@@ -32,12 +32,15 @@
     }
   }
 
-
   .character {
     display: grid;
     width: 100%;
     justify-content: center;
-    background: radial-gradient(circle, rgba(217, 91, 255, 0.192) 10%, rgba(0, 0, 0, 0.058) 35%);
+    background: radial-gradient(
+      circle,
+      rgba(217, 91, 255, 0.192) 10%,
+      rgba(0, 0, 0, 0.058) 35%
+    );
 
     img {
       min-width: 350px;
@@ -54,7 +57,6 @@
       width: 100%;
       grid-column: 1/-1;
       grid-template-columns: repeat(4, 1fr);
-
 
       @keyframes float {
         0% {
@@ -77,7 +79,11 @@
         width: 85px;
         height: 85px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(255, 211, 91, 0.388) 0%, rgba(0, 0, 0, 0.2) 80%);
+        background: radial-gradient(
+          circle,
+          rgba(255, 211, 91, 0.388) 0%,
+          rgba(0, 0, 0, 0.2) 80%
+        );
         border: 2px solid goldenrod;
         z-index: 1;
         position: relative;
@@ -96,13 +102,17 @@
 
       .bubble:hover {
         background-color: #000405f8;
-        background: radial-gradient(circle, rgba(255, 210, 88, 0.507) 0%, rgba(0, 0, 0, 0.2) 80%);
+        background: radial-gradient(
+          circle,
+          rgba(255, 210, 88, 0.507) 0%,
+          rgba(0, 0, 0, 0.2) 80%
+        );
         transform: scale(1.1) !important;
         z-index: 5;
       }
 
       .bubble::after {
-        content: '';
+        content: "";
         width: 75%;
         position: absolute;
         height: 75%;

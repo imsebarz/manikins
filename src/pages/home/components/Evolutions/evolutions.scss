@@ -1,6 +1,6 @@
 .section-evolutions {
   background-color: #000;
-  background: url('../../../../assets/smokebg2.png') no-repeat center center;
+  background: url("../../../../assets/smokebg2.webp") no-repeat center center;
   padding-top: 100px;
 
   .title {
@@ -58,7 +58,7 @@
           border-radius: 5px;
           margin: 10px;
           background-color: rgba(148, 106, 0, 0.2);
-          color: goldenrod
+          color: goldenrod;
         }
 
         button:hover {
@@ -80,9 +80,11 @@
       width: 40%;
       min-width: 400px;
       background: rgb(255, 199, 88);
-      background: radial-gradient(circle,
-          rgba(255, 199, 88, 0.456) 0%,
-          rgba(255, 247, 227, 0) 70%);
+      background: radial-gradient(
+        circle,
+        rgba(255, 199, 88, 0.456) 0%,
+        rgba(255, 247, 227, 0) 70%
+      );
     }
   }
 }
@@ -91,7 +93,6 @@
 @media (max-width: 880px) {
   .section-evolutions {
     .content {
-
       .copy {
         width: 80%;
         align-items: center;
