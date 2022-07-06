@@ -1,5 +1,5 @@
 header {
-  background: #272626aa;
+  background: rgba(13, 17, 26, 0.67);
   backdrop-filter: blur(10px);
   height: 75px;
   width: 100%;
@@ -14,8 +14,7 @@ nav {
   display: flex;
   width: 100%;
   position: relative;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Open Sans";
   font-weight: 100;
   justify-content: space-evenly;
   align-items: center;
@@ -23,6 +22,7 @@ nav {
   .logo {
     width: 35px;
     height: auto;
+    cursor: pointer;
   }
   .logo:hover {
     transform: scale(1.1);
@@ -39,6 +39,7 @@ nav {
       transition: all 0.4s ease;
       padding: 10px;
       box-sizing: border-box;
+      position: relative;
       a {
         text-decoration: none;
         color: white;
@@ -48,10 +49,24 @@ nav {
         padding-bottom: 1.2rem;
       }
     }
-    li:hover a {
-      border-bottom: 3px solid rgb(225, 188, 139);
-      font-weight: 500;
+    .nav-link:after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      display: block;
+      transition: all 0.3s ease;
+      border-radius: 3px;
+      bottom: 0;
+      left: 20px;
     }
+    .nav-link:hover::after {
+      border-radius: 3px;
+      width: 70%;
+      height: 2px;
+      background-color: rgb(225, 188, 139);
+    }
+
     .socials {
       width: 8rem;
       display: flex;

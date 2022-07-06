@@ -4,7 +4,7 @@ import { useUserDispatch } from '../context/user/State'
 import { getAllItems, loginUser } from '../context/user/Actions'
 import {ReactComponent as DiscordIcon} from '../assets/discordIcon.svg'
 import {ReactComponent as TwitterIcon} from '../assets/twitterIcon.svg'
-import manikinIcon from '../assets/manikinIcon.svg'
+import manikinIcon from '../assets/manikinIcon.webp'
 
 const Navbar = () => {
     const userDispatch = useUserDispatch()
@@ -53,16 +53,16 @@ const Navbar = () => {
             <nav >
                 <img src={manikinIcon} className='logo' alt="" />
                 <ul>
-                    <li>
+                    <li className='nav-link'>
                         <a href="/about">About</a>
                     </li>
-                    <li>
+                    <li className='nav-link'>
                         <a href="/market">NTF's</a>
                     </li>
-                    <li>
+                    <li className='nav-link'>
                         <a href="/roadmap">Road map</a>
                     </li>
-                    <li>
+                    <li className='nav-link'>
                         <a href="/team">Our Team</a>
                     </li>
                     <li>
