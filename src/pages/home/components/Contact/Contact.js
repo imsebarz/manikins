@@ -1,10 +1,11 @@
 import React from 'react'
 import './contact.scss'
 import arc from '../../../../assets/arc.png'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const Contact = () => {
   return <section className='contact-section'>
-    <img src={arc} alt="" />
+    <LazyLoadImage threshold={800} src={arc} alt="" />
     <form action="">
       <div className="title">
         <h1 className='golden'>CONTACT US</h1>

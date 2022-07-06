@@ -8,6 +8,7 @@ import bubble1 from '../../../../assets/bubble.svg'
 import bubble2 from '../../../../assets/bubble2.svg'
 import bubble3 from '../../../../assets/bubble3.svg'
 import Bubble from './Bubble'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 
 const Nfts = () => {
@@ -25,7 +26,7 @@ const Nfts = () => {
         <p>A preview of many relics, they will be available in coffers</p>
       </div>
       <div className="character">
-        <img src={character} alt="" />
+        <LazyLoadImage threshold={800} src={character} alt="" />
         <div className="bubbles">
           <Bubble id='1' bubbleImg={bubble1}></Bubble>
           <Bubble id='2' bubbleImg={bubble2}></Bubble>

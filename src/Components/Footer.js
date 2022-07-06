@@ -7,17 +7,18 @@ import instagram from '../assets/instagram.png'
 import facebook from '../assets/facebook.png'
 import youtube from '../assets/youtube.png'
 import discord from '../assets/discord.png'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const Footer = () => {
   return (
     <footer>
       <div className="links">
-        <img src={logo} alt="" className="logo" />
+        <LazyLoadImage threshold={800} src={logo} alt="" className="logo" />
         <div className="social">
-          <img src={facebook} alt="" />
-          <img src={youtube} alt="" />
-          <img src={instagram} alt="" />
-          <img src={discord} alt="" />
+          <LazyLoadImage threshold={800} src={facebook} alt="" />
+          <LazyLoadImage threshold={800} src={youtube} alt="" />
+          <LazyLoadImage threshold={800} src={instagram} alt="" />
+          <LazyLoadImage threshold={800} src={discord} alt="" />
         </div>
       </div>
       <div className="copy">

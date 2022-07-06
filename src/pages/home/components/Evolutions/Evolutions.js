@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import helmet from '../../../../assets/helmet.png'
 import './evolutions.scss'
 
@@ -9,7 +10,7 @@ const Evolutions = () => {
     const incrementLevel = () => {
         level <= 3 ? setLevel(level + 1) : setLevel(level);
     }
-    
+
     const decrementLevel = () => {
         level > 1 ? setLevel(level - 1) : setLevel(level);
     }
@@ -33,9 +34,9 @@ const Evolutions = () => {
                         <h5>Level {level}</h5>
                     </div>
                 </div>
-                <img src={helmet} style={{
+                <LazyLoadImage threshold={800} src={helmet} style={{
                     background: ` radial-gradient(circle,
-          rgba(255, 199, 88, ${ 0.2 + level*0.2}) 0%,
+          rgba(255, 199, 88, ${0.2 + level * 0.2}) 0%,
           rgba(255, 247, 227, 0) 70%)`}} alt='magic helmet with evolutions' />
             </div>
         </section >

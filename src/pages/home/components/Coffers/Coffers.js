@@ -1,6 +1,7 @@
 import React from 'react'
 import './coffers.scss'
 import coffer from '../../../../assets/coffer.png'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 
 const Coffers = () => {
@@ -14,18 +15,18 @@ const Coffers = () => {
         </div>
         <div className="videos">
           <div className="coffer">
-            < img src={coffer} alt="" />
+            <LazyLoadImage threshold={800} src={coffer} alt="" />
             <h2>Basic</h2>
           </div>
           <div className="coffer">
-            < img src={coffer} alt="" />
+            <LazyLoadImage threshold={800} src={coffer} alt="" />
             <h2>Intermediate</h2>
-            
+
           </div>
           <div className="coffer">
-            < img src={coffer} alt="" />
+            <LazyLoadImage threshold={800} src={coffer} alt="" />
             <h2>Advanced</h2>
-            
+
           </div>
 
         </div>
