@@ -45,7 +45,7 @@ nav {
         color: rgb(191, 191, 191);
         // padding: 0 1rem;
         min-width: fit-content;
-        font-weight: 100;
+        font-weight: 500;
         margin: 0 1rem;
         box-sizing: border-box;
         padding: 5px;
@@ -98,12 +98,13 @@ nav {
   .register {
     padding: 5px;
     width: 105px;
-    height: 34px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 500;
-    font-size: 34;
+    font-family: "Open Sans";
+    font-size: 1rem;
     background: rgb(255, 184, 94);
     background: linear-gradient(
       120deg,
