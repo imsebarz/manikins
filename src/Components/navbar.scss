@@ -42,10 +42,14 @@ nav {
       position: relative;
       a {
         text-decoration: none;
-        color: white;
+        color: rgb(191, 191, 191);
         // padding: 0 1rem;
         min-width: fit-content;
+        font-weight: 100;
         margin: 0 1rem;
+        box-sizing: border-box;
+        padding: 5px;
+        width: 35px;
         padding-bottom: 1.2rem;
       }
     }
@@ -53,7 +57,7 @@ nav {
       content: "";
       position: absolute;
       width: 0%;
-      height: 2px;
+      height: 2.2px;
       display: block;
       transition: all 0.3s ease;
       border-radius: 3px;
@@ -63,8 +67,12 @@ nav {
     .nav-link:hover::after {
       border-radius: 3px;
       width: 70%;
-      height: 2px;
+      height: 2.2px;
       background-color: rgb(225, 188, 139);
+    }
+    .nav-link:hover a {
+      color: white;
+      font-weight: 400;
     }
 
     .socials {
@@ -81,7 +89,7 @@ nav {
       }
       svg:hover {
         path {
-          fill: rgb(248, 220, 151);
+          fill: rgb(255, 184, 94);
         }
       }
     }
@@ -94,12 +102,19 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
     font-weight: 500;
-    font-size: 32;
-    background-color: rgb(225, 188, 139);
+    font-size: 34;
+    background: rgb(255, 184, 94);
+    background: linear-gradient(
+      120deg,
+      rgba(255, 184, 94, 1) 2%,
+      rgba(255, 214, 128, 1) 19%,
+      rgba(255, 195, 102, 1) 40%,
+      rgba(255, 184, 94, 1) 51%,
+      rgba(255, 195, 102, 1) 65%,
+      rgba(255, 214, 128, 1) 77%,
+      rgba(255, 184, 94, 1) 99%
+    );
     border: 2px solid rgb(93, 53, 0);
     outline: none;
     color: rgb(93, 53, 0);

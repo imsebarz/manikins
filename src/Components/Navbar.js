@@ -66,7 +66,7 @@ const Navbar = () => {
                         <a href="/team">Our Team</a>
                     </li>
                     <li>
-                        <button onClick={login} className='register'>Register</button>
+                        <button onClick={login} className='register'>Waitlist</button>
                     </li>
 
                     <li className='socials'>

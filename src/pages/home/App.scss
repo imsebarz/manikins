@@ -17,11 +17,17 @@ main {
 }
 
 .golden {
+  font-family: "Magic Hat";
+  background: rgb(255, 184, 94);
   background: linear-gradient(
-    0deg,
-    rgb(255, 151, 15) 0%,
-    rgba(255, 251, 241, 0.858) 41%,
-    rgb(255, 166, 0) 100%
+    120deg,
+    rgba(255, 184, 94, 1) 2%,
+    rgba(255, 214, 128, 1) 19%,
+    rgba(255, 195, 102, 1) 40%,
+    rgba(255, 184, 94, 1) 51%,
+    rgba(255, 195, 102, 1) 65%,
+    rgba(255, 214, 128, 1) 77%,
+    rgba(255, 184, 94, 1) 99%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -30,10 +36,14 @@ main {
 
 .goldenButton {
   background: linear-gradient(
-    0deg,
-    rgb(255, 176, 73) 0%,
-    rgba(255, 251, 241, 0.9) 41%,
-    rgb(255, 199, 94) 100%
+    120deg,
+    rgba(255, 184, 94, 1) 2%,
+    rgba(255, 214, 128, 1) 19%,
+    rgba(255, 195, 102, 1) 40%,
+    rgba(255, 184, 94, 1) 51%,
+    rgba(255, 195, 102, 1) 65%,
+    rgba(255, 214, 128, 1) 77%,
+    rgba(255, 184, 94, 1) 99%
   ) !important;
   color: rgb(180, 112, 3) !important;
   font-weight: 900 !important;
