@@ -3,7 +3,6 @@ import './comingSoon.scss'
 import separatorTop from '../../../../assets/separatorTop.svg'
 import comingSoon from '../../../../assets/comingsoon.webp'
   import textseparator from '../../../../assets/textseparator.svg'
-import {ReactComponent as DiscordIcon} from '../../../../assets/discordIcon.svg'
 import {ReactComponent as Colon} from '../../../../assets/colon.svg'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
