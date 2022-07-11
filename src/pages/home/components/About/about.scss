@@ -24,15 +24,33 @@
       padding-bottom: 15px;
       font-weight: 400;
       text-align: center;
+      font-family: "Magic Hat";
+      background: rgb(255, 184, 94);
+      background: linear-gradient(
+        120deg,
+        rgba(255, 184, 94, 1) 2%,
+        rgba(255, 214, 128, 1) 19%,
+        rgba(255, 195, 102, 1) 40%,
+        rgba(255, 184, 94, 1) 51%,
+        rgba(255, 195, 102, 1) 65%,
+        rgba(255, 214, 128, 1) 77%,
+        rgba(255, 184, 94, 1) 99%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       span {
-        color: rgb(255, 216, 118);
+        background: rgb(255, 255, 255);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     }
 
     p {
       font-size: 1.5rem;
       text-align: left;
-      font-weight: 300;
+      font-weight: 400;
     }
   }
 
