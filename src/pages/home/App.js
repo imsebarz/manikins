@@ -26,10 +26,10 @@ function App() {
         <Hero></Hero>
         <ComingSoon></ComingSoon>
         <About></About>
-        <Nfts></Nfts>
-        <Coffers></Coffers>
         <Evolutions></Evolutions>
         <Carousel item1={item1} item2={item2} item3={item3} item4={item4}></Carousel>
+        <Nfts></Nfts>
+        <Coffers></Coffers>
         <Features></Features>
         <Team></Team>
         <Contact></Contact>
