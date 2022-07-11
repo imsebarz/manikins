@@ -31,7 +31,7 @@ function App() {
         <Nfts></Nfts>
         <Coffers></Coffers>
         <Features></Features>
-        <Team></Team>
+        {/* <Team></Team> */}
         <Contact></Contact>
         <Cta></Cta>
         <Footer></Footer>
