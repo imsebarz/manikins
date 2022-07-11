@@ -6,19 +6,23 @@
   box-sizing: border-box;
   display: flex;
   margin: -120px 0;
-  padding: 3rem 2rem 5rem 2rem;
+  padding: 3rem 2rem 7rem 2rem;
   height: auto;
   flex-direction: row;
   z-index: 10;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   flex-wrap: wrap;
-  // overflow-: visible;
 
   .comingsoon-img {
     flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
       min-width: 500px;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       height: auto;
     }
@@ -40,31 +44,15 @@
       margin: 0;
     }
 
-    h1 {
-      font-size: clamp(4rem, 7vw, 9rem);
-      border-bottom: 1px solid goldenrod;
-    }
-
     h2 {
       font-weight: 400;
-      font-size: 2.5rem;
+      font-size: clamp(2rem, 4vw, 7rem);
       color: rgb(255, 213, 107);
     }
 
-    h3 {
-      font-size: 4rem;
-      font-weight: 100;
-      text-align: center;
-    }
-
     h4 {
-      font-size: 1.2rem;
       font-weight: 500;
-    }
-
-    p {
-      margin: 1em;
-      font-size: 1.5rem;
+      font-size: clamp(1rem, 1.8vw, 3.8rem);
     }
 
     .daystop {
@@ -108,7 +96,7 @@
 
     .silver {
       font-family: "Magic Hat";
-      font-size: 3rem;
+      font-size: clamp(2.3rem, 2.5vw, 3.5rem);
       background: rgb(132, 158, 167);
       background: linear-gradient(
         159deg,

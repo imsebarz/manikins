@@ -29,7 +29,7 @@ const ComingSoon = () => {
           </div>
           </div>
           <LazyLoadImage threshold={800} src={textseparator} className="text-separator" alt="hero" />
-          <p>Be part of our new community</p>
+          <h4>Be part of our new community</h4>
           <button>Waitlist</button>
         </div>
 
