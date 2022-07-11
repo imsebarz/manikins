@@ -1,7 +1,7 @@
 import React from 'react'
 import hero from '../../../../assets/hero.webp'
 import tipografia from '../../../../assets/tipografia.png'
-import arrow from '../../../../assets/arrow.svg'
+import arrow from '../../../../assets/arrow.gif'
 import './hero.scss'
 
 const Hero = () => {
