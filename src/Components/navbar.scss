@@ -88,8 +88,9 @@ nav {
         }
       }
       svg:hover {
+        cursor: pointer;
         path {
-          fill: rgb(255, 184, 94);
+          fill: #ffc858;
         }
       }
     }
@@ -104,7 +105,7 @@ nav {
     align-items: center;
     font-weight: 500;
     font-family: "Open Sans";
-    font-size: 1rem;
+    font-size: 0.9rem;
     background: rgb(255, 184, 94);
     background: linear-gradient(
       120deg,
@@ -121,9 +122,27 @@ nav {
     color: rgb(93, 53, 0);
     margin: 0;
     border-radius: 15px;
+    margin-left: 20px;
+    transition: all 0.1s ease;
+  }
+  .register:after {
+    content: "";
+    position: absolute;
+    padding: 5px;
+    width: 96px;
+    height: 15px;
+    display: block;
+    transition: all 0.2s ease;
+    border-radius: 15px;
+    bottom: 14px;
+    left: 3px;
+    margin-left: 25px;
+  }
+  .register:hover::after {
+    border: 1.5px solid white;
   }
   .register:hover {
-    border: 1px solid white;
+    // border: 1px solid white;
     font-weight: 700;
   }
 }
