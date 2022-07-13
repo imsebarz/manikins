@@ -17,6 +17,24 @@ const Carousel = ({ item1, item2, item3, item4 }) => {
       <div className="carousel-item">
         <LazyLoadImage threshold={800} src={item1} alt="manikin moving" />
       </div>
+      <div className="carousel-item">
+        <LazyLoadImage threshold={800} src={item2} alt="manikin moving" />
+      </div>
+      <div className="carousel-item">
+        <LazyLoadImage threshold={800} src={item2} alt="manikin moving" />
+      </div>
+      <div className="carousel-item">
+        <LazyLoadImage threshold={800} src={item2} alt="manikin moving" />
+      </div>
+      <div className="carousel-item">
+        <LazyLoadImage threshold={800} src={item2} alt="manikin moving" />
+      </div>
+      <div className="carousel-item">
+        <LazyLoadImage threshold={800} src={item2} alt="manikin moving" />
+      </div>
+      <div className="carousel-item">
+        <LazyLoadImage threshold={800} src={item2} alt="manikin moving" />
+      </div>
     </div>
   )
 }
