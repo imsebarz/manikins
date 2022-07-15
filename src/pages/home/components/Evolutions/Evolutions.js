@@ -7,6 +7,11 @@ import LevelSeparator from "../../../../assets/test.png";
 import textseparator from "../../../../assets/textseparator.svg";
 import "./evolutions.scss";
 import { useState } from "react";
+import Carousel from "../../../../Components/Carousel";
+import item1 from '../../../../assets/item1.png'
+import item2 from '../../../../assets/item2.png'
+import item3 from '../../../../assets/item3.png'
+import item4 from '../../../../assets/item4.png'
 
 const Evolutions = () => {
   const [level, setLevel] = useState(1);
@@ -78,7 +83,9 @@ const Evolutions = () => {
             src={relicevolutions}
             alt="Relic with evolutions"
           />
-        </div>
+              </div>
+        <Carousel item1={item1} item2={item2} item3={item3} item4={item4}></Carousel>
+              
       </section>
     </>
   );
