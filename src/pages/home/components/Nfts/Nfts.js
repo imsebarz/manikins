@@ -1,13 +1,8 @@
 import './nfts.scss'
 import character from '../../../../assets/character.png'
-import Carousel from '../../../../Components/Carousel'
-import manikin1 from '../../../../assets/manikin1.png'
-import manikin2 from '../../../../assets/manikin2.png'
-import manikin3 from '../../../../assets/manikin3.png'
-import bubble1 from '../../../../assets/bubble.svg'
-import bubble2 from '../../../../assets/bubble2.svg'
-import bubble3 from '../../../../assets/bubble3.svg'
-import Bubble from './Bubble'
+import build from '../../../../assets/build.png'
+import buildSelected from '../../../../assets/buildSelected.png'
+import relicIcon from '../../../../assets/relicIcon.png'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 
@@ -23,17 +18,27 @@ const Nfts = () => {
             YOU END UP LIKE NO ONE ELSE
           </span>
         </h1>
-        <p>A preview of many relics, they will be available in coffers</p>
       </div>
-      <div className="character">
+      <div className="content">
+        <div className="selectors">
+          <div className="builds">
+            <img src={buildSelected} alt='manikin pre built with relics' className="build"></img >
+            <img src={build} alt='manikin pre built with relics' className="build"></img >
+            <img src={build} alt='manikin pre built with relics' className="build"></img>
+          </div>
+          <h2 className='golden'>Manikin Customisable</h2>
+          <div className="relics">
+            <img src={relicIcon} alt='relic Icon with types' className="relic"></img>
+            <img src={relicIcon} alt='relic Icon with types' className="relic"></img>
+            <img src={relicIcon} alt='relic Icon with types' className="relic"></img>
+            <img src={relicIcon} alt='relic Icon with types' className="relic"></img>
+          </div>
+          <p>Combina las reliquias como quieras para obtener el máximo poder</p>
+        </div>
+        <div className="platform">
         <LazyLoadImage threshold={800} src={character} alt="" />
-        <div className="bubbles">
-          <Bubble id='1' bubbleImg={bubble1}></Bubble>
-          <Bubble id='2' bubbleImg={bubble2}></Bubble>
-          <Bubble id='3' bubbleImg={bubble3}></Bubble>
         </div>
       </div>
-      <Carousel item1={manikin1} item2={manikin2} item3={manikin3} item4={manikin1}></Carousel>
     </section>
   )
 }
