@@ -36,6 +36,8 @@
     .selectors {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       .builds {
         display: flex;
         justify-content: center;
@@ -48,6 +50,16 @@
       }
       h2 {
         margin: 3rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+        margin-top: 50px;
+        width: 70%;
+        span {
+          font-weight: 700;
+          color: #f9e694;
+        }
       }
       .relics {
         display: flex;
