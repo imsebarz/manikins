@@ -1,6 +1,6 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import relicevolutions from "../../../../assets/relicevolutions.webp";
-import { ReactComponent as SeparatorTop } from "../../../../assets/separatorTop.svg";
+import separatorTop from "../../../../assets/separatorTop.svg";
 // import { ReactComponent as LevelSpace } from "../../../../assets/levelSpace.svg";
 // import { ReactComponent as Level|SpaceSelected } from "../../../../assets/levelSpaceSelected.svg";
 import LevelSeparator from "../../../../assets/test.png";
@@ -17,8 +17,8 @@ const Evolutions = () => {
   const [level, setLevel] = useState(1);
 
   return (
-    <>
-      <SeparatorTop className="separator evolutions" />
+      <>
+        <LazyLoadImage threshold={800} src={separatorTop} className='separator' alt="" />
       <section className="section-evolutions">
         <h1 className="title">
           EVERY RELIC HAS <span> EVOLUTIONS</span>
@@ -46,7 +46,7 @@ const Evolutions = () => {
                   <p>Level 1</p>
                 </li>
                 <li className="levelSeparator">
-                  <img src={LevelSeparator} alt="" />
+                <LazyLoadImage threshold={800} src={LevelSeparator} alt="" />
                 </li>
                 <li
                   className={`${level === 2 ? "selected" : ""}`}
@@ -56,7 +56,7 @@ const Evolutions = () => {
                   <p> Level 2</p>
                 </li>
                 <li className="levelSeparator">
-                  <img src={LevelSeparator} alt="" />
+                <LazyLoadImage threshold={800} src={LevelSeparator} alt="" />
                 </li>
                 <li
                   className={`${level === 3 ? "selected" : ""}`}
@@ -66,7 +66,7 @@ const Evolutions = () => {
                   <p>Level 3</p>
                 </li>
                 <li className="levelSeparator">
-                  <img src={LevelSeparator} alt="" />
+                <LazyLoadImage threshold={800} src={LevelSeparator} alt="" />
                 </li>
                 <li
                   className={`${level === 4 ? "selected" : ""}`}
