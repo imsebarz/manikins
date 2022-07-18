@@ -1,33 +1,20 @@
 .section-coffers {
-  background: rgb(0, 0, 0, 1);
-  background: url('../../../../assets/rasgado2.png') no-repeat center center;
+  background-color: rgb(255, 255, 255);
+  background: url("../../../../assets/coffersBg.png") no-repeat center center;
   background-size: cover;
   place-content: center;
-  margin: -50px 0px;
+  margin: -120px 0px;
   z-index: 2;
-  padding: 100px 0;
+  padding: 150px 0;
 
-  .background {
-    width: 100vw;
-    height: auto;
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-    filter: brightness(0.2);
-    background-position: center;
-    background-size: cover;
-    height: 100%;
-    z-index: -1;
-  }
-
-  .main {
+  .content {
     display: flex;
-    grid-column: 1 / -1;
     height: auto;
-    grid-row: 1 / -1;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
+    gap: 30px;
 
     img {
       width: 50%;
@@ -36,31 +23,78 @@
 
     h1 {
       text-align: center;
-      font-size: 5rem;
-      margin-top: 0;
+      font-size: 4rem;
+      margin: 0;
+      font-family: "Magic Hat";
+      color: black;
     }
 
-    .videos {
+    p {
+      color: black;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .text-separator {
+      height: 18px;
+      width: auto;
+      margin-bottom: 30px;
+    }
+
+    .coffers {
       display: flex;
       gap: 50px;
       flex-wrap: wrap;
       justify-content: center;
 
-      img {
-        width: 250px;
-        height: 250px;
-        border-radius: 15px;
-        border: 2px solid goldenrod;
-        filter: brightness(0.9);
-      }
-
-      img:hover {
-        filter: brightness(1.3);
-      }
-
       .coffer {
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 1) 60%,
+          rgba(255, 255, 255, 0) 85%
+        );
+        padding: 2rem 1rem;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: max-content;
+        min-height: 300px;
+        width: 250px;
+        gap: 30px;
+        flex-direction: column;
+
+        .coffer-img {
+          width: 200px;
+          height: auto;
+          filter: brightness(0.9);
+        }
+
+        .pill {
+          width: 25px;
+          height: auto;
+        }
+
+        img:hover {
+          filter: brightness(1.3);
+        }
         h2 {
-          font-style: italic;
+          color: black;
+          font-weight: 300;
+          font-family: "Magic Hat";
+        }
+
+        button {
+          outline: none;
+          border: 2px solid #5e3704;
+          font-family: "Open Sans";
+          font-weight: 600 !important;
+          font-size: 1rem;
+          border-radius: 15px;
+          padding: 5px 15px;
+          color: #5e3704 !important;
         }
       }
     }
