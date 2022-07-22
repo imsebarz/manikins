@@ -8,6 +8,11 @@
   justify-content: center;
   align-items: center;
 
+  .text-separator {
+    margin: 1.5rem 0;
+    height: 15px;
+    width: auto;
+  }
   .cta-input {
     width: 70%;
     display: flex;
@@ -16,7 +21,8 @@
     font-size: 1.5rem;
 
     p {
-      width: 60%;
+      width: 50%;
+      font-size: 1.2rem;
     }
 
     .cta-input-container {
@@ -31,9 +37,9 @@
         width: 33%;
         background: rgba($color: #ffffff, $alpha: 1);
         height: 40px;
-        padding: 0;
-        text-align: center;
-        border-radius: 15px 0 0 15px;
+        padding: 10px;
+        text-align: left;
+        border-radius: 5px 0 0 5px;
         border: 3px solid white;
         outline: none;
         box-sizing: border-box;
@@ -41,13 +47,14 @@
       }
 
       button {
-        width: 30%;
+        width: 20%;
         height: 40px;
         color: white;
         outline: none;
         box-sizing: border-box;
-        border-radius: 0 15px 15px 0;
+        border-radius: 0 5px 5px 0;
         border: none;
+        font-weight: 100;
       }
 
       button:hover {
@@ -63,10 +70,9 @@
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     margin: 0;
     color: goldenrod;
-    border-bottom: 1px solid goldenrod;
     text-align: center;
   }
 }
