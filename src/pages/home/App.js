@@ -7,10 +7,10 @@ import Hero from './components/Hero/Hero'
 import Coffers from './components/Coffers/Coffers'
 import Evolutions from './components/Evolutions/Evolutions'
 import ComingSoon from './components/ComingSoon/ComingSoon'
-import Features from './components/Features/Features'
 import Nfts from './components/Nfts/Nfts'
 // import Team from './components/Team/Team'
-import Contact from './components/Contact/Contact'
+import Features from './components/Features/Features'
+import Roadmap from './components/Roadmap/Roadmap'
 
 function App() {
 
@@ -25,8 +25,8 @@ function App() {
         <Nfts></Nfts>
         <Coffers></Coffers>
         <Features></Features>
+        <Roadmap></Roadmap>
         {/* <Team></Team> */}
-        <Contact></Contact>
         <Cta></Cta>
         <Footer></Footer>
       </main>

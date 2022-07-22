@@ -1,0 +1,72 @@
+.section-roadmap {
+  background-color: rgb(255, 255, 255);
+  background: url("../../../../assets/coffersBg.png") no-repeat center center;
+  background-size: cover;
+  place-content: center;
+  margin: -50px 0px;
+  z-index: 2;
+  padding: 100px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 600px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5vw;
+    position: relative;
+    float: right;
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 500;
+      color: black;
+      font-family: "Magic Hat";
+    }
+  }
+  .roadmap {
+    display: flex;
+    ul {
+      min-height: 500px;
+      li {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        min-height: 50px;
+        p {
+          color: black;
+          width: 250px;
+        }
+      }
+      .stepSeparator {
+        position: relative;
+        left: 42px;
+        z-index: -1;
+        margin: -10px 0;
+        height: 10px;
+        width: 10px;
+      }
+    }
+    .step {
+      width: 94px;
+      height: 94px;
+      background: url("../../../../assets/step.png") center center no-repeat;
+      transition: all 0.7s ease;
+    }
+    .selected {
+      background: url("../../../../assets/stepSelected.png") center center
+        no-repeat;
+    }
+  }
+  img {
+    max-width: 700px;
+    align-self: flex-end;
+    position: absolute;
+    left: 0;
+  }
+}
