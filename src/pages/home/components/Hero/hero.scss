@@ -47,10 +47,10 @@
     align-self: flex-end;
     justify-content: center;
     align-items: center;
-    z-index: 30;
+    z-index: 300;
     width: 50%;
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     // position: absolute;
     // bottom: 30px;
     flex-direction: column;
@@ -64,6 +64,50 @@
     .arrow {
       height: 50px;
       width: auto;
+    }
+
+    .input-container {
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+      margin-top: 30px;
+
+      input {
+        width: 33%;
+        background: rgba($color: #ffffff, $alpha: 1);
+        height: 40px;
+        padding: 10px;
+        text-align: left;
+        border-radius: 5px 0 0 5px;
+        border: 3px solid white;
+        outline: none;
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      button {
+        width: 20%;
+        height: 40px;
+        color: white;
+        outline: none;
+        box-sizing: border-box;
+        border-radius: 0 5px 5px 0;
+        border: none;
+        font-weight: 100;
+      }
+
+      button:hover {
+        background: rgba($color: goldenrod, $alpha: 1);
+        color: white;
+      }
+
+      button:active {
+        background: rgba($color: goldenrod, $alpha: 0.8);
+        color: white;
+      }
     }
   }
 }

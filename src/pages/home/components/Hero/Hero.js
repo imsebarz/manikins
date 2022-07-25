@@ -11,6 +11,10 @@ const Hero = () => {
       <div className="gradient"></div>
       <div className="content">
         <img src={tipografia} className='title' alt="hero" />
+        <form className='input-container'>
+          <input type='email' required placeholder='Enter your email' ></input>
+          <button className='goldenButton'>REGISTER</button>
+        </form>
         <img src={arrow} className="arrow" alt="hero" />
       </div>
     </section>
