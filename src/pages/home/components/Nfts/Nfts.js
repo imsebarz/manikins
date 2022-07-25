@@ -15,7 +15,7 @@ const Nfts = () => {
     <>
     <section className="section-nfts">
       <div className="title">
-        <h1 className="golden">
+        <h1>
           YOU START LIKE EVERYONE ELSE <br />
           <span className='golden'>
             YOU END UP LIKE NO ONE ELSE
@@ -32,6 +32,7 @@ const Nfts = () => {
           </div>
           <h2 className='golden'>Manikin Customizable</h2>
           <div className="relics">
+            <LazyLoadImage threshold={800} src={relicIcon} alt='relic Icon with types' className="relic" />
             <LazyLoadImage threshold={800} src={relicIcon} alt='relic Icon with types' className="relic" />
             <LazyLoadImage threshold={800} src={relicIcon} alt='relic Icon with types' className="relic" />
             <LazyLoadImage threshold={800} src={relicIcon} alt='relic Icon with types' className="relic" />
