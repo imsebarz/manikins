@@ -8,7 +8,7 @@ import Coffers from './components/Coffers/Coffers'
 import Evolutions from './components/Evolutions/Evolutions'
 import ComingSoon from './components/ComingSoon/ComingSoon'
 import Nfts from './components/Nfts/Nfts'
-// import Team from './components/Team/Team'
+import Team from './components/Team/Team'
 import Features from './components/Features/Features'
 import Roadmap from './components/Roadmap/Roadmap'
 
@@ -26,7 +26,7 @@ function App() {
         <Coffers></Coffers>
         <Features></Features>
         <Roadmap></Roadmap>
-        {/* <Team></Team> */}
+        <Team></Team>
         <Cta></Cta>
         <Footer></Footer>
       </main>
