@@ -70,7 +70,7 @@ const Register = () => {
   }
 
   return (
-    <section>
+    <section className='section-register'>
       <h1>Register</h1>
 
       <form onSubmit={(e) => handleSubmit(e)}>

@@ -1,16 +1,22 @@
-form {
-  display: flex;
-  flex-direction: column;
-  color: white;
+.section-register {
+  margin: -120px 0px;
+  z-index: 2;
+  padding: 150px 0;
 
-  input {
-    padding: 10px 20px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-    outline: none;
-  }
+  form {
+    display: flex;
+    flex-direction: column;
+    color: white;
 
-  .error {
-    border: 2px solid red;
+    input {
+      padding: 10px 20px;
+      margin-bottom: 25px;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .error {
+      border: 2px solid red;
+    }
   }
 }

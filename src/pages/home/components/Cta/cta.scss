@@ -1,12 +1,15 @@
 .section-cta {
   display: flex;
   flex-direction: column;
-  background: url("../../../../assets/Intersection.webp") center no-repeat fixed;
+  background: url("../../../../assets/intersection.png") center no-repeat fixed;
   background-size: cover;
   background-color: #0f0f0f;
 
   justify-content: center;
   align-items: center;
+
+  margin-top: -100px;
+  z-index: 2;
 
   .text-separator {
     margin: 1.5rem 0;
