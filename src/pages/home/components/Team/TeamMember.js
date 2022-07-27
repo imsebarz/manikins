@@ -1,5 +1,7 @@
 import React from 'react'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import './teamMember.scss'
+
 
 const teamMember = ({ name, image, role }) => {
     return (
