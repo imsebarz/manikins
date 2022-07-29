@@ -5,12 +5,13 @@
   place-content: center;
   margin: -150px 0px -50px 0px;
   z-index: 2;
-  padding: 100px 0 0 0;
+  padding: 100px 0px 70px 0px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
   min-height: 600px;
   .content {
     display: flex;
@@ -44,7 +45,6 @@
         }
       }
       .stepSeparator {
-        position: relative;
         left: 42px;
         z-index: -1;
         margin: -10px 0;
@@ -67,6 +67,8 @@
     max-width: 700px;
     align-self: flex-end;
     position: absolute;
-    left: 0;
+    left: 0px;
+    bottom: 50px;
+    z-index: 100;
   }
 }
