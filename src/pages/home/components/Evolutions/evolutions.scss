@@ -67,19 +67,21 @@
       background-position: center center;
       background-size: auto;
       transition: all 0.4s ease;
+      filter: brightness(1);
+      background-image: url("../../../../assets/relicevolutions.webp");
     }
 
     .ev1 {
-      background-image: url("../../../../assets/relicevolutions.webp");
+      filter: hue-rotate(1deg);
     }
     .ev2 {
-      background-image: url("../../../../assets/relicIcon1.png");
+      filter: hue-rotate(100deg);
     }
     .ev3 {
-      background-image: url("../../../../assets/relicIcon2.png");
+      filter: hue-rotate(180deg);
     }
     .ev4 {
-      background-image: url("../../../../assets/relicIcon3.png");
+      filter: hue-rotate(240deg);
     }
 
     .copy {
