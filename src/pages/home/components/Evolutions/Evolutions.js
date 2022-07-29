@@ -1,5 +1,5 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import relicevolutions from "../../../../assets/relicevolutions.webp";
+// import relicevolutions from "../../../../assets/relicevolutions.webp";
 import separatorTop from "../../../../assets/separatorTop.svg";
 // import { ReactComponent as LevelSpace } from "../../../../assets/levelSpace.svg";
 // import { ReactComponent as Level|SpaceSelected } from "../../../../assets/levelSpaceSelected.svg";
@@ -7,11 +7,11 @@ import LevelSeparator from "../../../../assets/test.png";
 import textseparator from "../../../../assets/textseparator.svg";
 import "./evolutions.scss";
 import { useState } from "react";
-import Carousel from "../../../../Components/Carousel";
-import item1 from '../../../../assets/item1.png'
-import item2 from '../../../../assets/item2.png'
-import item3 from '../../../../assets/item3.png'
-import item4 from '../../../../assets/item4.png'
+// import Carousel from "../../../../Components/Carousel";
+// import item1 from '../../../../assets/item1.png'
+// import item2 from '../../../../assets/item2.png'
+// import item3 from '../../../../assets/item3.png'
+// import item4 from '../../../../assets/item4.png'
 
 const Evolutions = () => {
   const [level, setLevel] = useState(1);
@@ -78,13 +78,12 @@ const Evolutions = () => {
               </ul>
             </div>
           </div>
-          <LazyLoadImage
-            threshold={800}
-            src={relicevolutions}
+          <div
+            className={`relic-evolutions ev${level}`}
             alt="Relic with evolutions"
           />
               </div>
-        <Carousel item1={item1} item2={item2} item3={item3} item4={item4}></Carousel>
+        {/* <Carousel item1={item1} item2={item2} item3={item3} item4={item4}></Carousel> */}
               
       </section>
     </>
