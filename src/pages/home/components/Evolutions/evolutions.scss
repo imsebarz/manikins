@@ -60,6 +60,27 @@
       height: 15px;
       width: auto;
     }
+    .relic-evolutions {
+      width: 500px;
+      height: 500px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: auto;
+      transition: all 0.4s ease;
+    }
+
+    .ev1 {
+      background-image: url("../../../../assets/relicevolutions.webp");
+    }
+    .ev2 {
+      background-image: url("../../../../assets/relicIcon1.png");
+    }
+    .ev3 {
+      background-image: url("../../../../assets/relicIcon2.png");
+    }
+    .ev4 {
+      background-image: url("../../../../assets/relicIcon3.png");
+    }
 
     .copy {
       width: 40%;
