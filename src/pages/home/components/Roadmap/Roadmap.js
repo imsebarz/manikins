@@ -10,7 +10,7 @@ const Roadmap = () => {
       <LazyLoadImage
         threshold={800}
         src={hiManikin}
-        className="roadmap-img"
+        className="hi-manikin"
         alt="Hi gesture manikin"
       />
       <div className="content">
@@ -25,10 +25,10 @@ const Roadmap = () => {
         alt="Hi gesture manikin"
       />
           <ul className="roadmapContainer">
-              <li>Actualmente estamos en desarrollo - <span>versión Alpha</span></li>
-              <li><span>10 de octubre 2022</span> Lanzamiento del beta</li>
-              <li><span>Tiempo de analisis de datos</span></li>
-              <li><span>10 de abril 2023</span> Lanzamiento a produccion</li>
+              <li><span>Participacion Gamescom</span> - 24 de agosto 2022</li>
+              <li><span>Closed PRE-Sale</span> 30 de septiembre 2022</li>
+              <li><span>Lanzamiento de la beta</span>30 de noviembre 2022</li>
+              <li><span>Season 1</span>Q2 - 2023</li>
           </ul>
         </div>
       </div>

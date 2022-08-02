@@ -21,11 +21,11 @@ const Evolutions = () => {
         <LazyLoadImage threshold={800} src={separatorTop} className='separator' alt="" />
       <section className="section-evolutions">
         <h1 className="title">
-          EVERY RELIC HAS <span> EVOLUTIONS</span>
+          BATTLE RELIC<span> UPGRADES</span>
         </h1>
         <div className="content">
           <div className="copy">
-            <h3>Increase your power</h3>
+            <h3>Limitless build <span>combinations</span></h3>
             <LazyLoadImage
               threshold={800}
               src={textseparator}
@@ -33,8 +33,10 @@ const Evolutions = () => {
               alt="hero"
             />
             <p>
-              With every evolution the relic unlocks new features and Powers ,
-              you can use it in the game to power up your character.
+              Relics power up by upgrading them, increasing stats and developing new skills. 
+            </p>
+            <p>
+               You can build your Manikin equipment using any Battle Relic, there are no character classes or restrictions. Welcome mage tanks and ninja healers. 
             </p>
             <div className="levels">
               <ul className="levelsContainer">

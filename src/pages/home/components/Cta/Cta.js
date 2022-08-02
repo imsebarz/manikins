@@ -17,15 +17,15 @@ const Cta = () => {
 
   return (
     <section className="section-cta">
-      <h1 className='golden'>REGISTER NOW!</h1>
+      <h1 className='golden'>JOIN NOW!</h1>
       <LazyLoadImage threshold={800} src={textseparator} className="text-separator" alt="hero" />
       <div className='cta-input'>
         <p>
-          Register now and be the first to know about manikins beta, relics sales, events and more!
+          Register now and be the first to know about our Battle Relics PRE-Sale, Manikins beta, events and more!
         </p>
         <form className='cta-input-container' onSubmit={(e) => handleSubmit(e)}>
-          <input type='email' required placeholder='Enter your email' value={mail} onChange={(e) => setMail(e.target.value)}></input>
-          <button className='goldenButton'>REGISTER</button>
+          <input type='email' required placeholder='Pre-sale Waitlist' value={mail} onChange={(e) => setMail(e.target.value)}></input>
+          <button className='goldenButton'>JOIN</button>
         </form>
       </div>
     </section>

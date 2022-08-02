@@ -61,12 +61,16 @@
       }
     }
   }
-  img {
+  .hi-manikin {
     max-width: 700px;
+    width: 50vw;
     align-self: flex-end;
     position: absolute;
     left: 0px;
-    bottom: 50px;
+    bottom: 0px;
     z-index: 100;
   }
+}
+
+@media (max-width: 880px) {
 }

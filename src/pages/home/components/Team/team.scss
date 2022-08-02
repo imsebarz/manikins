@@ -1,3 +1,7 @@
+.ft {
+  top: 0px;
+}
+
 .section-team {
   padding: 100px 0px;
   background-color: #120d14;
@@ -27,6 +31,8 @@
       display: flex;
       width: 70%;
       justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
       gap: 50px;
       img {
         width: 300px;

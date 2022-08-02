@@ -53,7 +53,7 @@
     width: 80%;
     justify-content: space-around;
     align-items: center;
-    margin: 50px 0px;
+    margin: clamp(10px, 4vw, 1rem) 0px;
     flex-wrap: wrap;
 
     .text-separator {
@@ -61,11 +61,13 @@
       width: auto;
     }
     .relic-evolutions {
-      width: 500px;
-      height: 500px;
+      width: 60%;
+      height: max-content;
+      min-width: 400px;
+      min-height: 400px;
       background-repeat: no-repeat;
       background-position: center center;
-      background-size: auto;
+      background-size: contain;
       transition: all 0.4s ease;
       filter: brightness(1);
       background-image: url("../../../../assets/relicevolutions.webp");
@@ -99,6 +101,9 @@
         text-align: left;
         margin: 0;
       }
+      span {
+        color: rgb(225, 188, 139);
+      }
 
       .levels {
         display: flex;
@@ -121,11 +126,25 @@
           transition: all 0.7s ease;
           position: relative;
 
+          .levelSeparator {
+            margin: -1%;
+            img {
+              top: 11px;
+              width: clamp(10px, 13%, 45px);
+              height: auto;
+              object-fit: contain;
+            }
+          }
           .imgLevel {
-            width: 94px;
-            height: 64px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            min-height: 50px;
             background: url("../../../../assets/levelSpace.svg") center center
               no-repeat;
+            background-size: contain;
             transition: all 0.7s ease;
           }
           li {
@@ -137,6 +156,10 @@
             flex-direction: column;
             p {
               position: relative;
+              width: 100%;
+              padding: 0;
+              margin: 0;
+              font-size: clamp(0.8rem, 3vw, 1.5rem);
             }
             p:after {
               content: "";
@@ -164,7 +187,13 @@
             .imgLevel {
               background: url("../../../../assets/levelSpaceSelected.svg")
                 center center no-repeat;
-              height: 63px;
+              background-size: contain;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100%;
+              min-height: 50px;
             }
             p::after {
               border-radius: 3px;
@@ -192,6 +221,11 @@
         width: 80%;
         align-items: center;
         padding: 50px;
+      }
+    }
+    .levelSeparator {
+      img {
+        top: 15px !important;
       }
     }
   }

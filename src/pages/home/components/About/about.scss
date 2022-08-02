@@ -1,5 +1,6 @@
 .about-separator {
   z-index: 10;
+  top: calc(5vw - 100px);
 }
 
 .section-about {
@@ -58,8 +59,8 @@
     }
 
     p {
-      font-size: 1.5rem;
-      text-align: left;
+      font-size: 1.8rem;
+      text-align: center;
       font-weight: 400;
     }
   }
@@ -73,15 +74,18 @@
 
   .text-separator {
     border: none;
-    height: 20px;
+    height: 17px;
     margin-top: -20px;
     margin-bottom: 30px;
-    width: auto;
+    width: 40%;
   }
 }
 
 //media query for mobile
 @media screen and (max-width: 750px) {
+  .about-separator {
+    top: calc(18vw - 100px);
+  }
   .section-about {
     .content {
       h1 {

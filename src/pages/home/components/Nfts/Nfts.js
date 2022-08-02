@@ -19,9 +19,9 @@ const Nfts = () => {
     <section className="section-nfts">
       <div className="title">
         <h1>
-          YOU START LIKE EVERYONE ELSE <br />
+          BUILD YOUR TEAM <br />
           <span className='golden'>
-            YOU END UP LIKE NO ONE ELSE
+            AND SHAPE YOUR OWN STRATEGY
           </span>
         </h1>
       </div>
@@ -32,7 +32,7 @@ const Nfts = () => {
             <LazyLoadImage threshold={800} src={build} alt='manikin pre built with relics'  className="build" />
             <LazyLoadImage threshold={800} src={build} alt='manikin pre built with relics'  className="build" />
           </div>
-          <h2 className='golden'>Manikin Customizable</h2>
+          <h2 className='golden'>Custom build</h2>
           <div className="relics">
             <LazyLoadImage threshold={800} src={relicIcon0} alt='relic Icon with types' className="relic" />
             <LazyLoadImage threshold={800} src={relicIcon1} alt='relic Icon with types' className="relic" />
@@ -40,14 +40,14 @@ const Nfts = () => {
             <LazyLoadImage threshold={800} src={relicIcon3} alt='relic Icon with types' className="relic" />
             <LazyLoadImage threshold={800} src={relicIcon4} alt='relic Icon with types' className="relic" />
           </div>
-          <p>Combina las reliquias como quieras para <span>obtener el máximo poder</span></p>
+          <p>Manikins obtain their skills and stats from the equipped Battle Relics, the Manikins by themselves are empty shelves.</p>
         </div>
         <div className="platform">
         <LazyLoadImage threshold={800} src={character} alt="" />
         </div>
       </div>
     </section>
-    <LazyLoadImage threshold={800} src={separatorDown} className='separator' alt="" />
+    <LazyLoadImage threshold={800} src={separatorDown} className='separator separator-roadmap' alt="" />
 </>
   )
 }

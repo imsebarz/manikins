@@ -16,8 +16,8 @@ const About = () => {
         <div className='content'>
           <h1>About <span>the game</span></h1>
           <LazyLoadImage threshold={800} src={textseparator} className="text-separator" alt="hero" />
-          <p>Manikins  is a Tactic game and NFT Relics collector built on the Immutable Blockchain, releasing on PC  in 2022.</p>
-          <p>Play-to-earn in the arena and defeat other players around the world while you power up your skills using Relics.</p>
+          <p>Manikins R&T is free to play PvP Tactics game, where players Manikins team clash into a battle for last standing character.</p>
+          <p>Watch the trailer!</p>
         </div>
       </section>
     </>

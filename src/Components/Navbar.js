@@ -56,13 +56,13 @@ const Navbar = () => {
                         <a href="/about">About</a>
                     </li>
                     <li className='nav-link'>
-                        <a href="/market">NTF's</a>
+                        <a href="/market">Battle Relics</a>
                     </li>
                     <li className='nav-link'>
-                        <a href="/roadmap">Road map</a>
+                        <a href="/roadmap">Roadmap</a>
                     </li>
                     <li className='nav-link'>
-                        <a href="/team">Our Team</a>
+                        <a href="/team">Team</a>
                     </li>
                     <li>
                         <button onClick={login} className='register'>Waitlist</button>
@@ -70,7 +70,6 @@ const Navbar = () => {
 
                     <li className='socials'>
                         <DiscordIcon/>
-                        <TwitterIcon/>
                     </li>
                 </ ul>
             </nav >
