@@ -3,7 +3,7 @@ import './navbar.scss'
 import { useUserDispatch } from '../context/user/State'
 import { getAllItems, loginUser } from '../context/user/Actions'
 import {ReactComponent as DiscordIcon} from '../assets/discordIcon.svg'
-import {ReactComponent as TwitterIcon} from '../assets/twitterIcon.svg'
+// import {ReactComponent as TwitterIcon} from '../assets/twitterIcon.svg'
 import manikinIcon from '../assets/manikinIcon.webp'
 
 const Navbar = () => {
