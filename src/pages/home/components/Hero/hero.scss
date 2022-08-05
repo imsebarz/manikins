@@ -38,20 +38,6 @@
       left: 0;
       object-fit: cover;
     }
-    #personaje1 {
-      height: 70%;
-      min-width: auto;
-      width: auto;
-      top: 200px;
-      left: 0%;
-    }
-
-    #personaje2 {
-      height: 70%;
-      width: auto;
-      min-width: auto;
-      left: 50%;
-    }
   }
 
   .gradient {
@@ -140,30 +126,6 @@
         background: rgba($color: goldenrod, $alpha: 0.8);
         color: white;
       }
-    }
-  }
-}
-
-@media (max-width: 900px) {
-  .hero-image {
-    #personaje1 {
-      left: -20% !important;
-    }
-
-    #personaje2 {
-      left: 80%;
-    }
-  }
-}
-
-@media (max-width: 700px) {
-  .hero-image {
-    #personaje1 {
-      left: -50% !important;
-    }
-
-    #personaje2 {
-      left: 80%;
     }
   }
 }
