@@ -121,19 +121,19 @@ const Navbar = () => {
                     </li>
                         <li>
                             {" "}
-                            <a href="#"> About</a>
+                            <a href="#about"> About</a>
                         </li>
                         <li>
                             {" "}
-                            <a href="#">NFT</a>
+                            <a href="#nft">NFT</a>
                         </li>
                         <li>
                             {" "}
-                            <a href="#">RoadMap</a>
+                            <a href="#roadmap">RoadMap</a>
                         </li>
                         <li>
                             {" "}   
-                            <a href="#">Team</a>
+                            <a href="#team">Team</a>
                         </li>
                         <li>
                         <button onClick={login} className='register'>Waitlist</button>
