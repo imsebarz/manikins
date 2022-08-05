@@ -11,19 +11,48 @@
   background-size: cover;
   margin-bottom: 50px;
 
-  // .hero-image {
-  //   width: auto;
-  //   min-width: 100vw;
-  //   overflow: hidden;
-  //   height: 100%;
-  //   grid-column: 1 / -1;
-  //   grid-row: 1 / -1;
-  //   -ms-grid-column: 1 / -1;
-  //   -ms-grid-row: 1 / -1;
-  //   background-position: center;
-  //   background-size: cover;
-  //   z-index: 0;
-  // }
+  .hero-image {
+    width: auto;
+    min-width: 100vw;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    -ms-grid-column: 1 / -1;
+    -ms-grid-row: 1 / -1;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+    img {
+      position: absolute;
+      width: 100%;
+      min-width: 110vw;
+      overflow: hidden;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+    #personaje1 {
+      height: 70%;
+      min-width: auto;
+      width: auto;
+      top: 200px;
+      left: 0%;
+    }
+
+    #personaje2 {
+      height: 70%;
+      width: auto;
+      min-width: auto;
+      left: 50%;
+    }
+  }
 
   .gradient {
     grid-column: 1 / -1;
@@ -111,6 +140,30 @@
         background: rgba($color: goldenrod, $alpha: 0.8);
         color: white;
       }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-image {
+    #personaje1 {
+      left: -20% !important;
+    }
+
+    #personaje2 {
+      left: 80%;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-image {
+    #personaje1 {
+      left: -50% !important;
+    }
+
+    #personaje2 {
+      left: 80%;
     }
   }
 }
