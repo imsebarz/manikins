@@ -5,7 +5,6 @@ const Layer = ({ src, translateX, translateY, defer, id }) => {
     let x = (translateX * defer) /250 
     let y = (translateY * defer) / 250 
     
-    console.log((src))
 
     
   return (
