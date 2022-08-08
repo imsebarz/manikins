@@ -1,7 +1,9 @@
 import React from 'react'
-import person1 from '../../../../assets/teamMember1.png'
-import person2 from '../../../../assets/teamMember2.png'
-import person3 from '../../../../assets/teamMember3.png'
+import john from '../../../../assets/john.webp'
+import nitae from '../../../../assets/nitae.webp'
+import diego from '../../../../assets/diego.webp'
+import elbin from '../../../../assets/elbin.webp'
+import alex from '../../../../assets/alex.webp'
 import separatorTop from '../../../../assets/separatorTop.svg'
 import separatorDown from '../../../../assets/separatorDown.svg'
 import TeamMember from './TeamMember'
@@ -33,11 +35,11 @@ const Team = () => {
           </p>
         </div>
         <div className="slider">
-          <TeamMember name='Nitae Uribe' role='Director' image={person1}></TeamMember>
-          <TeamMember name='John Ayala' role='Producer' image={person2}></TeamMember>
-          <TeamMember name='Elbin Marin' role='Lead Artist' image={person3}></TeamMember>
-          <TeamMember name='Alex Sanabria' role='Tech Lead' image={person1}></TeamMember>
-          <TeamMember name='Diego Duarte' role='Tech Artist' image={person2}></TeamMember>
+          <TeamMember name='Nitae Uribe' role='Director' image={nitae}></TeamMember>
+          <TeamMember name='John Ayala' role='Producer' image={john}></TeamMember>
+          <TeamMember name='Elbin Marin' role='Lead Artist' image={elbin}></TeamMember>
+          <TeamMember name='Alex Sanabria' role='Tech Lead' image={alex}></TeamMember>
+          <TeamMember name='Diego Duarte' role='Tech Artist' image={diego}></TeamMember>
         </div>
       </section>
       <LazyLoadImage threshold={800} src={separatorDown} className='separator' alt="" />
