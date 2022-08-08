@@ -64,26 +64,50 @@
       width: 60%;
       height: max-content;
       min-width: 400px;
+      cursor: pointer;
       min-height: 400px;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: contain;
-      transition: all 0.4s ease;
+      transition: all 0.3s ease;
       filter: brightness(1);
-      background-image: url("../../../../assets/relicevolutions.webp");
+      background-image: url("../../../../assets/RomanArmor_LVL1.webp");
+      opacity: 1;
     }
 
     .ev1 {
-      filter: hue-rotate(1deg);
+      opacity: 0;
+      opacity: 1;
+      background-image: url("../../../../assets/RomanArmor_LVL1.webp") !important;
     }
     .ev2 {
-      filter: hue-rotate(100deg);
+      opacity: 0;
+      opacity: 1;
+      background-image: url("../../../../assets/RomanArmor_LVL2.webp") !important;
     }
     .ev3 {
-      filter: hue-rotate(180deg);
+      opacity: 0;
+      opacity: 1;
+      background-image: url("../../../../assets/RomanArmor_LVL3.webp") !important;
     }
     .ev4 {
-      filter: hue-rotate(240deg);
+      opacity: 0;
+      opacity: 1;
+      background-image: url("../../../../assets/RomanArmor_LVL4.webp") !important;
+    }
+    .ev1:hover {
+      opacity: 0;
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    .ev2:hover {
+      transform: scale(1.2);
+    }
+    .ev3:hover {
+      transform: scale(1.2);
+    }
+    .ev4:hover {
+      transform: scale(1.2);
     }
 
     .copy {
@@ -141,6 +165,8 @@
             justify-content: center;
             align-items: center;
             height: 100%;
+            cursor: pointer;
+
             min-height: 50px;
             background: url("../../../../assets/levelSpace.svg") center center
               no-repeat;

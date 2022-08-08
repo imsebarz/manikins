@@ -51,7 +51,7 @@
         .build {
           height: 300px;
           transition: all 0.2s ease;
-          width: 120px;
+          width: 33%;
           filter: brightness(0.8);
           filter: grayscale(1);
         }
@@ -95,7 +95,7 @@
       }
     }
 
-    .platform-container {
+    #platform-container {
       width: 40%;
       display: flex;
       flex-direction: column;
@@ -108,6 +108,11 @@
         transition: all 0.2s ease;
         max-width: 900px;
         margin-bottom: -100px;
+      }
+      .fungi {
+        width: 120%;
+        margin-bottom: -150px;
+        margin-left: -120px;
       }
       .platform {
         width: 70%;

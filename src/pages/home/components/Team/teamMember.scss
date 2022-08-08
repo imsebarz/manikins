@@ -1,6 +1,9 @@
 .team-member {
   img {
     width: 200px;
+    padding: 5px;
+    border: 8px double rgb(225, 188, 139);
+    position: relative;
   }
   h3,
   p {

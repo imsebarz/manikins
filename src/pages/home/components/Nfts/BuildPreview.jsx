@@ -3,7 +3,6 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 
 const BuildPreview = ({ image, selected, number, changeCharacter, character }) => {
-    console.log(selected, number)
     return (
            
                 <LazyLoadImage

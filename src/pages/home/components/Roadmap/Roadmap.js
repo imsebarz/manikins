@@ -7,8 +7,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 const Roadmap = () => {
   return (
     <section className="section-roadmap">
-      <LazyLoadImage
-        threshold={1200}
+      <img
         src={hiManikin}
         className="roadmap-manikin"
         alt="Hi gesture manikin"
@@ -22,7 +21,7 @@ const Roadmap = () => {
         threshold={800}
         src={roadmap}
         className="roadmap-img"
-        alt="Hi gesture manikin"
+        alt="roadmap icons"
       />
           <ul className="roadmapContainer">
               <li><span>Participacion Gamescom</span> - 24 de agosto 2022</li>

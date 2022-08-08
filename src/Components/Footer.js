@@ -4,7 +4,6 @@ import logo from '../assets/manikins.png'
 import fryos from "../assets/fryosFooter.png";
 import litg from "../assets/litgFooter.png";
 import instagram from '../assets/instagram.svg'
-import facebook from '../assets/facebook.svg'
 import twitter from '../assets/twitter.svg'
 import youtube from '../assets/youtube.svg'
 import discord from '../assets/discord.svg'
@@ -20,9 +19,6 @@ const Footer = () => {
         <LazyLoadImage threshold={800} src={logo} alt="" className="logo" />
         </div>
         <div className="social">
-          <a href="https://www.facebook.com/" target='_blank' rel="noreferrer">
-          <LazyLoadImage threshold={800} src={facebook} alt="" />
-          </a>
           <a href="https://www.youtube.com/" target='_blank' rel="noreferrer">
           <LazyLoadImage threshold={800} src={youtube} alt="" />
           </a>
