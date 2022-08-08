@@ -41,11 +41,11 @@
     }
     ul {
       min-height: 500px;
-      margin-top: 30px;
       height: 100%;
       display: flex;
       flex-direction: column;
       gap: 80px;
+      margin-top: 90px;
       li {
         gap: 50px;
         justify-content: center;
@@ -61,16 +61,30 @@
       }
     }
   }
-  .hi-manikin {
-    max-width: 700px;
-    width: 50vw;
+  .roadmap-manikin {
+    width: 120%;
     align-self: flex-end;
     position: absolute;
-    left: 0px;
-    bottom: 0px;
+    left: -40%;
+    bottom: -70%;
     z-index: 100;
   }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1000px) {
+  .roadmap-manikin {
+    bottom: -40% !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .section-roadmap {
+    flex-direction: column-reverse;
+  }
+  .roadmap-manikin {
+    bottom: -40% !important;
+    position: static !important;
+    margin-bottom: -60%;
+    width: 150% !important;
+  }
 }
