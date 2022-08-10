@@ -80,10 +80,13 @@ const Evolutions = () => {
               </ul>
             </div>
           </div>
+          <div className="relic-container">
+          <div className="circle"></div>
           <div
             className={`relic-evolutions ev${level}`}
             alt="Relic with evolutions"
-          />
+            />
+            </div>
               </div>
         {/* <Carousel item1={item1} item2={item2} item3={item3} item4={item4}></Carousel> */}
               

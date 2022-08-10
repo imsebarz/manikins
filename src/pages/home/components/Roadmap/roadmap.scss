@@ -1,6 +1,6 @@
 .section-roadmap {
   background-color: rgb(255, 255, 255);
-  background: url("../../../../assets/coffersBg.png") no-repeat center center;
+  background: url("../../../../assets/coffersBg.webp") no-repeat center center;
   background-size: cover;
   place-content: center;
   margin: -150px 0px -50px 0px;
@@ -9,7 +9,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   position: relative;
   min-height: 600px;
@@ -19,9 +19,6 @@
     width: 50%;
     justify-content: center;
     align-items: center;
-    margin-right: 5vw;
-    position: relative;
-    float: right;
 
     h1 {
       font-size: 3.2rem;
@@ -32,6 +29,7 @@
   }
   .roadmap {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     img {
@@ -61,30 +59,28 @@
       }
     }
   }
-  .roadmap-manikin {
-    width: 120%;
-    align-self: flex-end;
-    position: absolute;
-    left: -40%;
-    bottom: -70%;
+  .image-container {
+    width: 50%;
     z-index: 100;
-  }
-}
-
-@media (max-width: 1000px) {
-  .roadmap-manikin {
-    bottom: -40% !important;
+    display: flex;
+    margin-bottom: -600px;
+    justify-content: center;
+    align-items: center;
+    .roadmap-manikin {
+      object-fit: cover;
+      height: auto;
+      width: 100vw;
+    }
   }
 }
 
 @media (max-width: 700px) {
   .section-roadmap {
     flex-direction: column-reverse;
+    height: max-content !important;
   }
-  .roadmap-manikin {
-    bottom: -40% !important;
-    position: static !important;
-    margin-bottom: -60%;
-    width: 150% !important;
+
+  .image-container {
+    margin-bottom: 0 !important;
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import hero from '../../../../assets/hero.webp'
 import bruma from '../../../../assets/banner/BRUMA.png'
 import cielo from '../../../../assets/banner/CIELO.png'
@@ -12,12 +12,23 @@ import arrow from '../../../../assets/arrow.gif'
 import './hero.scss'
 import Layer from './Layer'
 import { useMousePosition } from './useMousePosition'
+import { useUserDispatch } from '../../../../context/user/State'
+import { joinWaitList } from '../../../../context/user/Actions'
 
 
 
 
 
 const Hero = () => {
+
+  const [mail, setMail] = useState('')
+  const userDispatch = useUserDispatch()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    joinWaitList(userDispatch, mail)
+    setMail('')
+  }
 
   const position = useMousePosition();
 
@@ -35,8 +46,8 @@ const Hero = () => {
       <div className="gradient"></div>
       <div className="content">
         <img src={tipografia} className='title' alt="hero" />
-        <form className='input-container'>
-          <input type='email' required placeholder='Pre-sale Waitlist' ></input>
+        <form className='input-container' onSubmit={(e) => handleSubmit(e)}>
+          <input type='email' required placeholder='Pre-sale Waitlist' value={mail} onChange={(e) => setMail(e.target.value)}></input>
           <button className='goldenButton'>JOIN</button>
         </form>
         <img src={arrow} className="arrow" alt="hero" />

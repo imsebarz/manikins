@@ -54,10 +54,11 @@ export async function joinWaitList(dispatch, data) {
       { headers: { 'Content-Type': 'application/json' } }
     )
     .then((result) => {
-      console.log('user has joined the whitelist', result.data)
+      if (result.data.error) throw new Error(result.data.error)
+      alert('user has joined the whitelist sucessfully')
     })
     .catch(error => {
-      console.error('There is an error: ', error)
+      alert(`${error.message}`)
     })
 }
 

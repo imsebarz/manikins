@@ -7,11 +7,14 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 const Roadmap = () => {
   return (
     <section className="section-roadmap">
+      <div className="image-container">
+
       <img
         src={hiManikin}
         className="roadmap-manikin"
         alt="Hi gesture manikin"
       />
+      </div>
       <div className="content">
         <h1 >
           ROAD <span className="golden">MAP</span>
