@@ -21,8 +21,8 @@ function App() {
         <Hero></Hero>
         {/* <ComingSoon></ComingSoon> */}
         <About></About>
-        <Evolutions></Evolutions>
         <Nfts></Nfts>
+        <Evolutions></Evolutions>
         {/* <Coffers></Coffers> */}
         {/* <Features></Features> */}
         <Roadmap></Roadmap>
