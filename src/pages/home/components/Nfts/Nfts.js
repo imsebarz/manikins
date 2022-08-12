@@ -94,7 +94,7 @@ const Nfts = () => {
         </div>
         <div id='platform-container'>
         <LazyLoadImage threshold={800} src={image} alt="" className={`pose ${fileName}`} />
-        <LazyLoadImage threshold={800} className='platform' src={platform} alt="" />
+        {/* <LazyLoadImage threshold={800} className='platform' src={platform} alt="" /> */}
         </div>
       </div>
     </section>
