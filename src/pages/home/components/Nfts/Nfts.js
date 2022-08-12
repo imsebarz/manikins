@@ -1,5 +1,5 @@
 import './nfts.scss'
-import platform from '../../../../assets/platform.webp'
+// import platform from '../../../../assets/platform.webp'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import separatorTop from "../../../../assets/separatorTop.svg";
 import buildTriton from '../../../../assets/buildTriton.webp'
@@ -17,47 +17,47 @@ const Nfts = () => {
   const [selected, setSelected] = useState('1')
   const [relics, setRelics] = useState([])
   const [fileName, setfileName] = useState('triton')
-  
+
   useEffect(() => {
-        const fetchImage = async () => {
-          try {
-                const pose = await import(`../../../../assets/${fileName}/pose.webp`) // change relative path to suit your needs
-                const relic1 = await import(`../../../../assets/${fileName}/relic1.webp`) // change relative path to suit your needs
-                const relic2 = await import(`../../../../assets/${fileName}/relic2.webp`) // change relative path to suit your needs
-                const relic3 = await import(`../../../../assets/${fileName}/relic3.webp`) // change relative path to suit your needs
-                const relic4 = await import(`../../../../assets/${fileName}/relic4.webp`) // change relative path to suit your needs
-            setImage(pose.default)
-            setRelics([relic1.default, relic2.default, relic3.default, relic4.default])
-          } catch (err) {
-            throw new Error(err)
-            } 
-        }
+    const fetchImage = async () => {
+      try {
+        const pose = await import(`../../../../assets/${fileName}/pose.webp`) // change relative path to suit your needs
+        const relic1 = await import(`../../../../assets/${fileName}/relic1.webp`) // change relative path to suit your needs
+        const relic2 = await import(`../../../../assets/${fileName}/relic2.webp`) // change relative path to suit your needs
+        const relic3 = await import(`../../../../assets/${fileName}/relic3.webp`) // change relative path to suit your needs
+        const relic4 = await import(`../../../../assets/${fileName}/relic4.webp`) // change relative path to suit your needs
+        setImage(pose.default)
+        setRelics([relic1.default, relic2.default, relic3.default, relic4.default])
+      } catch (err) {
+        throw new Error(err)
+      }
+    }
     fetchImage()
   }, [fileName])
-  
-  
-  const changeCharacter = ( character, number) => {
+
+
+  const changeCharacter = (character, number) => {
     setfileName(character)
-    setSelected(number)    
+    setSelected(number)
   }
 
 
 
   return (
     <>
-        <LazyLoadImage threshold={800} src={separatorTop} className='separator' alt="" />
-      
-    <section className="section-nfts">
-      <div className="title">
-        <h1>
-          BUILD YOUR TEAM <br />
-          <span className='golden'>
-            AND SHAPE YOUR OWN STRATEGY
-          </span>
-        </h1>
-      </div>
-      <div className="content">
-        <div className="selectors">
+      <LazyLoadImage threshold={800} src={separatorTop} className='separator' alt="" />
+
+      <section className="section-nfts">
+        <div className="title">
+          <h1>
+            BUILD YOUR TEAM <br />
+            <span className='golden'>
+              AND SHAPE YOUR OWN STRATEGY
+            </span>
+          </h1>
+        </div>
+        <div className="content">
+          <div className="selectors">
             <div className="builds">
               <BuildPreview
                 image={buildTriton}
@@ -81,24 +81,24 @@ const Nfts = () => {
                 changeCharacter={changeCharacter}
                 character={'bear'}
               ></BuildPreview>
-          </div>
-          <h2 className='golden' id='custom-build'>Custom build</h2>
+            </div>
+            <h2 className='golden' id='custom-build'>Custom build</h2>
             <div className="relics">
-              {relics.map((relic,idx) => {
-                return(
+              {relics.map((relic, idx) => {
+                return (
                   <LazyLoadImage threshold={800} src={relic} key={idx} alt='relic Icon with types' className="relic" />
-                  )
+                )
               })}
+            </div>
+            <p>Manikins obtain their skills and stats from the equipped Battle Relics, the Manikins by themselves are empty shelves.</p>
           </div>
-          <p>Manikins obtain their skills and stats from the equipped Battle Relics, the Manikins by themselves are empty shelves.</p>
+          <div id='platform-container'>
+            <LazyLoadImage threshold={800} src={image} alt="" className={`pose ${fileName}`} />
+            {/* <LazyLoadImage threshold={800} className='platform' src={platform} alt="" /> */}
+          </div>
         </div>
-        <div id='platform-container'>
-        <LazyLoadImage threshold={800} src={image} alt="" className={`pose ${fileName}`} />
-        {/* <LazyLoadImage threshold={800} className='platform' src={platform} alt="" /> */}
-        </div>
-      </div>
-    </section>
-</>
+      </section>
+    </>
   )
 }
 
