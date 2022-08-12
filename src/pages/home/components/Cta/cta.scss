@@ -4,12 +4,11 @@
   background: url("../../../../assets/intersection.png") center no-repeat fixed;
   background-size: cover;
   background-color: #0f0f0f;
-
   justify-content: center;
   align-items: center;
-
   margin-top: -100px;
   z-index: 2;
+  min-height: 550px;
 
   .text-separator {
     margin: 1.5rem 0;

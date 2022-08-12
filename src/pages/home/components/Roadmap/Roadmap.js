@@ -7,8 +7,9 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 const Roadmap = () => {
   return (
     <section className="section-roadmap">
+      <h1 >ROAD <span className="golden">MAP</span></h1>
+      <div className="content-container">
       <div className="image-container">
-
       <img
         src={hiManikin}
         className="roadmap-manikin"
@@ -16,9 +17,6 @@ const Roadmap = () => {
       />
       </div>
       <div className="content">
-        <h1 >
-          ROAD <span className="golden">MAP</span>
-        </h1>
         <div className="roadmap">
                 <LazyLoadImage
         threshold={800}
@@ -33,7 +31,9 @@ const Roadmap = () => {
               <li><span>Season 1</span> Q2 - 2023</li>
           </ul>
         </div>
+        </div>
       </div>
+        
     </section>
   );
 };

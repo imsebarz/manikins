@@ -5,82 +5,94 @@
   place-content: center;
   margin: -150px 0px -50px 0px;
   z-index: 2;
-  padding: 100px 0px 70px 0px;
+  padding: 130px 0px 70px 0px;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   min-height: 600px;
-  .content {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    justify-content: center;
-    align-items: center;
 
-    h1 {
-      font-size: 3.2rem;
-      font-weight: 500;
-      color: black;
-      font-family: "Magic Hat";
-    }
+  h1 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: black;
+    font-family: "Magic Hat";
   }
-  .roadmap {
+
+  .content-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    img {
-      position: relative;
-      margin: auto;
-      margin-top: 67px;
-    }
-    ul {
-      min-height: 500px;
-      height: 100%;
+    justify-content: space-around;
+    max-width: 100%;
+    .content {
       display: flex;
-      flex-direction: column;
-      gap: 80px;
-      margin-top: 90px;
-      li {
-        gap: 50px;
-        justify-content: center;
-        min-height: 50px;
-        color: black;
-        list-style: none;
-        width: 250px;
-        text-align: left;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+    }
+
+    .roadmap {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      img {
+        position: relative;
+        margin: auto;
+        margin-top: 67px;
       }
-      span {
-        display: inline;
-        font-weight: 900;
+      ul {
+        min-height: 500px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        margin-top: 90px;
+        li {
+          gap: 50px;
+          justify-content: center;
+          min-height: 50px;
+          color: black;
+          list-style: none;
+          width: 250px;
+          text-align: left;
+        }
+        span {
+          display: inline;
+          font-weight: 900;
+        }
       }
     }
-  }
-  .image-container {
-    width: 50%;
-    z-index: 100;
-    display: flex;
-    margin-bottom: -600px;
-    justify-content: center;
-    align-items: center;
-    .roadmap-manikin {
-      object-fit: cover;
-      height: auto;
-      width: 100vw;
+    .image-container {
+      width: 50%;
+      z-index: 100;
+      margin-bottom: -35vw;
+      margin-left: -25vw;
+      // justify-content: center;
+      // align-items: center;
+      .roadmap-manikin {
+        object-fit: cover;
+        height: auto;
+        width: 100vw;
+        margin-left: -20vw;
+        margin-bottom: -35vw;
+      }
     }
   }
 }
 
 @media (max-width: 700px) {
-  .section-roadmap {
+  .content-container {
     flex-direction: column-reverse;
     height: max-content !important;
+    .content {
+      width: 100% !important;
+    }
   }
 
   .image-container {
     margin-bottom: 0 !important;
+    margin-left: 0 !important;
   }
 }

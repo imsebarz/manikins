@@ -1,10 +1,11 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 // import relicevolutions from "../../../../assets/relicevolutions.webp";
-import separatorTop from "../../../../assets/separatorTop.svg";
 // import { ReactComponent as LevelSpace } from "../../../../assets/levelSpace.svg";
 // import { ReactComponent as Level|SpaceSelected } from "../../../../assets/levelSpaceSelected.svg";
 import LevelSeparator from "../../../../assets/test.png";
 import textseparator from "../../../../assets/textseparator.svg";
+import separatorDown from '../../../../assets/separatorDown.svg'
+
 import "./evolutions.scss";
 import { useState } from "react";
 // import Carousel from "../../../../Components/Carousel";
@@ -18,7 +19,6 @@ const Evolutions = () => {
 
   return (
       <>
-        <LazyLoadImage threshold={800} src={separatorTop} className='separator' alt="" />
       <section className="section-evolutions">
         <h1 className="title">
           BATTLE RELIC<span> UPGRADES</span>
@@ -91,6 +91,8 @@ const Evolutions = () => {
         {/* <Carousel item1={item1} item2={item2} item3={item3} item4={item4}></Carousel> */}
               
       </section>
+    <LazyLoadImage threshold={800} src={separatorDown} className='separator separator-roadmap' alt="" />
+
     </>
   );
 };

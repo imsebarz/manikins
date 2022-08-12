@@ -1,8 +1,11 @@
 .evolutions {
   margin-top: -20px;
 }
+
+.separator-roadmap {
+  margin-top: 1vw;
+}
 .section-evolutions {
-  padding-top: 100px;
   background-color: rgb(18 13 20);
   background-image: url("../../../../assets/fondocomingsoon.png");
   background-size: cover;
@@ -72,20 +75,48 @@
       .relic-evolutions {
         height: max-content;
         width: 60%;
-        min-width: 400px;
+        min-width: 500px;
         cursor: pointer;
         grid-column: 1 / -1;
         grid-row: 1 / -1;
         -ms-grid-column: 1 / -1;
         -ms-grid-row: 1 / -1;
-        min-height: 400px;
+        min-height: 500px;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
-        transition: all 0.3s ease;
+        transition: all 0.4s ease;
         filter: brightness(1);
-        background-image: url("../../../../assets/RomanArmor_LVL1.webp");
+        background-image: url("../../../../assets/RomanArmor_LV1.webp");
         opacity: 1;
+      }
+
+      @keyframes animateBorder {
+        to {
+          border: 2.2px dotted rgba(200, 117, 8, 0.349);
+        }
+      }
+
+      .relic-evolutions::after {
+        content: "MOVE YOUR MOUSE OVER ME!";
+        color: rgba(255, 185, 94, 0.949);
+        background: rgba(16, 16, 16, 0.555);
+        backdrop-filter: blur(20px);
+        width: 80px;
+        font-size: 8px;
+        padding: 10px;
+        border-radius: 35px;
+        border: 2.2px dashed rgba(255, 185, 94, 0.349);
+        height: max-content;
+        position: absolute;
+        display: block;
+        bottom: 30px;
+        animation: 0.2s animateBorder infinite;
+        right: 30px;
+      }
+
+      .relic-evolutions:hover .relic-evolutions::after {
+        display: none !important;
       }
 
       .circle {
@@ -97,37 +128,28 @@
       }
 
       .ev1 {
-        opacity: 1;
-        background-image: url("../../../../assets/RomanArmor_LVL1.webp") !important;
+        background-image: url("../../../../assets/RomanArmor_LV1.webp") !important;
       }
       .ev2 {
-        opacity: 1;
-        background-image: url("../../../../assets/RomanArmor_LVL2.webp") !important;
+        background-image: url("../../../../assets/RomanArmor_LV2.webp") !important;
       }
       .ev3 {
-        opacity: 1;
-        background-image: url("../../../../assets/RomanArmor_LVL3.webp") !important;
+        background-image: url("../../../../assets/RomanArmor_LV3.webp") !important;
       }
       .ev4 {
-        opacity: 1;
-        background-image: url("../../../../assets/RomanArmor_LVL4.webp") !important;
+        background-image: url("../../../../assets/RomanArmor_LV4.webp") !important;
       }
       .ev1:hover {
-        opacity: 1;
         background-image: url("../../../../assets/RomanArmor_LVL1.gif") !important;
-        transform: scale(1.2);
       }
       .ev2:hover {
-        transform: scale(1.2);
         background-image: url("../../../../assets/RomanArmor_LVL2.gif") !important;
       }
       .ev3:hover {
-        transform: scale(1.2);
         background-image: url("../../../../assets/RomanArmor_LVL3.gif") !important;
       }
       .ev4:hover {
         background-image: url("../../../../assets/RomanArmor_LVL4.gif") !important;
-        transform: scale(1.2);
       }
     }
     .copy {
@@ -196,16 +218,17 @@
           li {
             display: flex;
             gap: 20px;
+            padding: 0px 1px;
             align-items: center;
             justify-content: center;
             text-align: center;
             flex-direction: column;
             p {
               position: relative;
-              width: 100%;
-              padding: 0;
+              width: 90%;
+              padding: 10px;
               margin: 0;
-              font-size: clamp(0.8rem, 3vw, 1.5rem);
+              font-size: clamp(0.8rem, 2vw, 1.2rem);
             }
             p:after {
               content: "";
@@ -221,7 +244,7 @@
           }
           li:hover p::after {
             border-radius: 3px;
-            width: 100%;
+            width: 80%;
             height: 3px;
             background-color: rgb(225, 188, 139);
           }
@@ -243,7 +266,7 @@
             }
             p::after {
               border-radius: 3px;
-              width: 100%;
+              width: 80%;
               height: 3px;
               background-color: rgb(225, 188, 139);
             }
@@ -261,6 +284,9 @@
 
 //add media queries for mobile
 @media (max-width: 880px) {
+  .separator-roadmap {
+    top: -130px !important;
+  }
   .section-evolutions {
     .content {
       .copy {

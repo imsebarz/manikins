@@ -66,8 +66,9 @@
     z-index: 300;
     width: 50%;
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: -60px;
     flex-direction: column;
+    position: absolute;
     color: white;
 
     .title {

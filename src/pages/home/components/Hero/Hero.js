@@ -16,9 +16,6 @@ import { useUserDispatch } from '../../../../context/user/State'
 import { joinWaitList } from '../../../../context/user/Actions'
 
 
-
-
-
 const Hero = () => {
 
   const [mail, setMail] = useState('')

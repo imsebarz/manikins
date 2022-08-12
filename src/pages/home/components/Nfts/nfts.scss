@@ -103,17 +103,13 @@
       align-items: center;
       min-width: 400px;
       .pose {
-        width: 120%;
+        width: 100%;
         height: auto;
         transition: all 0.2s ease;
         max-width: 900px;
-        margin-bottom: -100px;
+        margin-bottom: -130px;
       }
-      .fungi {
-        width: 120%;
-        margin-bottom: -150px;
-        margin-left: -120px;
-      }
+
       .platform {
         width: 70%;
         height: auto;
@@ -125,9 +121,7 @@
 }
 
 @media (max-width: 880px) {
-  .separator-roadmap {
-    top: -120px;
-  }
+
 
   .pose {
     margin-bottom: -80px !important;

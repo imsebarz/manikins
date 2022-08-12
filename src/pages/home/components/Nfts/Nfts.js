@@ -1,7 +1,7 @@
 import './nfts.scss'
 import platform from '../../../../assets/platform.webp'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
-import separatorDown from '../../../../assets/separatorDown.svg'
+import separatorTop from "../../../../assets/separatorTop.svg";
 import buildTriton from '../../../../assets/buildTriton.webp'
 import buildFungi from '../../../../assets/buildFungi.webp'
 import buildBear from '../../../../assets/buildBear.webp'
@@ -45,6 +45,8 @@ const Nfts = () => {
 
   return (
     <>
+        <LazyLoadImage threshold={800} src={separatorTop} className='separator' alt="" />
+      
     <section className="section-nfts">
       <div className="title">
         <h1>
@@ -96,7 +98,6 @@ const Nfts = () => {
         </div>
       </div>
     </section>
-    <LazyLoadImage threshold={800} src={separatorDown} className='separator separator-roadmap' alt="" />
 </>
   )
 }
