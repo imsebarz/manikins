@@ -16,8 +16,8 @@ const About = () => {
 
   return (
     <>
-      <LazyLoadImage threshold={800} src={separatorTop} className='separator about-separator' alt="" />
-      <section className="section-about">
+      <LazyLoadImage  threshold={800} src={separatorTop} className='separator about-separator' alt="" />
+      <section className="section-about" id='about'>
         <div className="trailer">
           <LazyLoadImage threshold={800} src={trailerCover} alt='Manikin' />
           <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="BKx7sFSzD7c" onClose={() => setOpen(false)} />

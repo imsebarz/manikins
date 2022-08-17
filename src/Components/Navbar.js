@@ -68,10 +68,10 @@ const Navbar = () => {
                 <img src={manikinIcon} className='logo' alt="" />
                 <ul className='nav-links'>
                     <li className='nav-link'>
-                        <a href="/about">About</a>
+                        <a href="#about">About</a>
                     </li>
                     <li className='nav-link'>
-                        <a href="/market">Battle Relics</a>
+                        <a href="#relics">Battle Relics</a>
                     </li>
                     <li className='nav-link'>
                         <a href="/roadmap">Roadmap</a>

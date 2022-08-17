@@ -36,12 +36,14 @@
     flex-wrap: wrap;
     place-items: center;
     gap: 10%;
+    width: 85%;
     .selectors {
       display: flex;
       width: 40%;
       min-width: 400px;
       flex-direction: column;
       justify-content: center;
+
       align-items: center;
       .builds {
         display: flex;

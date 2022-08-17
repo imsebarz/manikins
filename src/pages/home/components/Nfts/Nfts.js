@@ -47,8 +47,8 @@ const Nfts = () => {
     <>
       <LazyLoadImage threshold={800} src={separatorTop} className='separator' alt="" />
 
-      <section className="section-nfts">
-        <div className="title">
+      <section className="section-nfts" id='relics'>
+        <div className="title" >
           <h1>
             BUILD YOUR TEAM <br />
             <span className='golden'>

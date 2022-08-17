@@ -1,6 +1,16 @@
 import axios from 'axios'
+import Swal from 'sweetalert2'
+import alertSuccess from '../../assets/alertSuccess.png'
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 axios.defaults.headers.common = { 'Authorization': `bearer ${localStorage.getItem('token')}` }
+
+console.log(alertSuccess)
+
+
+
+
+
+
 
 
 export const registerUser = async (dispatch, data, navigate) => {
@@ -55,10 +65,42 @@ export async function joinWaitList(dispatch, data) {
     )
     .then((result) => {
       if (result.data.error) throw new Error(result.data.error)
-      alert('user has joined the whitelist sucessfully')
+      Swal.fire({
+        title: 'Success',
+        text: 'Thank you for subscribing',
+        customClass: {
+          popup: 'alert-success',
+          htmlContainer: 'container',
+          title: 'title'
+        },
+        toast: true,
+        showConfirmButton: false,
+        showCloseButton: true,
+        background: "#00000000",
+        icon: 'success',
+        padding: '10%',
+        iconColor: 'green',
+
+      })
     })
     .catch(error => {
-      alert(`${error.message}`)
+      Swal.fire({
+        title: 'Something went wrong',
+        text: 'You may be already subscribed',
+        customClass: {
+          popup: 'alert-error',
+          htmlContainer: 'container',
+          title: 'title',
+          icon: 'icon'
+        },
+        toast: true,
+        showConfirmButton: false,
+        showCloseButton: true,
+        background: "#00000000",
+        icon: 'error',
+        iconColor: 'red',
+        padding: '10%',
+      })
     })
 }
 
