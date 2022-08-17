@@ -6,26 +6,30 @@ import separatorTop from '../../../../assets/aboutSeparator.png'
 import play from '../../../../assets/play.svg'
 
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import ModalVideo from 'react-modal-video'
+import { useState } from 'react'
 
 
 const About = () => {
+
+  const [isOpen, setOpen] = useState(false);
+
   return (
     <>
       <LazyLoadImage threshold={800} src={separatorTop} className='separator about-separator' alt="" />
       <section className="section-about">
         <div className="trailer">
           <LazyLoadImage threshold={800} src={trailerCover} alt='Manikin' />
-          <a href="https://www.youtube.com/watch?v=BKx7sFSzD7c/" target='_blank' rel="noreferrer">
+          <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="BKx7sFSzD7c" onClose={() => setOpen(false)} />
+          <div onClick={() => setOpen(true)}>
             <LazyLoadImage threshold={800} src={play} className='play' alt="" />
-          </a>
+          </div>
         </div>
         <div className='content'>
           <h1>About <span>the game</span></h1>
           <LazyLoadImage threshold={800} src={textseparator} className="text-separator" alt="hero" />
           <p>Manikins R&T is free to play PvP Tactics game, where players Manikins team clash into a battle for last standing character.</p>
-          <a href="https://www.youtube.com/watch?v=BKx7sFSzD7c/" target='_blank' rel="noreferrer">
-          <p>Watch the trailer!</p>
-          </a>
+          <p onClick={() => setOpen(true)} className='watch'>Watch the trailer!</p>
         </div>
       </section>
     </>

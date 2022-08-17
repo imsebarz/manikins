@@ -1,3 +1,5 @@
+@import "node_modules/react-modal-video/scss/modal-video.scss";
+
 .about-separator {
   z-index: 10;
   top: calc(5vw - 100px);
@@ -28,9 +30,6 @@
     justify-content: center;
     align-items: center;
     color: white;
-    a {
-      color: rgb(255, 184, 94);
-    }
     h1 {
       width: max-content;
       font-size: 3.5rem;
@@ -65,6 +64,12 @@
       text-align: center;
       font-weight: 400;
     }
+
+    .watch {
+      cursor: pointer;
+      color: rgb(255, 184, 94);
+      text-decoration: underline;
+    }
   }
 
   .trailer {
@@ -79,6 +84,7 @@
       height: 100%;
     }
     .play {
+      cursor: pointer;
       position: absolute;
       width: 80px;
       height: 80px;
