@@ -1,0 +1,107 @@
+.modal {
+  background: #00000000 url("../assets/subscribeModal.png");
+  background-size: contain !important;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  font-size: 12px;
+  color: #ffffff;
+  backdrop-filter: blur(18px);
+  padding: 50px;
+  width: 50vw;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: auto;
+  justify-content: space-around;
+  align-items: center;
+
+  img {
+    width: 40%;
+    min-width: 200px;
+    object-fit: cover;
+  }
+
+  .content {
+    display: flex;
+    width: 50%;
+    min-width: 300px;
+    height: 100%;
+    flex-direction: column;
+
+    .title {
+      margin-bottom: 2rem;
+      font-size: clamp(0.8rem, 2vw, 1.6rem);
+      h1,
+      h2 {
+        margin: 0;
+        font-weight: 400;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+
+      input {
+        background: none;
+        border: none;
+        border-bottom: 1px solid white;
+        margin: 1rem 0px;
+        padding: 1rem 0.5rem;
+        outline: none;
+        color: white;
+        font-size: 1rem;
+      }
+      input:focus {
+        border-bottom: 1px solid goldenrod;
+      }
+
+      button {
+        padding: 0.8rem 0;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        font-weight: 600 !important;
+        font-family: "Open Sans";
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: 15px;
+    top: 40px;
+    font-size: 24px;
+    background: #00000000;
+    border-radius: 18px;
+    border: 1px solid goldenrod;
+    color: goldenrod;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .modal {
+    margin-top: 5rem;
+    background: #000000da;
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100px !important;
+    }
+    .content {
+      justify-content: center;
+      align-items: center;
+      .title {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
