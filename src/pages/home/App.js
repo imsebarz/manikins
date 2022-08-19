@@ -26,7 +26,7 @@ function App() {
   useEffect(() => {
     if ((scroll.y > 1900) && (scroll.y < 2300) && (hasAppeared === false)) {
       console.log(true)
-      setAppeared(false)
+      setAppeared(true)
       setOpenModal(true)
     }
   }, [scroll, hasAppeared])
