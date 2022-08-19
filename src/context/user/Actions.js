@@ -1,16 +1,7 @@
 import axios from 'axios'
 import Swal from 'sweetalert2'
-import alertSuccess from '../../assets/alertSuccess.png'
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 axios.defaults.headers.common = { 'Authorization': `bearer ${localStorage.getItem('token')}` }
-
-console.log(alertSuccess)
-
-
-
-
-
-
 
 
 export const registerUser = async (dispatch, data, navigate) => {

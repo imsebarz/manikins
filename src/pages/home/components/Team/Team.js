@@ -18,7 +18,7 @@ const Team = () => {
   return (
     <>
       <LazyLoadImage threshold={800} src={separatorTop} className='separator ft' alt="" />
-      <section className='section-team'>
+      <section className='section-team' id='team'>
         <div className="title">
           <h1 className="golden">Our Team</h1>
           <LazyLoadImage threshold={800} src={textseparator} className="text-separator" alt="hero" />

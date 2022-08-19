@@ -6,7 +6,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Roadmap = () => {
   return (
-    <section className="section-roadmap">
+    <section className="section-roadmap" id='roadmap' >
       <h1 >ROAD <span className="golden">MAP</span></h1>
       <div className="content-container">
       <div className="image-container">

@@ -74,10 +74,10 @@ const Navbar = () => {
                         <a href="#relics">Battle Relics</a>
                     </li>
                     <li className='nav-link'>
-                        <a href="/roadmap">Roadmap</a>
+                        <a href="#roadmap">Roadmap</a>
                     </li>
                     <li className='nav-link'>
-                        <a href="/team">Team</a>
+                        <a href="#team">Team</a>
                     </li>
                     <li>
                         <button onClick={login} className='register'>Waitlist</button>
