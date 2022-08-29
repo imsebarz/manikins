@@ -1,6 +1,6 @@
 import Popup from 'reactjs-popup';
 import './modal.scss'
-import helmet from '../assets/helmetModal.png'
+import helmet from '../assets/helmetModal.webp'
 import { useState } from 'react';
 import { useUserDispatch } from '../context/user/State';
 import { joinWaitList } from '../context/user/Actions';
