@@ -118,6 +118,16 @@
 }
 
 @media (max-width: 880px) {
+  .selectors {
+    min-width: 380px !important;
+    .builds {
+      gap: 20px !important;
+      .build {
+        width: 30% !important;
+        height: 260px !important;
+      }
+    }
+  }
   .pose {
     margin-bottom: -80px !important;
   }

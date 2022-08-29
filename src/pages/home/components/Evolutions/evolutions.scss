@@ -288,11 +288,23 @@
     top: -130px !important;
   }
   .section-evolutions {
+    margin-top: -100px !important;
     .content {
       .copy {
         width: 80%;
         align-items: center;
         padding: 50px;
+      }
+    }
+    .relic-evolutions {
+      min-width: 380px !important;
+      margin-top: -80px !important;
+    }
+
+    .levelsContainer {
+      li {
+        padding: 0px !important;
+        gap: 0 !important;
       }
     }
     .levelSeparator {
