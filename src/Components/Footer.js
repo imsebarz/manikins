@@ -7,7 +7,7 @@ import instagram from '../assets/instagram.svg'
 import twitter from '../assets/twitter.svg'
 import youtube from '../assets/youtube.svg'
 import discord from '../assets/discord.svg'
-import hiManikin from "../assets/hiManikin.png";
+import hiManikin from "../assets/hiManikin.webp";
 
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
