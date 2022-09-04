@@ -25,10 +25,10 @@ const Roadmap = () => {
         alt="roadmap icons"
       />
           <ul className="roadmapContainer">
-              <li><span>Participacion Gamescom</span> - 24 de agosto 2022</li>
-              <li><span>Closed PRE-Sale</span> 30 de septiembre 2022</li>
-              <li><span>Lanzamiento de la beta</span> 30 de noviembre 2022</li>
-              <li><span>Season 1</span> Q2 - 2023</li>
+              <li><span>Gamescom participation</span> - August 24, 2022.</li>
+              <li><span>Closed PRE-Sale</span> - September 30, 2022.</li>
+              <li><span>Beta launch</span> - November 30, 2022.</li>
+              <li><span>Season 1</span> -  Q2, 2023.</li>
           </ul>
         </div>
         </div>
