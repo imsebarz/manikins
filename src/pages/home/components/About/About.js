@@ -20,7 +20,7 @@ const About = () => {
       <section className="section-about" id='about'>
         <div className="trailer">
           <LazyLoadImage threshold={800} src={trailerCover} alt='Manikin' />
-          <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="BKx7sFSzD7c" onClose={() => setOpen(false)} />
+          <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="fFZBn1fA6Z4" onClose={() => setOpen(false)} />
           <div onClick={() => setOpen(true)}>
             <LazyLoadImage threshold={800} src={play} className='play' alt="" />
           </div>
