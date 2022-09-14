@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './about.scss'
 import trailerCover from "../../../../assets/trailerCover.webp"
 import textseparator from '../../../../assets/textseparator.svg'
@@ -13,6 +13,11 @@ import { useState } from 'react'
 const About = () => {
 
   const [isOpen, setOpen] = useState(false);
+
+    useEffect(() => {
+     isOpen && (document.body.style.overflow = 'hidden');
+     !isOpen && (document.body.style.overflow = 'unset');
+  }, [isOpen]);
 
   return (
     <>
