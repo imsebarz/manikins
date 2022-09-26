@@ -44,7 +44,7 @@ const Hero = () => {
       <div className="content">
         <img src={tipografia} className='title' alt="hero" />
         <form className='input-container' onSubmit={(e) => handleSubmit(e)}>
-          <input type='email' required placeholder='Pre-sale Waitlist' value={mail} onChange={(e) => setMail(e.target.value)}></input>
+          <input type='email' required placeholder='Enter your Email' value={mail} onChange={(e) => setMail(e.target.value)}></input>
           <button className='goldenButton'>JOIN</button>
         </form>
         <img src={arrow} className="arrow" alt="hero" />
