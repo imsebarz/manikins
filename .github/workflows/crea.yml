@@ -2,8 +2,7 @@ name: Continous deployment
 on:
   push:
     branches:
-      - main
-  pull_request: {}
+      - crea
 
 jobs:
   avoid_reduncy:
@@ -65,5 +64,5 @@ jobs:
           port: 21098
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
           local_path: "./build/*"
-          remote_path: "/home/maniutzq/public_html/"
+          remote_path: "/home/maniutzq/creadigital.manikins.io/"
           args: "-o ConnectTimeout=60"
