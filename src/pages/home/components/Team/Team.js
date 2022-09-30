@@ -17,7 +17,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 const Team = () => {
   return (
     <>
-      <LazyLoadImage threshold={800} src={separatorTop} className='separator ft' alt="" />
+      <LazyLoadImage threshold={800} src={separatorTop} className='separator team' alt="" />
       <section className='section-team' id='team'>
         <div className="title">
           <h1 className="golden">Our Team</h1>
