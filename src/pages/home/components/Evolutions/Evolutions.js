@@ -1,7 +1,4 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-// import relicevolutions from "../../../../assets/relicevolutions.webp";
-// import { ReactComponent as LevelSpace } from "../../../../assets/levelSpace.svg";
-// import { ReactComponent as Level|SpaceSelected } from "../../../../assets/levelSpaceSelected.svg";
 import LevelSeparator from "../../../../assets/test.png";
 import textseparator from "../../../../assets/textseparator.svg";
 import separatorDown from '../../../../assets/separatorDown.svg'

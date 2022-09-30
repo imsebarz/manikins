@@ -1,3 +1,6 @@
+.team {
+  top: 0;
+}
 .section-team {
   padding: 100px 0px;
   background-color: #120d14;
@@ -52,8 +55,8 @@
 }
 
 @media (max-width: 900px) {
-  .ft {
-    top: 30px !important;
+  .team {
+    top: -40px !important;
   }
   .section-team {
     p {
