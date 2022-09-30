@@ -1,5 +1,6 @@
 .ft {
   top: 0;
+  margin-bottom: -100px;
 }
 .features-section {
   display: flex;
@@ -7,13 +8,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px 0;
-  margin-top: -100px;
-
+  min-height: max-content;
+  padding: 50px 0px;
+  gap: 10px;
   .title {
+    margin: 40px 0px;
     font-size: 4rem;
     margin: 0;
     color: goldenrod;
+  }
+
+  .subtitle {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 10px 0px;
+  }
+
+  .text-separator {
+    height: 15px;
+    width: auto;
   }
 
   .content {
@@ -27,14 +41,45 @@
 
     .card {
       padding: 30px;
-      height: 280px;
+      background-image: url("../../../../assets/fondoFeatured.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 300px;
       width: 200px;
-      border: 3px solid goldenrod;
       border-radius: 5px;
+      padding-top: 50px;
+
+      img {
+        width: 110px;
+        height: auto;
+      }
 
       .copy {
         margin-top: 40px;
+        color: #3b4155;
+        .title {
+          font-family: "Magic Hat";
+          font-size: 1.2rem;
+          letter-spacing: 2px;
+          color: #3b4155;
+        }
+        p {
+          width: 70%;
+          margin: 20px auto;
+        }
       }
     }
+
+    .card:hover {
+      filter: brightness(1.2);
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ft {
+    top: 20px !important;
+    margin-bottom: 10px;
   }
 }
