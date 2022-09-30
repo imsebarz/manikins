@@ -1,9 +1,12 @@
 import React from 'react'
 import './coffers.scss'
-import coffer from '../../../../assets/coffer.png'
+import coffer1 from '../../../../assets/Cofre_LVL1.webp'
+import coffer2 from '../../../../assets/Cofre_LVL2.webp'
+import coffer3 from '../../../../assets/Cofre_LVL3.webp'
+import coffer4 from '../../../../assets/Cofre_LVL4.webp'
 import textseparator from '../../../../assets/textseparator.svg'
-import pill from '../../../../assets/pill.svg'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import Coffer from './Coffer'
 
 
 const Coffers = () => {
@@ -14,29 +17,12 @@ const Coffers = () => {
         <p>With every evolution the relic unlocks new features</p>
         <LazyLoadImage threshold={800} src={textseparator} className="text-separator" alt="text separator manikins arena" />
         <div className="coffers">
-          <div className="coffer">
-            <LazyLoadImage threshold={800} src={coffer} className='coffer-img' alt="" />
-            <h2>Basic</h2>
-            <LazyLoadImage threshold={800} src={pill} className='pill' alt="" />
-            <p>With every evolution the relic unlocks new features and Powers.</p>
-            <button className='goldenButton'>View at Market</button>
-          </div>
-          <div className="coffer">
-            <LazyLoadImage threshold={800} src={coffer} className='coffer-img' alt="" />
-            <h2>Intermediate</h2>
-            <LazyLoadImage threshold={800} src={pill} className='pill' alt="" />
-            <p>With every evolution the relic unlocks new features and Powers.</p>
-            <button className='goldenButton'>View at Market</button>
-          </div>
-          <div className="coffer">
-            <LazyLoadImage threshold={800} src={coffer} className='coffer-img' alt="" />
-            <h2>Advanced</h2>
-            <LazyLoadImage threshold={800} src={pill} className='pill' alt="" />
-            <p>With every evolution the relic unlocks new features and Powers.</p>
-            <button className='goldenButton'>View at Market</button>
-
-          </div>
+         <Coffer img={coffer1} name='Basic' description="With every evolution the relic unlocks new features and Powers."></Coffer>
+         <Coffer img={coffer2} name='Intermediate' description="With every evolution the relic unlocks new features and Powers."></Coffer>
+         <Coffer img={coffer3} name='Advanced' description="With every evolution the relic unlocks new features and Powers."></Coffer>
+         <Coffer img={coffer4} name='Pro' description="With every evolution the relic unlocks new features and Powers."></Coffer>
         </div>
+        <button className='goldenButton'>Waitlist</button>
       </div>
     </section>
   )
