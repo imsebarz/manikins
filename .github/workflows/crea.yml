@@ -1,4 +1,4 @@
-name: Continous deployment
+name: crea digital CI/CD
 on:
   push:
     branches:
