@@ -1,0 +1,68 @@
+name: development CI/CD
+on:
+  push:
+    branches:
+      - desarrollo
+
+jobs:
+  avoid_reduncy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
+
+  build:
+    env:
+      REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm ci --force
+      - name: Build
+        run: npm run build
+      - name: Publish Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build
+          retention-days: 5
+
+  test:
+    needs: [build]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm ci --force
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: build
+      - name: Test
+        run: npm run test
+
+  deploy:
+    needs: [test]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: build
+      - name: Deploy with SFTP
+        if: ${{ github.event_name == 'push' }}
+        uses: wlixcc/SFTP-Deploy-Action@v1.0
+        with:
+          username: "maniutzq"
+          server: "ftp.manikins.io"
+          port: 21098
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          local_path: "./build/*"
+          remote_path: "/home/maniutzq/desarrollo.manikins.io/"
+          args: "-o ConnectTimeout=60"
