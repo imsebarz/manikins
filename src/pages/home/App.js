@@ -21,11 +21,11 @@ function App() {
   const scroll = useScroll();
   const [hasAppeared, setAppeared] = useState(false)
   const [openModal, setOpenModal] = useState(false)
-  console.log("estamos en " + scroll.y)
+  // console.log("estamos en " + scroll.y)
 
   useEffect(() => {
     if ((scroll.y > 1900) && (scroll.y < 2300) && (hasAppeared === false)) {
-      console.log(true)
+      // console.log(true)
       setAppeared(true)
       setOpenModal(true)
     }

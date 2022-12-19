@@ -1,103 +1,112 @@
-import axios from 'axios'
-import Swal from 'sweetalert2'
+import axios from "axios";
+import Swal from "sweetalert2";
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
-axios.defaults.headers.common = { 'Authorization': `bearer ${localStorage.getItem('token')}` }
+axios.defaults.headers.common = {
+  Authorization: `bearer ${localStorage.getItem("token")}`,
+};
 
-
-export const registerUser = async (dispatch, data, navigate) => {
+export const registerUser = async (navigate) => {
   await axios
-    .get('/register')
+    .get("/register")
     .then(() => {
-      navigate('/login')
+      navigate("/login");
     })
-    .catch(error => {
-      console.error('There is an error: ', error)
-    })
-}
+    .catch((error) => {
+      console.error("There is an error: ", error);
+    });
+};
 
-export const loginUser = async (dispatch, data,) => {
+export const confirmUser = async (params) => {
   await axios
-    .post('/logintoken', data)
+    .get("/auth/confirmEmail", { params: params })
+    .then(() => {
+      return true;
+    })
+    .catch((e) => {
+        throw new Error(e)
+    });
+};
+
+export const loginUser = async (data) => {
+  await axios
+    .post("/logintoken", data)
     .then((res) => {
-      localStorage.setItem('token', res.data.token)
+      localStorage.setItem("token", res.data.token);
     })
-    .catch(error => {
-      console.error('There is an error: ', error)
-    })
-}
+    .catch((error) => {
+      console.error("There is an error: ", error);
+    });
+};
 
 export const getAllItems = async () => {
   await axios
-    .get('/items')
+    .get("/items")
     .then((res) => {
-      console.log(res.data)
+      console.log(res.data);
     })
-    .catch(error => {
-      console.error('There is an error: ', error)
-    })
-}
-
-
+    .catch((error) => {
+      console.error("There is an error: ", error);
+    });
+};
 
 export function signOut(dispatch, navigate) {
-  localStorage.removeItem('username')
-  localStorage.removeItem('email')
-  localStorage.removeItem('name')
-  dispatch({ type: 'SIGN_OUT_SUCCESS' })
-  navigate('/login')
+  localStorage.removeItem("username");
+  localStorage.removeItem("email");
+  localStorage.removeItem("name");
+  dispatch({ type: "SIGN_OUT_SUCCESS" });
+  navigate("/login");
 }
 
-export async function joinWaitList(dispatch, data) {
+export async function joinWaitList(data) {
   await axios
     .post(
-      '/whitelist',
+      "/whitelist",
       { email: data },
-      { headers: { 'Content-Type': 'application/json' } }
+      { headers: { "Content-Type": "application/json" } }
     )
     .then((result) => {
-      if (result.data.error) throw new Error(result.data.error)
+      if (result.data.error) throw new Error(result.data.error);
       Swal.fire({
-        title: 'Success',
-        text: 'Thank you for subscribing',
+        title: "Success",
+        text: "Thank you for subscribing",
         customClass: {
-          popup: 'alert-success',
-          htmlContainer: 'container',
-          title: 'title'
+          popup: "alert-success",
+          htmlContainer: "container",
+          title: "title",
         },
         toast: true,
         showConfirmButton: false,
         showCloseButton: true,
         background: "#00000000",
-        icon: 'success',
-        padding: '10%',
-        iconColor: 'green',
-
-      })
+        icon: "success",
+        padding: "10%",
+        iconColor: "green",
+      });
     })
-    .catch(error => {
+    .catch((error) => {
       Swal.fire({
-        title: 'Something went wrong',
-        text: 'You may be already subscribed',
+        title: "Something went wrong",
+        text: "You may be already subscribed",
         customClass: {
-          popup: 'alert-error',
-          htmlContainer: 'container',
-          title: 'title',
-          icon: 'icon'
+          popup: "alert-error",
+          htmlContainer: "container",
+          title: "title",
+          icon: "icon",
         },
         toast: true,
         showConfirmButton: false,
         showCloseButton: true,
         background: "#00000000",
-        icon: 'error',
-        iconColor: 'red',
-        padding: '10%',
-      })
-    })
+        icon: "error",
+        iconColor: "red",
+        padding: "10%",
+      });
+    });
 }
 
 export const setUserState = (dispatch, result) => {
-  localStorage.setItem('username', result.username)
+  localStorage.setItem("username", result.username);
   // localStorage.setItem("name", result.name);
   // localStorage.setItem("email", result.email);
-  dispatch({ type: 'LOGIN_SUCCESS' })
-}
+  dispatch({ type: "LOGIN_SUCCESS" });
+};

@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.scss'
 import App from './pages/home/App'
 import Login from './pages/login/Login'
+import Confirmation from './pages/confirmation/Confirmation'
 // import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Register from './pages/register/Register'
@@ -19,6 +20,7 @@ root.render(
           <Route path="/" element={<App />} />
           <Route path="/login" element={< Login />} />
           <Route path="/register" element={< Register />} />
+          <Route path="/confirmemail" element={< Confirmation />} />
         </Routes>
       </BrowserRouter>
     </UserProvider>
