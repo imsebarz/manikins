@@ -31,12 +31,11 @@ const About = () => {
           </div>
         </div>
         <div className='content'>
-          <h1>Sobre <span>el juego</span></h1>
+          <h1>About <span>the game</span></h1>
           <LazyLoadImage threshold={800} src={textseparator} className="text-separator" alt="hero" />
-          <p>Manikins RnT es un videojuego táctico, Donde los jugadores crean un
-            equipo de Manikins Para llevarlos a combate, gana quien quede de
-            ultimo con vida</p>
-          <p onClick={() => setOpen(true)} className='watch'>Ver trailer del juego</p>
+          <p>Manikins RnT is a tactical video game, where players create a team of Manikins to take them into combat, whoever is
+last alive wins</p>
+          <p onClick={() => setOpen(true)} className='watch'>Watch game trailer</p>
         </div>
       </section>
     </>

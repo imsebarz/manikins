@@ -68,16 +68,16 @@ const Navbar = () => {
                 <img src={manikinIcon} className='logo' alt="" />
                 <ul className='nav-links'>
                     <li className='nav-link'>
-                        <a href="#about">Sobre el juego</a>
+                        <a href="#about">Info. Game</a>
                     </li>
                     <li className='nav-link'>
-                        <a href="#relics">Reliquias</a>
+                        <a href="#relics">Battle Relics</a>
                     </li>
                     <li className='nav-link'>
                         <a href="#roadmap">Manikins</a>
                     </li>
                     <li className='nav-link'>
-                        <a href="#team">Nosotros</a>
+                        <a href="#team">About us</a>
                     </li>
                     <li>
                         <button onClick={login} className='register'>Waitlist</button>

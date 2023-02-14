@@ -19,25 +19,30 @@ const Roadmap = () => {
         </div>
         <div className="content">
           <h1>
-            MECANICAS <span className="golden">DE JUEGO</span>
+            GAME <span className="golden">MECHANICS</span>
           </h1>
           <div className="roadmap">
             <ul className="roadmapContainer">
-              <li>Comanda a un equipo de 3 a 6 Manikins en batalla</li>
+              <li>Command a team of 3 to 6 Manikins in battle</li>
               <li>
-                Cada Manikin puede ser equipado hasta un máximo de cinco (5)
-                Reliquias de Batalla
+              Each Manikin can be equipped up to a maximum of five (5) Battle Reli
               </li>
               <li>
-                Acciones en el turno:
+              Actions in turn:
                 <ul className="sublist">
-                  <li>Desplazamiento del Manikin</li>
-                  <li>Ataque con armas</li>
-                  <li>Uso de habilidades de las Reliquias de Batalla</li>
+                  <li>Scroll of the Manikin</li>
+                  <li>Attack with weapons</li>
+                  <li>Using skills from Battle Relics</li>
                 </ul>
               </li>
-              <li>Juega en modo multijugador local u online</li>
-              <li>Cuenta con 5 diferentes escenarios de combate</li>
+              <li>
+                Play mode:
+                <ul className="sublist">
+                  <li>Campaign</li>
+                  <li>PVP multiplayer (local or online)</li>
+                </ul>
+              </li>
+              <li>It has 5 different combat scenarios</li>
             </ul>
           </div>
         </div>
