@@ -1,39 +1,47 @@
 import React from "react";
 import "./roadmap.scss";
-import hiManikin from "../../../../assets/roadmapManikin.webp";
-import roadmap from "../../../../assets/roadmap.png";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import hiManikin from "../../../../assets/roadmap.webp";
+
 
 const Roadmap = () => {
   return (
-    <section className="section-roadmap" id='roadmap' >
-      <h1 >ROAD <span className="golden">MAP</span></h1>
+    <section className="section-roadmap" id="roadmap">
+      {/* <h1>
+        <span className="golden">FEATURES</span>
+      </h1> */}
       <div className="content-container">
-      <div className="image-container">
-      <img
-        src={hiManikin}
-        className="roadmap-manikin"
-        alt="Hi gesture manikin"
-      />
-      </div>
-      <div className="content">
-        <div className="roadmap">
-                <LazyLoadImage
-        threshold={800}
-        src={roadmap}
-        className="roadmap-img"
-        alt="roadmap icons"
-      />
-          <ul className="roadmapContainer">
-              <li><span>Gamescom</span> - August 2022.</li>
-              <li><span>Alpha</span> - December 2022.</li>
-              <li><span>Open Beta</span> - Q2 2023.</li>
-              <li><span>Season 1</span> -  Q4 2023.</li>
-          </ul>
+        <div className="image-container">
+          <img
+            src={hiManikin}
+            className="roadmap-manikin"
+            alt="Hi gesture manikin"
+          />
         </div>
+        <div className="content">
+          <h1>
+            MECANICAS <span className="golden">DE JUEGO</span>
+          </h1>
+          <div className="roadmap">
+            <ul className="roadmapContainer">
+              <li>Comanda a un equipo de 3 a 6 Manikins en batalla</li>
+              <li>
+                Cada Manikin puede ser equipado hasta un máximo de cinco (5)
+                Reliquias de Batalla
+              </li>
+              <li>
+                Acciones en el turno:
+                <ul className="sublist">
+                  <li>Desplazamiento del Manikin</li>
+                  <li>Ataque con armas</li>
+                  <li>Uso de habilidades de las Reliquias de Batalla</li>
+                </ul>
+              </li>
+              <li>Juega en modo multijugador local u online</li>
+              <li>Cuenta con 5 diferentes escenarios de combate</li>
+            </ul>
+          </div>
         </div>
       </div>
-        
     </section>
   );
 };

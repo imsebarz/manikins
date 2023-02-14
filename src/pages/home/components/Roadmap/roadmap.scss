@@ -3,7 +3,6 @@
   background: url("../../../../assets/coffersBg.webp") no-repeat center center;
   background-size: cover;
   place-content: center;
-  margin: 0px;
   z-index: 2;
   padding: 130px 0px 70px 0px;
   display: flex;
@@ -12,7 +11,8 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  min-height: 40vw;
+  margin: -80px 0;
+  min-height: 60vw;
 
   h1 {
     font-size: 3.2rem;
@@ -23,10 +23,13 @@
 
   .content-container {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-around;
     max-width: 100%;
+    gap: 5rem;
     .content {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 50%;
@@ -35,6 +38,7 @@
     .roadmap {
       display: flex;
       flex-direction: row;
+      margin-bottom: 10rem;
       justify-content: center;
       align-items: center;
       img {
@@ -47,16 +51,48 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        gap: 80px;
+        gap: 40px;
         margin-top: 90px;
         li {
-          gap: 50px;
           justify-content: center;
+          align-items: center;
           min-height: 50px;
           color: black;
           list-style: none;
-          width: 250px;
+          width: 300px;
+          font-size: 1.2rem;
           text-align: left;
+          vertical-align: middle;
+          list-style-position: inside;
+        }
+
+        .sublist {
+          margin: 0;
+          height: auto;
+          gap: 0;
+          min-height: auto;
+          margin-top: 1.5rem;
+          li {
+            font-size: 0.9rem !important;
+            font-weight: 300;
+            margin: -0.5rem;
+          }
+        }
+
+        .sublist li::before {
+          height: 15px;
+          width: 15px;
+        }
+
+        li::before {
+          content: "";
+          display: inline-block;
+          height: 20px;
+          width: 20px;
+          margin-right: 10px;
+          margin-bottom: -3px;
+          background-image: url("../../../../assets/pill.svg");
+          background-size: contain;
         }
         span {
           display: inline;
@@ -67,46 +103,30 @@
     .image-container {
       width: 50%;
       z-index: 100;
-      margin-bottom: -35vw;
-      margin-left: -25vw;
-      // justify-content: center;
-      // align-items: center;
       .roadmap-manikin {
         object-fit: cover;
         height: auto;
-        width: 100vw;
-        margin-left: -20vw;
-        margin-bottom: -35vw;
+        width: 80vw;
+        margin-top: 5rem;
+        max-width: 800px;
       }
     }
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+  .section-roadmap {
+    margin-bottom: 0;
+  }
   .content-container {
-    flex-direction: column-reverse;
+    flex-direction: column-reverse !important;
+    gap: 0 !important;
     height: max-content !important;
     .content {
       width: 100% !important;
+      .roadmap {
+        margin-bottom: 0;
+      }
     }
-  }
-
-  .image-container {
-    margin-bottom: 0 !important;
-    margin-left: 0 !important;
-  }
-
-  .roadmap-manikin {
-    width: 130vw !important;
-  }
-}
-
-@media (min-width: 1400px) {
-  .roadmap-manikin {
-    object-fit: cover;
-    height: auto;
-    width: 80vw !important;
-    margin-left: -20vw;
-    margin-bottom: -35vw;
   }
 }

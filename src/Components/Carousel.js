@@ -2,39 +2,26 @@ import React from 'react'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import './carousel.scss'
 
-const Carousel = ({ item1, item2, item3, item4 }) => {
+const Carousel = ({ relics, setRelicName}) => {
+
+  const getArmorName = (armorPath) => {
+    let armorFile = armorPath.split('/').slice(-1)[0];
+    let armorName = armorFile.split('.').slice(0)[0];
+    let armorNameWithoutLVL = armorName.split('_').slice(0)[0];
+    return armorNameWithoutLVL.toLowerCase();
+  }
+
   return (
     <div className="carousel">
-      <div className="carousel-item">
-        <LazyLoadImage threshold={800} src={item1} alt="manikin moving" />
-      </div>
-      <div className="carousel-item">
-        <LazyLoadImage threshold={800} src={item2} alt="manikin moving" />
-      </div>
-      <div className="carousel-item">
-        <LazyLoadImage threshold={800} src={item3} alt="manikin moving" />
-      </div>
-      <div className="carousel-item">
-        <LazyLoadImage threshold={800} src={item1} alt="manikin moving" />
-      </div>
-      <div className="carousel-item">
-        <LazyLoadImage threshold={800} src={item2} alt="manikin moving" />
-      </div>
-      <div className="carousel-item">
-        <LazyLoadImage threshold={800} src={item2} alt="manikin moving" />
-      </div>
-      <div className="carousel-item">
-        <LazyLoadImage threshold={800} src={item2} alt="manikin moving" />
-      </div>
-      <div className="carousel-item">
-        <LazyLoadImage threshold={800} src={item2} alt="manikin moving" />
-      </div>
-      <div className="carousel-item">
-        <LazyLoadImage threshold={800} src={item2} alt="manikin moving" />
-      </div>
-      <div className="carousel-item">
-        <LazyLoadImage threshold={800} src={item2} alt="manikin moving" />
-      </div>
+      {relics.map(element => {
+        return (
+          // <div className="carousel-item" onClick={() => setRelicName(getArmorName(element))}>
+          //   <LazyLoadImage threshold={800} src={element} alt="manikin moving" />
+          // </div>)
+          <div className="carousel-item" onClick={() => setRelicName(getArmorName(element))}>
+            <LazyLoadImage threshold={800} src={element} alt="manikin moving" />
+          </div>)
+      })}
     </div>
   )
 }

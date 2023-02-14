@@ -68,24 +68,24 @@ const Navbar = () => {
                 <img src={manikinIcon} className='logo' alt="" />
                 <ul className='nav-links'>
                     <li className='nav-link'>
-                        <a href="#about">About</a>
+                        <a href="#about">Sobre el juego</a>
                     </li>
                     <li className='nav-link'>
-                        <a href="#relics">Battle Relics</a>
+                        <a href="#relics">Reliquias</a>
                     </li>
                     <li className='nav-link'>
-                        <a href="#roadmap">Roadmap</a>
+                        <a href="#roadmap">Manikins</a>
                     </li>
                     <li className='nav-link'>
-                        <a href="#team">Team</a>
+                        <a href="#team">Nosotros</a>
                     </li>
                     <li>
                         <button onClick={login} className='register'>Waitlist</button>
                     </li>
 
-                    <li className='socials'>
+                    {/* <li className='socials'>
                         <DiscordIcon />
-                    </li>
+                    </li> */}
                 </ ul>
                 <div className={`hamburger ${isOpen}`} onClick={toggleSidebar}>
                     <svg
